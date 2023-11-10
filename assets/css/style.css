@@ -1,0 +1,573 @@
+
+
+/* @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #050801;
+    font-family: 'Raleway', sans-serif;
+    font-weight: bold;
+}
+a{
+    position: relative;
+    display: inline-block;
+    padding: 25px 30px;
+    margin: 40px 0;
+    color: #03e9f4;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: 0.5s;
+    letter-spacing: 4px;
+    overflow: hidden;
+    margin-right: 50px;
+   
+}
+a:hover{
+    background: #03e9f4;
+    color: #050801;
+    box-shadow: 0 0 5px #03e9f4,
+                0 0 25px #03e9f4,
+                0 0 50px #03e9f4,
+                0 0 200px #03e9f4;
+     -webkit-box-reflect:below 1px linear-gradient(transparent, #0005);
+}
+a:nth-child(1){
+    filter: hue-rotate(270deg);
+}
+a:nth-child(2){
+    filter: hue-rotate(110deg);
+}
+a span{
+    position: absolute;
+    display: block;
+}
+a span:nth-child(1){
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg,transparent,#03e9f4);
+    animation: animate1 1s linear infinite;
+}
+@keyframes animate1{
+    0%{
+        left: -100%;
+    }
+    50%,100%{
+        left: 100%;
+    }
+}
+a span:nth-child(2){
+    top: -100%;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(180deg,transparent,#03e9f4);
+    animation: animate2 1s linear infinite;
+    animation-delay: 0.25s;
+}
+@keyframes animate2{
+    0%{
+        top: -100%;
+    }
+    50%,100%{
+        top: 100%;
+    }
+}
+a span:nth-child(3){
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(270deg,transparent,#03e9f4);
+    animation: animate3 1s linear infinite;
+    animation-delay: 0.50s;
+}
+@keyframes animate3{
+    0%{
+        right: -100%;
+    }
+    50%,100%{
+        right: 100%;
+    }
+}
+
+
+a span:nth-child(4){
+    bottom: -100%;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(360deg,transparent,#03e9f4);
+    animation: animate4 1s linear infinite;
+    animation-delay: 0.75s;
+}
+@keyframes animate4{
+    0%{
+        bottom: -100%;
+    }
+    50%,100%{
+        bottom: 100%;
+    }
+} */
+
+
+/* 🟥以下は試験的に記述（ネオン色）ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー */
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
+
+footer > a{
+    position: relative;
+    display: inline-block;
+    padding: 25px 30px;
+    margin: 40px 0;
+    text-decoration: none;
+    text-transform: none;
+    transition: 0.5s;
+    letter-spacing: 4px;
+    overflow: hidden;
+    margin-right: 50px;
+   
+}
+footer > a:hover{
+    background: #03e9f4;
+    color: #050801;
+    box-shadow: 0 0 5px #03e9f4,
+                0 0 25px #03e9f4,
+                0 0 50px #03e9f4,
+                0 0 200px #03e9f4;
+     -webkit-box-reflect:below 1px linear-gradient(transparent, #0005);
+}
+footer > a:nth-child(1){
+    filter: hue-rotate(270deg);
+}
+footer > a:nth-child(2){
+    filter: hue-rotate(110deg);
+}
+footer > a span{
+    position: absolute;
+    display: block;
+}
+footer > a span:nth-child(1){
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg,transparent,#03e9f4);
+    animation: animate1 1s linear infinite;
+}
+@keyframes animate1{
+    0%{
+        left: -100%;
+    }
+    50%,100%{
+        left: 100%;
+    }
+}
+footer > a span:nth-child(2){
+    top: -100%;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(180deg,transparent,#03e9f4);
+    animation: animate2 1s linear infinite;
+    animation-delay: 0.25s;
+}
+@keyframes animate2{
+    0%{
+        top: -100%;
+    }
+    50%,100%{
+        top: 100%;
+    }
+}
+footer > a span:nth-child(3){
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(270deg,transparent,#03e9f4);
+    animation: animate3 1s linear infinite;
+    animation-delay: 0.50s;
+}
+@keyframes animate3{
+    0%{
+        right: -100%;
+    }
+    50%,100%{
+        right: 100%;
+    }
+}
+/* 🟥上記は試験的に記述ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* <body> */
+body {
+    height: 100%;
+    margin: 0 auto;
+}
+
+
+/* メインの色、宇宙色。rgb(16, 35, 51) */
+
+
+
+
+
+
+/* __________<header>______________________________________________________ */
+header {
+    /* border: solid 1px rgb(16, 35, 51); */
+    height: 10%;
+    width: 100%;
+    display: flex;
+    background-color: rgba(51, 51, 51);
+    opacity: 0.7;
+    position: fixed;
+    /* background-color: rgba(0, 0, 0); */
+    /* padding: 5px; */
+}
+
+
+
+/* ナビゲーションバースタイル */
+.navbar {
+    overflow: hidden;
+    background-color: rgba(51, 51, 51, 0.5);
+    opacity: 0.7;
+  }
+  
+  /* ナビゲーションリンクスタイル */
+  .navbar a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+  }
+  
+  /* ナビゲーションリンクホバースタイル */
+  .navbar a:hover {
+    background-color: rgba(51, 51, 51, 0.5);
+    color: black;
+  }
+
+
+
+
+
+/* ✅①ロゴ＋キャッチコピー */
+/* .header-left {
+    width: 20%;
+    border: solid 1px red;
+    color: white;
+    font-size: 30px;
+    text-align: center;
+}
+.header-left > img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+} */
+
+/* ✅(1.5)スペースあけるためだけの記述 */
+/* .header-center {
+    width: 50%;
+} */
+
+/* ✅②ハンバーガーメニュー(寮のこと・学校のこと・生活のこと) */
+/* .header-right {
+    width: 30%;
+    border: solid 1px rgb(16, 35, 51);
+    padding: 4% 0;
+    text-align: center;
+    justify-content: space-between;
+} */
+
+/* .header-right > a {
+    border: solid 1px red;
+    color: white;
+    text-decoration: none;
+    font-size: 28px;
+
+} */
+/* _________<header>______________________________________________________________ */
+
+
+
+
+
+
+/* <main> */
+main {
+    height: 85%;
+    background-color: rgb(16, 35, 51);
+    padding: 20px;
+}
+
+
+
+
+/* ✅③タイトル・サブタイトル */
+.main-title {
+    /* border: solid 1px red; */
+    color: white;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 1000px;
+/* 🟥以下は試験的に記述----------------------------------- */
+    text-shadow:
+    0 0 7px #fff,
+    0 0 10px #fff,
+    0 0 21px #fff,
+    0 0 42px #bc13fe,
+    0 0 82px #bc13fe,
+    0 0 92px #bc13fe,
+    0 0 102px #bc13fe,
+    0 0 151px #bc13fe;
+/* 🟥------------------------------------------------- */
+}
+
+.main-title > h1 {
+    /* border: solid 3px red; */
+    width: 80%;
+    margin: auto;
+    font-size: 50px;
+}
+
+
+
+
+
+.main-title > h2 {
+    width: 70%;
+    margin: 5px auto;
+    /* border: solid 1px red; */
+    font-size: 30px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* __________メインコンテンツ（④＋⑤）______________________________________________________________ */
+.main-contents {
+    border: solid 1px rgb(16, 35, 51);
+    padding: 5%;
+    margin: 5% 0;
+    display: flex;
+}
+
+/* ✅④コンセプト・作成背景 */
+.concept {
+    width: 33%;
+    border: solid 1px red;
+    border-radius: 10%;
+    color: white;
+    padding: 2%;
+    margin: 10% 0;
+}
+
+.concept > h3 {
+    border: solid 1px red;
+    border-radius: 10%;
+    margin: 5%;
+    text-align: center;
+    font-size: 30px;
+}
+
+.concept > p {
+    /* border: solid 1px red; */
+    color: white;
+    margin: 10px;
+    font-size: 20px;
+    
+}
+
+
+
+/* ✅⑤写真 */
+.pictures {
+    width: 66%;
+    margin: 10% 0 10% 5%;
+    border: solid 1px red;
+    border-radius: 10%;
+    color: white;
+    font-size: 30px;
+    display: flex;
+    
+}
+
+.pictures > a {
+    /* border: solid 1px red; */
+    margin: 30px;
+    width: 33%;
+    text-decoration: none;
+    color: white;
+    border: 1px solid red;
+}
+
+a > img {
+    /* border: solid 1px red; */
+    width: 100%;
+    height: 80%;
+    object-fit: cover;
+}
+/* __________________________<メインコンテンツ（④＋⑤）>___________________________________________________________ */
+
+
+
+
+
+
+
+
+
+
+/* ✅⑥地図の埋め込み */
+.maps {
+    height: 600px;
+    border: solid 1px red;
+    color: white;
+    font-size: 200%;
+    display: flex;
+    margin: 10% 5%;
+}
+
+.seedtech-map {
+    text-align: center;
+    border: solid 1px red;
+    margin: 1%;
+    object-fit: cover;
+}
+
+.dormitory-map {
+    text-align: center;
+    border: solid 1px red;
+    margin: 1%;
+    object-fit: cover;
+}
+
+
+
+/* ✅⑦カフェの紹介 */
+.cafes {
+    /* border: solid 1px brown; */
+    color: white;
+    height: 500px;
+    display: flex;
+}
+
+.cafes > a:hover{
+    background-color: #050801;
+}
+
+.cafes > a {
+    border: solid 1px red;
+    border-radius: 10%;
+    margin: 100px;
+    padding: 3%;
+    width: 33%;
+    text-decoration: none;
+    color: white;
+    font-weight: 900;
+    font-size: 50%;
+}
+
+
+
+/* ✅⑧最後のメッセージ */
+.message {
+    border: solid 1px red;
+    height: 300px;
+    text-align: center;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    margin: 10% 0;
+}
+
+.message > a {
+    border: solid 1px red;
+    border-radius: 5%;
+    font-size: 100%;
+    text-decoration: none;
+    color: white;
+    background-color: red;
+    padding: 1%;
+}
+
+.message > a:hover {
+    background-color: rgb(226, 16, 16, 1); /* ホバー時の背景色 */
+  }
+
+
+
+
+
+/* ✅⑨フッター */
+footer {
+    /* border: solid 1px red; */
+    height: 10%;
+    background-color: rgba(0, 0, 0);
+    text-align: center;
+    font-weight: 600;
+    padding: 10px;
+    
+    
+}
+
+.footer > a {
+    font-size: 15px;
+    background-color: black;
+    margin-right: 20px;
+    text-align: center;
+}
+
+.line {
+    color: black;
+    background-color: aqua;
+}
+
+.instagram {
+    color: black;
+    background-color: aqua;
+}
+
+.twitter {
+    color: black;
+    background-color: aqua;
+}
+
