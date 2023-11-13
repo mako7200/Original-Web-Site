@@ -357,7 +357,7 @@ main {
     /* border: solid 3px red; */
     width: 80%;
     margin: auto;
-    font-size: 50px;
+    font-size: 20px;
 }
 
 
@@ -368,7 +368,7 @@ main {
     width: 70%;
     margin: 5px auto;
     /* border: solid 1px red; */
-    font-size: 30px;
+    font-size: 20px;
 }
 
 
@@ -436,7 +436,7 @@ main {
     width: 33%;
     text-decoration: none;
     color: white;
-    border: 1px solid red;
+/*     border: 1px solid red; */
 }
 
 a > img {
@@ -459,7 +459,7 @@ a > img {
 /* ✅⑥地図の埋め込み */
 .maps {
     height: 600px;
-    border: solid 1px red;
+/*     border: solid 1px red; */
     color: white;
     font-size: 200%;
     display: flex;
