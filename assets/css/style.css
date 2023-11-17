@@ -344,7 +344,7 @@ main {
 .main-title {
     /* border: solid 1px red; */
     color: white;
-    padding: 10px;
+    padding: 20%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -396,32 +396,35 @@ main {
 
 /* __________メインコンテンツ（④＋⑤）______________________________________________________________ */
 .main-contents {
-    border: solid 1px red;
+    /* border: solid 1px red; */
     padding: 5%;
     margin: 5% 0;
     /* display: flex; */
 }
 
-/* ✅④コンセプト・作成背景 */
+/* ✅④作成背景 */
 .concept {
-    width: 50%;
-    border: solid 1px white;
+    width: 80%;
+    height: 80%;
+    border: solid 0.1px white;
     border-radius: 10%;
     color: white;
-    padding: 2%;
+    padding: 10%;
     margin: 10% auto;
     text-shadow:
-    0 0 7px #fe13fa,
-    0 0 10px #fe13f2,
-    0 0 21px #ea13fe,
-    0 0 42px #fe13d7,
-    0 0 151px #fe13b8;
+    0 0 7px #13e3fe,
+    0 0 10px #13e3fe,
+    0 0 21px #13e3fe,
+    0 0 42px #13bffe,
+    0 0 82px #13acfe,
+    0 0 92px #13a8fe,
+    0 0 102px #13e3fe,
+    0 0 151px #1381fe;
 }
 
 .concept > h3 {
-    border: solid 1px white;
+    /* border: solid 1px white; */
     border-radius: 10%;
-    margin: 5%;
     text-align: center;
     font-size: 30px;
 }
@@ -429,7 +432,6 @@ main {
 .concept > p {
     /* border: solid 1px red; */
     color: white;
-    margin: 10px;
     font-size: 20px;
     
 }
@@ -440,7 +442,7 @@ main {
 .pictures {
     width: 100%;
     height: 100%;
-    border: solid 1px white;
+    border: solid 0.1px white;
     border-radius: 10%;
     font-size: 30px;
     display: flex;
@@ -487,7 +489,7 @@ a > img {
 /* ✅⑥地図の埋め込み */
 .maps {
     height: 600px;
-    border: solid 1px red;
+    /* border: solid 1px red; */
     color: white;
     font-size: 200%;
     display: flex;
@@ -499,7 +501,7 @@ a > img {
 .seedtech-map {
     text-align: center;
     border: solid 0.1px white;
-    margin: 1%;
+    padding: 5%;
     object-fit: cover;
 }
 
@@ -520,6 +522,7 @@ a > img {
     text-align: center;
     border: solid 0.1px white;
     margin: 1%;
+    padding: 5%;
     object-fit: cover;
 }
 
@@ -561,10 +564,10 @@ a > img {
 }
 
 .cafes > a {
-    border: solid 1px white;
+    border: solid 0.1px white;
     border-radius: 10%;
     margin: 20px;
-    padding: 3%;
+    padding: 5%;
     width: 33%;
     text-decoration: none;
     color: white;
@@ -576,7 +579,7 @@ a > img {
 
 /* ✅⑧最後のメッセージ */
 .message {
-    border: solid 1px red;
+    border: solid 0.1px white;
     height: 500px;
     text-align: center;
     align-items: center;
@@ -599,12 +602,12 @@ a > img {
 }
 
 .message > a {
-    border: solid 1px red;
+    border: solid 0.1px white;
     border-radius: 5%;
     font-size: 100%;
     text-decoration: none;
     color: white;
-    background-color: red;
+    background-color: white;
     padding: 1%;
 }
 
@@ -622,8 +625,10 @@ a > img {
     0 0 151px #1381fe;
   }
 
+
+  /* ✅試験的に導入 */
 .greeting{
-    border: solid 1px red;
+    border: solid 0.1px white;
     color: white;
     height: 100px;
     display: flex;
