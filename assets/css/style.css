@@ -284,13 +284,19 @@ main {
     padding: 5%;
     margin: 5% 0;
     /* display: flex; */
+
+    @media(max-width: 768px) {
+        font-size: 5px;
+        padding: 10%;
+        height: auto; /* 高さを自動調整 */
+    }
 }
 
 /* ✅④作成背景 */
 .concept {
     width: 80%;
     height: 80%;
-    border: solid 0.1px white;
+    /* border: solid 0.1px white; */
     border-radius: 10%;
     color: white;
     padding: 10%;
@@ -298,7 +304,7 @@ main {
 
     /* レスポンシブ対応 */
     @media(max-width: 768px) {
-        font-size: 10px;
+        font-size: 5px;
         padding: 10%;
         height: auto; /* 高さを自動調整 */
     }
@@ -309,13 +315,25 @@ main {
     border-radius: 10%;
     text-align: center;
     font-size: 30px;
+
+    @media(max-width: 768px) {
+        font-size: 15px;
+        text-align: left;
+        height: auto; /* 高さを自動調整 */
+    }
 }
 
 .concept > p {
     /* border: solid 1px red; */
     color: white;
     font-size: 20px;
-    
+
+/* レスポンシブ対応 */
+@media(max-width: 768px) {
+    font-size: 5px;
+    height: auto; /* 高さを自動調整 */
+}
+
 }
 
 
@@ -324,13 +342,21 @@ main {
 .pictures {
     width: 100%;
     height: 100%;
-    border: solid 0.1px white;
+    /* border: solid 0.1px white; */
     border-radius: 10%;
     font-size: 30px;
     display: flex;
     text-align: center;
     align-items: center;
     justify-content: space-between;
+
+    /* レスポンシブ対応 */
+    @media(max-width: 768px) {
+        font-size: 5px;
+        height: auto; /* 高さを自動調整 */
+        display: flex;
+        flex-direction: column;
+    }
 }
 
 .pictures > a {
@@ -378,6 +404,14 @@ a > img {
     align-items: center;
     justify-content: space-between;
     margin: 10% auto;
+
+    /* レスポンシブ対応 */
+    @media(max-width: 768px) {
+        font-size: 5px;
+        height: auto; /* 高さを自動調整 */
+        display: flex;
+        flex-direction: column;
+    }
 }
 
 .seedtech-map {
@@ -430,6 +464,14 @@ a > img {
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    /* レスポンシブ対応 */
+    @media(max-width: 768px) {
+        font-size: 10px;
+        height: auto; /* 高さを自動調整 */
+        display: flex;
+        flex-direction: column;
+    }
 }
 
 .cafes > a:hover{
@@ -532,7 +574,14 @@ footer {
     font-weight: 600;
     padding: 10px;
     
-    
+/* レスポンシブ対応 */
+@media(max-width: 768px) {
+    font-size: 15px;
+    padding: 10%;
+    height: auto; /* 高さを自動調整 */
+    display: flex;
+    flex-direction: column;
+}
 }
 
 .footer > a {
