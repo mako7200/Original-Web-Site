@@ -210,7 +210,7 @@ header {
 
 /* <main> */
 main {
-    height: 80%;
+    height: auto;
     background-color: rgb(16, 35, 51);
     /* padding: 20px; */
 }
@@ -221,6 +221,7 @@ main {
 /* ✅③タイトル・サブタイトル */
 .main-title {
     /* border: solid 1px red; */
+    height: auto;
     color: white;
     padding: 20%;
     display: flex;
@@ -228,7 +229,6 @@ main {
     align-items: center;
     justify-content: center;
     text-align: center;
-    height: 900px;
 
 /* 🟥以下は試験的に記述----------------------------------- */
     text-shadow:
@@ -241,12 +241,15 @@ main {
     0 0 102px #13e3fe,
     0 0 151px #1381fe;
 
-    /* レスポンシブ対応 */
-    @media(max-width: 768px) {
-        font-size: 10px;
-        padding: 10%;
-        height: auto; /* 高さを自動調整 */
-    }
+/* レスポンシブ対応 */
+@media(max-width: 768px) {
+    font-size: 15px;
+    width: auto;
+    height: auto; /* 高さを自動調整 */
+    display: flex;
+    flex-direction: column;
+}
+
 }
 
 .main-title > h1 {
@@ -254,6 +257,15 @@ main {
     width: 80%;
     margin: 0 auto;
     font-size: 20px;
+
+    /* レスポンシブ対応 */
+@media(max-width: 768px) {
+    font-size: 15px;
+    width: auto;
+    height: auto; /* 高さを自動調整 */
+    display: flex;
+    flex-direction: column;
+}
 }
 
 
@@ -265,6 +277,15 @@ main {
     margin: 150px auto;
     /* border: solid 1px red; */
     font-size: 20px;
+
+    /* レスポンシブ対応 */
+@media(max-width: 768px) {
+    font-size: 15px;
+    width: auto;
+    height: auto; /* 高さを自動調整 */
+    display: flex;
+    flex-direction: column;
+}
 }
 
 
@@ -281,7 +302,7 @@ main {
 /* __________メインコンテンツ（④＋⑤）______________________________________________________________ */
 .main-contents {
     /* border: solid 1px red; */
-    padding: 5%;
+    /* padding: 5%; */
     margin: 5% 0;
     /* display: flex; */
 
@@ -305,7 +326,6 @@ main {
     /* レスポンシブ対応 */
     @media(max-width: 768px) {
         font-size: 5px;
-        padding: 10%;
         height: auto; /* 高さを自動調整 */
     }
 }
@@ -330,7 +350,7 @@ main {
 
 /* レスポンシブ対応 */
 @media(max-width: 768px) {
-    font-size: 5px;
+    font-size: 10px;
     height: auto; /* 高さを自動調整 */
 }
 
@@ -352,7 +372,7 @@ main {
 
     /* レスポンシブ対応 */
     @media(max-width: 768px) {
-        font-size: 5px;
+        font-size: 10px;
         height: auto; /* 高さを自動調整 */
         display: flex;
         flex-direction: column;
@@ -375,6 +395,15 @@ main {
     0 0 102px #13e3fe,
     0 0 151px #1381fe;
 /*     border: 1px solid red; */
+
+/* レスポンシブ対応 */
+@media(max-width: 768px) {
+    font-size: 10px;
+    height: auto; /* 高さを自動調整 */
+    width: auto;
+    display: flex;
+    flex-direction: column;
+}
 }
 
 a > img {
@@ -382,6 +411,14 @@ a > img {
     width: 100%;
     height: 80%;
     object-fit: cover;
+
+/* レスポンシブ対応 */
+@media(max-width: 768px) {
+    font-size: 5px;
+    height: auto; /* 高さを自動調整 */
+    display: flex;
+    flex-direction: column;
+}
 }
 /* __________________________<メインコンテンツ（④＋⑤）>___________________________________________________________ */
 
@@ -399,7 +436,7 @@ a > img {
     height: 600px;
     /* border: solid 1px red; */
     color: white;
-    font-size: 200%;
+    font-size: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -407,7 +444,7 @@ a > img {
 
     /* レスポンシブ対応 */
     @media(max-width: 768px) {
-        font-size: 5px;
+        font-size: 15px;
         height: auto; /* 高さを自動調整 */
         display: flex;
         flex-direction: column;
@@ -460,14 +497,14 @@ a > img {
 .cafes {
     /* border: solid 1px brown; */
     color: white;
-    height: 500px;
+    height: auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
 
     /* レスポンシブ対応 */
     @media(max-width: 768px) {
-        font-size: 10px;
+        font-size: 15px;
         height: auto; /* 高さを自動調整 */
         display: flex;
         flex-direction: column;
@@ -488,7 +525,7 @@ a > img {
 }
 
 .cafes > a {
-    border: solid 0.1px white;
+    /* border: solid 0.1px white; */
     border-radius: 10%;
     margin: 20px;
     padding: 5%;
@@ -497,19 +534,39 @@ a > img {
     color: white;
     font-weight: 900;
     font-size: 50%;
+
+/* レスポンシブ対応 */
+@media(max-width: 768px) {
+    border: solid 0.1px whitesmoke;
+    font-size: 15px;
+    width: auto;
+    height: auto; /* 高さを自動調整 */
+    display: flex;
+    flex-direction: column;
+}
+
 }
 
 
 
 /* ✅⑧最後のメッセージ */
 .message {
-    border: solid 0.1px white;
+    /* border: solid 0.1px white; */
     height: 500px;
     text-align: center;
     align-items: center;
     display: flex;
     justify-content: center;
     margin: 10% 0;
+
+/* レスポンシブ対応 */
+@media(max-width: 768px) {
+    font-size: 15px;
+    width: auto;
+    height: auto; /* 高さを自動調整 */
+    display: flex;
+    flex-direction: column;
+}
 }
 
 .message:hover{
@@ -552,7 +609,7 @@ a > img {
 
   /* ✅試験的に導入 */
 .greeting{
-    border: solid 0.1px white;
+    /* border: solid 0.1px white; */
     color: white;
     height: 100px;
     display: flex;
