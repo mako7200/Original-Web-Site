@@ -125,6 +125,12 @@ header {
     /* background-color: rgba(0, 0, 0); */
     /* padding: 5px; */
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+        /* レスポンシブ対応 */
+        @media(max-width: 768px) {
+            height: auto;
+            width: 100%;
+        }
 }
 
 
@@ -134,6 +140,14 @@ header {
     overflow: hidden;
     background-color: rgba(51, 51, 51, 0.5);
     opacity: 0.7;
+
+            /* レスポンシブ対応 */
+            @media(max-width: 768px) {
+                height: auto;
+                width: 100%;
+                transform: scale(0.7);
+                opacity: 0.5;
+            }
   }
   
   /* ナビゲーションリンクスタイル */
@@ -211,6 +225,7 @@ header {
 /* <main> */
 main {
     height: auto;
+    width: auto;
     background-color: rgb(16, 35, 51);
     /* padding: 20px; */
 }
@@ -318,15 +333,15 @@ main {
     width: 80%;
     height: 80%;
     /* border: solid 0.1px white; */
-    border-radius: 10%;
+    /* border-radius: 10%; */
     color: white;
     padding: 10%;
     margin: 10% auto;
 
     /* レスポンシブ対応 */
     @media(max-width: 768px) {
-        font-size: 5px;
         height: auto; /* 高さを自動調整 */
+        width: auto;
     }
 }
 
@@ -334,10 +349,11 @@ main {
     /* border: solid 1px white; */
     border-radius: 10%;
     text-align: center;
-    font-size: 30px;
+    font-size: 40px;
+    text-align: left;
 
     @media(max-width: 768px) {
-        font-size: 15px;
+        font-size: 20px;
         text-align: left;
         height: auto; /* 高さを自動調整 */
     }
@@ -346,12 +362,16 @@ main {
 .concept > p {
     /* border: solid 1px red; */
     color: white;
-    font-size: 20px;
+    font-size: 30px;
+    width: 80%;
+    margin: 15px;
 
 /* レスポンシブ対応 */
 @media(max-width: 768px) {
-    font-size: 10px;
+    font-size: 15px;
     height: auto; /* 高さを自動調整 */
+    width: auto;
+    margin: 5px;
 }
 
 }
@@ -398,7 +418,7 @@ main {
 
 /* レスポンシブ対応 */
 @media(max-width: 768px) {
-    font-size: 10px;
+    font-size: 15px;
     height: auto; /* 高さを自動調整 */
     width: auto;
     display: flex;
@@ -409,8 +429,10 @@ main {
 a > img {
     /* border: solid 1px red; */
     width: 100%;
-    height: 80%;
+    height: auto;
     object-fit: cover;
+    border-radius: 5%;
+    transform: scale(0.8); /* 0.8は縮小率で調整可能 */
 
 /* レスポンシブ対応 */
 @media(max-width: 768px) {
@@ -418,6 +440,7 @@ a > img {
     height: auto; /* 高さを自動調整 */
     display: flex;
     flex-direction: column;
+    transform: scale(0.8); /* 0.8は縮小率で調整可能 */
 }
 }
 /* __________________________<メインコンテンツ（④＋⑤）>___________________________________________________________ */
@@ -433,33 +456,49 @@ a > img {
 
 /* ✅⑥地図の埋め込み */
 .maps {
-    height: 600px;
+    height: auto;
+    width: auto;
     /* border: solid 1px red; */
     color: white;
-    font-size: 100%;
+    font-size: 30px;
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    margin: 10% auto;
+    flex-direction: column;
+    margin: 5%;
+    padding: 10px;
 
     /* レスポンシブ対応 */
     @media(max-width: 768px) {
-        font-size: 15px;
-        height: auto; /* 高さを自動調整 */
+        /* margin: 1%; */
+        height: auto;
+        width: auto;
         display: flex;
         flex-direction: column;
+        transform: scale(0.7);
     }
 }
 
 .seedtech-map {
     text-align: center;
-    border: solid 0.1px white;
+    /* border: solid 0.1px white; */
     padding: 5%;
+    margin: 5%;
     object-fit: cover;
+
+        /* レスポンシブ対応 */
+        @media(max-width: 768px) {
+            /* margin: 1%; */
+            height: auto;
+            width: auto;
+            display: flex;
+            flex-direction: column;
+            transform: scale(0.5);
+        }
 }
 
 .seedtech-map:hover{
     background-color: black;
+    border-radius: 10%;
     text-shadow:
     0 0 7px #f0f3ec,
     0 0 10px #f2f2ec,
@@ -472,15 +511,26 @@ a > img {
 }
 
 .dormitory-map {
+    width: auto;
     text-align: center;
-    border: solid 0.1px white;
+    /* border: solid 0.1px white; */
     margin: 1%;
     padding: 5%;
     object-fit: cover;
+
+        /* レスポンシブ対応 */
+        @media(max-width: 768px) {
+            height: auto; /* 高さを自動調整 */
+            width: auto;
+            display: flex;
+            flex-direction: column;
+            transform: scale(0.5); /* 0.8は縮小率で調整可能 */
+        }
 }
 
 .dormitory-map:hover{
     background-color: black;
+    border-radius: 10%;
     text-shadow:
     0 0 7px #f0f3ec,
     0 0 10px #f2f2ec,
@@ -501,6 +551,7 @@ a > img {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    font-size: 30px;
 
     /* レスポンシブ対応 */
     @media(max-width: 768px) {
@@ -513,6 +564,7 @@ a > img {
 
 .cafes > a:hover{
     background-color: #050801;
+    border-radius: 10%;
     text-shadow:
     0 0 7px #13e3fe,
     0 0 10px #13e3fe,
@@ -543,11 +595,21 @@ a > img {
     height: auto; /* 高さを自動調整 */
     display: flex;
     flex-direction: column;
+    transform: scale(0.8); /* 0.8は縮小率で調整可能 */
+}
 }
 
+.cafe > a > img{
+    margin: 10px;
+
+/* レスポンシブ対応 */
+@media(max-width: 768px) {
+    border: solid 0.1px whitesmoke;
+    width: auto;
+    height: auto; /* 高さを自動調整 */
+    transform: scale(0.8); /* 0.8は縮小率で調整可能 */
 }
-
-
+}
 
 /* ✅⑧最後のメッセージ */
 .message {
@@ -570,7 +632,7 @@ a > img {
 }
 
 .message:hover{
-    background-color: black;
+    /* background-color: black; */
     text-shadow:
     0 0 7px #1361fe,
     0 0 10px #1352fe,
@@ -584,16 +646,16 @@ a > img {
 
 .message > a {
     border: solid 0.1px white;
-    border-radius: 5%;
+    border-radius: 2%;
     font-size: 100%;
     text-decoration: none;
     color: white;
-    background-color: white;
+    /* background-color: white; */
     padding: 1%;
 }
 
 .message > a:hover {
-    background-color: rgb(226, 16, 16, 1); /* ホバー時の背景色 */
+    background-color: rgb(0, 0, 0); /* ホバー時の背景色 */
     color:rgb(0, 255, 221);
     text-shadow:
     0 0 7px #23fe13,
