@@ -13,7 +13,6 @@ footer > a{
     letter-spacing: 4px;
     overflow: hidden;
     margin-right: 50px;
-   
 }
 footer > a:hover{
     background: #03e9f4;
@@ -22,7 +21,7 @@ footer > a:hover{
                 0 0 25px #03e9f4,
                 0 0 50px #03e9f4,
                 0 0 200px #03e9f4;
-     -webkit-box-reflect:below 1px linear-gradient(transparent, #0005);
+    -webkit-box-reflect:below 1px linear-gradient(transparent, #0005);
 }
 footer > a:nth-child(1){
     filter: hue-rotate(270deg);
@@ -116,21 +115,19 @@ body {
 /* __________<header>______________________________________________________ */
 header {
     /* border: solid 1px rgb(16, 35, 51); */
-    height: 10%;
+    height: auto;
     width: 100%;
     display: flex;
     background-color: rgba(51, 51, 51);
     opacity: 0.7;
     position: fixed;
-    /* background-color: rgba(0, 0, 0); */
-    /* padding: 5px; */
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     z-index: 1;
 
         /* レスポンシブ対応 */
         @media(max-width: 768px) {
             height: auto;
             width: 100%;
+            font-weight: bold;
         }
 }
 
@@ -140,6 +137,9 @@ header {
 .navbar {
     overflow: hidden;
     background-color: rgba(51, 51, 51, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     opacity: 0.7;
 
             /* レスポンシブ対応 */
@@ -148,23 +148,25 @@ header {
                 width: 100%;
                 transform: scale(0.7);
                 opacity: 0.5;
+                justify-content: space-between;
             }
-  }
-  
+}
+
   /* ナビゲーションリンクスタイル */
-  .navbar a {
+.navbar a {
     float: left;
     display: block;
     color: #f2f2f2;
     text-align: center;
     padding: 14px 20px;
     text-decoration: none;
-  }
-  
+    justify-content: space-between;
+}
+
   /* ナビゲーションリンクホバースタイル */
-  .navbar a:hover {
+.navbar a:hover {
     font-size: 120%;
-    background-color: rgba(51, 51, 51, 0.5);
+    /* background-color: rgba(51, 51, 51, 0.5); */
     color: white;
     text-shadow:
     0 0 7px #f0f2e3,
@@ -175,9 +177,37 @@ header {
     0 0 92px #13a8fe,
     0 0 102px #13e3fe,
     0 0 151px #1381fe;
-  }
+}
 
+.btn {
+    height: auto;
+    display: inline-block;
+    padding: 0.8em 3em;
+    background-color: #7fc2da; /* 背景色 */
+    box-shadow: 0 5px 0 #46c2d5; /* 影の太さ・色 */
+    border: solid 0.5px #46ced5;
+    border-radius: 10px;
+    color: #fff;
+    cursor: pointer;
+    text-decoration: none;
+    justify-content: space-between;
+    margin: 10px;
 
+        /* レスポンシブ対応 */
+        @media(max-width: 768px) {
+            height: auto; /* 高さを自動調整 */
+            width: auto;
+        }
+}
+.btn:hover {
+    color: #fff;
+    background-color: #7fd4da;
+    transform: scale(1.1);
+}
+.btn:active {
+    box-shadow: none;
+    transform: translateY(4px);
+}
 
 
 
@@ -266,7 +296,6 @@ main {
     display: flex;
     flex-direction: column;
 }
-
 }
 
 .main-title > h1 {
@@ -510,6 +539,9 @@ a > img {
 iframe {
     transform: scale(0.8);
 }
+iframe:hover {
+    transform: scale(1.0);
+}
 
 .seedtech-map {
     text-align: center;
@@ -621,7 +653,7 @@ iframe {
     color: white;
     text-align: center;
     font-weight: 900;
-    font-size: 50%;
+    font-size: 23px;
 
 /* レスポンシブ対応 */
 @media(max-width: 768px) {
@@ -635,6 +667,7 @@ iframe {
 }
 }
 
+
 .cafes > a > img{
     margin: 10px;
     transform: scale(0.9);
@@ -644,6 +677,16 @@ iframe {
 @media(max-width: 768px) {
     height: auto; /* 高さを自動調整 */
     transform: scale(0.8); /* 0.8は縮小率で調整可能 */
+}
+}
+
+.cafes > a > img:hover {
+    transform: scale(1.1);
+
+/* レスポンシブ対応 */
+@media(max-width: 768px) {
+    height: auto; /* 高さを自動調整 */
+    transform: scale(1.0); /* 0.8は縮小率で調整可能 */
 }
 }
 
@@ -693,6 +736,7 @@ iframe {
 .message > a:hover {
     background-color: rgb(0, 0, 0); /* ホバー時の背景色 */
     color:rgb(0, 255, 221);
+    transform: scale(1.2);
     text-shadow:
     0 0 7px #23fe13,
     0 0 10px #32fe13,
@@ -702,7 +746,7 @@ iframe {
     0 0 92px #13a8fe,
     0 0 102px #13e3fe,
     0 0 151px #1381fe;
-  }
+}
 
 
   /* ✅試験的に導入 */
@@ -750,14 +794,23 @@ footer {
     color: black;
     background-color: aqua;
 }
+.line:hover {
+    transform: scale(1.2);
+}
 
 .instagram {
     color: black;
     background-color: aqua;
 }
+.instagram:hover {
+    transform: scale(1.2);
+}
 
 .twitter {
     color: black;
     background-color: aqua;
+}
+.twitter:hover {
+    transform: scale(1.2);
 }
 
