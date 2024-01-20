@@ -100,8 +100,8 @@ footer > a span:nth-child(3){
 
 /* <body> */
 body {
-    height: 100%;
-    margin: 0 auto;
+    height: auto;
+    margin: auto;
 }
 
 
@@ -306,7 +306,7 @@ main {
 
 .main-title > h1 {
     /* border: solid 3px red; */
-    width: 80%;
+    width: auto;
     margin: 0 auto;
     font-size: 40px;
 
@@ -336,12 +336,12 @@ span {
 
 
 .main-title > h2 {
-    width: 70%;
+    width: auto;
     margin: 50px auto;
     /* border: solid 1px red; */
     font-size: 20px;
 
-    /* レスポンシブ対応 */
+/* レスポンシブ対応 */
 @media(max-width: 768px) {
     font-size: 15px;
     width: auto;
@@ -377,13 +377,11 @@ span {
 
 /* ✅④作成背景 */
 .concept {
-    width: 80%;
-    height: 80%;
     /* border: solid 0.1px white; */
     /* border-radius: 10%; */
     color: white;
     padding: 10%;
-    margin: 10% auto;
+    margin: 10%;
 
     /* レスポンシブ対応 */
     @media(max-width: 768px) {
