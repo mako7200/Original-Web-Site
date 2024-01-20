@@ -37,6 +37,8 @@ body {
 
   .btn {
     height: auto;
+    width: auto;
+    font-size: 10px;
     display: inline-block;
     padding: 0.8em 3em;
     background-color: #7fda80; /* 背景色 */
