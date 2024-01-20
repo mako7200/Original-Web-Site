@@ -46,3 +46,27 @@ html,body{
             padding: 5%;
         }
 }
+
+.btn {
+  height: auto;
+  display: inline-block;
+  padding: 0.8em 3em;
+  background-color: #7fda80; /* 背景色 */
+  box-shadow: 0 5px 0 #46d548; /* 影の太さ・色 */
+  border: solid 0.5px #46d548;
+  border-radius: 10px;
+  color: #fff;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.btn:hover {
+  color: #fff;
+  background-color: #7fda80;
+  transform: scale(1.1);
+}
+
+.btn:active {
+  box-shadow: none;
+  transform: translateY(4px);
+}
