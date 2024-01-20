@@ -392,8 +392,8 @@ span {
 
 /* ✅⑤写真 */
 .pictures {
-    width: 100%;
-    height: 100%;
+    width: auto;
+    height: auto;
     /* border: solid 0.1px white; */
     border-radius: 10%;
     font-size: 20px;
@@ -413,8 +413,9 @@ span {
 
 .pictures > a {
     /* border: solid 1px red; */
-    margin: 30px;
-    width: 33%;
+    margin: 5%;
+    padding-top: 5%;
+    width: auto;
     text-decoration: none;
     color: white;
     text-shadow:
@@ -431,6 +432,7 @@ span {
 /* レスポンシブ対応 */
 @media(max-width: 768px) {
     font-size: 15px;
+    padding: 5%;
     height: auto; /* 高さを自動調整 */
     width: auto;
     display: flex;
@@ -455,6 +457,21 @@ a > img {
     transform: scale(0.8); /* 0.8は縮小率で調整可能 */
 }
 }
+
+.pictures > a:hover {
+    background-color: black;
+    border-radius: 10%;
+    text-shadow:
+    0 0 7px #13e3fe,
+    0 0 10px #13e3fe,
+    0 0 21px #13e3fe,
+    0 0 42px #13bffe,
+    0 0 82px #13acfe,
+    0 0 92px #13a8fe,
+    0 0 102px #13e3fe,
+    0 0 151px #1381fe;
+}
+
 /* __________________________<メインコンテンツ（④＋⑤）>___________________________________________________________ */
 
 
@@ -476,24 +493,28 @@ a > img {
     display: flex;
     align-items: center;
     flex-direction: column;
-    margin: auto;
+    margin-bottom: 10%;
     padding: 10px;
 
     /* レスポンシブ対応 */
     @media(max-width: 768px) {
-        /* margin: 1%; */
+        padding: 5%;
         height: auto;
         width: auto;
         display: flex;
         flex-direction: column;
-        transform: scale(0.7);
+        transform: scale(0.8);
     }
+}
+
+iframe {
+    transform: scale(0.8);
 }
 
 .seedtech-map {
     text-align: center;
     /* border: solid 0.1px white; */
-    padding: 5%;
+    padding: 10%;
     margin: 5%;
     object-fit: cover;
 
@@ -504,7 +525,8 @@ a > img {
             width: auto;
             display: flex;
             flex-direction: column;
-            transform: scale(0.5);
+            padding: 20%;
+            transform: scale(0.8);
         }
 }
 
@@ -512,22 +534,22 @@ a > img {
     background-color: black;
     border-radius: 10%;
     text-shadow:
-    0 0 7px #f0f3ec,
-    0 0 10px #f2f2ec,
-    0 0 21px #f7f7f7,
-    0 0 42px #fcfcfc,
-    0 0 82px #ffffff,
-    0 0 92px #fcfeff,
-    0 0 102px #f9f9f9,
-    0 0 151px #ffffff;
+    0 0 7px #13e3fe,
+    0 0 10px #13e3fe,
+    0 0 21px #13e3fe,
+    0 0 42px #13bffe,
+    0 0 82px #13acfe,
+    0 0 92px #13a8fe,
+    0 0 102px #13e3fe,
+    0 0 151px #1381fe;
 }
 
 .dormitory-map {
     width: auto;
     text-align: center;
     /* border: solid 0.1px white; */
-    margin: 1%;
-    padding: 5%;
+    padding: 10%;
+    /* margin: 5%; */
     object-fit: cover;
 
         /* レスポンシブ対応 */
@@ -536,7 +558,8 @@ a > img {
             width: auto;
             display: flex;
             flex-direction: column;
-            transform: scale(0.5); /* 0.8は縮小率で調整可能 */
+            padding: 20%;
+            transform: scale(0.8); /* ()の数字は縮小率で調整可能 */
         }
 }
 
@@ -544,14 +567,14 @@ a > img {
     background-color: black;
     border-radius: 10%;
     text-shadow:
-    0 0 7px #f0f3ec,
-    0 0 10px #f2f2ec,
-    0 0 21px #f7f7f7,
-    0 0 42px #fcfcfc,
-    0 0 82px #ffffff,
-    0 0 92px #fcfeff,
-    0 0 102px #f9f9f9,
-    0 0 151px #ffffff;
+    0 0 7px #13e3fe,
+    0 0 10px #13e3fe,
+    0 0 21px #13e3fe,
+    0 0 42px #13bffe,
+    0 0 82px #13acfe,
+    0 0 92px #13a8fe,
+    0 0 102px #13e3fe,
+    0 0 151px #1381fe;
 }
 
 
@@ -596,13 +619,14 @@ a > img {
     width: 33%;
     text-decoration: none;
     color: white;
+    text-align: center;
     font-weight: 900;
     font-size: 50%;
 
 /* レスポンシブ対応 */
 @media(max-width: 768px) {
     border: solid 0.1px whitesmoke;
-    font-size: 15px;
+    font-size: 20px;
     width: auto;
     height: auto; /* 高さを自動調整 */
     display: flex;
@@ -611,13 +635,13 @@ a > img {
 }
 }
 
-.cafe > a > img{
+.cafes > a > img{
     margin: 10px;
+    transform: scale(0.9);
+    object-fit: cover;
 
 /* レスポンシブ対応 */
 @media(max-width: 768px) {
-    border: solid 0.1px whitesmoke;
-    width: auto;
     height: auto; /* 高さを自動調整 */
     transform: scale(0.8); /* 0.8は縮小率で調整可能 */
 }
