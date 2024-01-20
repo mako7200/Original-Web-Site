@@ -17,7 +17,7 @@ a{
 /*========= particle js を描画するエリア設定 ===============*/
 
 html,body{
-  height: 100%;/*高さを100%にして描画エリアをとる*/
+  height: auto;
 }
 
 #particles-js{ 
