@@ -101,9 +101,13 @@ footer > a span:nth-child(3){
 /* <body> */
 body {
     height: auto;
-    margin: auto;
+    /* width: 100%; */
 }
 
+html {
+    height: auto;
+    width: 100%;
+}
 
 /* メインの色、宇宙色。rgb(16, 35, 51) */
 
@@ -125,7 +129,6 @@ header {
 
         /* レスポンシブ対応 */
         @media(max-width: 768px) {
-            height: auto;
             font-weight: bold;
         }
 }
@@ -140,14 +143,18 @@ header {
     align-items: center;
     justify-content: space-between;
     opacity: 0.7;
+    transform: scale(1.0);
+
+    /* 写真を追加したから、widthを調整 */
+    width: 90%;
 
 
     /* レスポンシブ対応 */
     @media(max-width: 768px) {
-        height: auto;
-        width: auto;
-        transform: scale(0.7);
-        opacity: 0.5;
+        height: 100%;
+        width: 100%;
+        transform: scale(0.9);
+        opacity: 0.9;
         justify-content: space-between;
     }
 }
@@ -160,12 +167,27 @@ header {
     text-align: center;
     text-decoration: none;
     justify-content: space-between;
+    padding:1% 5%;
 
     /* レスポンシブ対応 */
     @media(max-width: 768px) {
         padding: 10px;
-        transform: scale(1.1);
+        margin: 0 auto;
+        transform: scale(0.8);
         justify-content: space-between;
+        font-family: 'Courier New', Courier, monospace;
+    }
+}
+
+.navbar > p > img {
+    width: 5rem;
+    height: auto;
+
+    /* レスポンシブ対応 */
+    @media(max-width: 768px) {
+        width: 2rem;
+        height: auto;
+        transform: scale(1.5);
     }
 }
 
@@ -203,6 +225,8 @@ header {
         /* レスポンシブ対応 */
         @media(max-width: 768px) {
             font-size: 15px;
+            position: relative;
+            left: 5%;
         }
 }
 .btn:hover {
@@ -541,11 +565,11 @@ a > img {
 }
 
 iframe {
+    transform: scale(0.7);
+}
+/* iframe:hover {
     transform: scale(0.8);
-}
-iframe:hover {
-    transform: scale(1.0);
-}
+} */
 
 .seedtech-map {
     text-align: center;
@@ -562,7 +586,7 @@ iframe:hover {
             display: flex;
             flex-direction: column;
             padding: 20%;
-            transform: scale(0.8);
+            transform: scale(0.7);
         }
 }
 
@@ -595,7 +619,7 @@ iframe:hover {
             display: flex;
             flex-direction: column;
             padding: 20%;
-            transform: scale(0.8); /* ()の数字は縮小率で調整可能 */
+            transform: scale(0.7); /* ()の数字は縮小率で調整可能 */
         }
 }
 
@@ -685,12 +709,12 @@ iframe:hover {
 }
 
 .cafes > a > img:hover {
-    transform: scale(1.1);
+    transform: scale(0.9);
 
 /* レスポンシブ対応 */
 @media(max-width: 768px) {
     height: auto; /* 高さを自動調整 */
-    transform: scale(1.0); /* 0.8は縮小率で調整可能 */
+    transform: scale(0.9); /* 0.8は縮小率で調整可能 */
 }
 }
 
@@ -780,18 +804,27 @@ footer {
 /* レスポンシブ対応 */
 @media(max-width: 768px) {
     font-size: 15px;
+    font-family: 'Courier New', Courier, monospace;
     padding: 10%;
     height: auto; /* 高さを自動調整 */
     display: flex;
     flex-direction: column;
+    align-items: center;
 }
 }
 
-.footer > a {
+footer > a {
     font-size: 15px;
     background-color: black;
     margin-right: 20px;
     text-align: center;
+
+    /* レスポンシブ対応 */
+    @media(max-width: 768px) {
+        transform: scale(0.8);
+        margin: 10px;
+        padding: 5%;
+    }
 }
 
 .line {
