@@ -51,22 +51,24 @@ html,body{
   height: auto;
   display: inline-block;
   padding: 0.8em 3em;
-  background-color: #7fda80; /* 背景色 */
-  box-shadow: 0 5px 0 #46d548; /* 影の太さ・色 */
-  border: solid 0.5px #46d548;
+  background-color: #323966; /* 背景色 */
+  box-shadow: 0 5px 0 #3e4885; /* 影の太さ・色 */
+  border: solid 0.5px #4753a2;
   border-radius: 10px;
   color: #fff;
   cursor: pointer;
   text-decoration: none;
+  transform: scale(0.7);
 }
 
 .btn:hover {
   color: #fff;
-  background-color: #7fda80;
-  transform: scale(1.1);
+  background-color: #3b4379;
+  transform: scale(0.8);
 }
 
 .btn:active {
   box-shadow: none;
   transform: translateY(4px);
+  transform: scale(0.9);
 }

@@ -2,22 +2,82 @@
     height: auto;
     display: inline-block;
     padding: 0.8em 3em;
-    background-color: #7fda80; /* 背景色 */
-    box-shadow: 0 5px 0 #46d548; /* 影の太さ・色 */
-    border: solid 0.5px #46d548;
+    background-color: #081690; /* 背景色 */
+    box-shadow: 0 5px 0 #15056e; /* 影の太さ・色 */
+    border: solid 0.5px #110560;
     border-radius: 10px;
     color: #fff;
     cursor: pointer;
     text-decoration: none;
+    transform: scale(0.9);
 }
 
 .btn:hover {
     color: #fff;
-    background-color: #7fda80;
-    transform: scale(1.1);
+    background-color: #252fa2;
+    transform: scale(1.0);
 }
 
 .btn:active {
     box-shadow: none;
     transform: translateY(4px);
+}
+
+/*== 🔵🔵🔵無限に波紋が広がる */
+
+.btnripple2{
+    /*波紋の基点とするためrelativeを指定*/
+	position: relative;
+    /*波紋の形状*/
+	display:inline-block;
+	/* background:#333; */
+	width:100px;
+	height:100px;
+	border-radius: 50%;
+	/* color:#ccc; */
+    outline: none;
+    /*アニメーションの設定*/
+    transition: all .3s;
+    z-index: -1;
+}
+
+/*hoverした際の背景色の設定*/
+/* .btnripple2:hover{
+	background:#666;	
+} */
+
+/*波形を2つ設定*/
+.btnripple2::after,
+.btnripple2::before {
+    content: '';
+    /*絶対配置で波形の位置を決める*/
+    position: absolute;
+    left: -25%;
+    top: -25%;
+    /*波形の形状*/
+    border: 0.5px solid #086e90;
+    /* border: 0.5px solid #363d61; */
+    width: 150%;
+    height: 150%;
+    border-radius: 50%;
+    /*はじめは不透明*/
+    opacity: 0.8;
+    /*波形の広がる速度を調整*/
+    animation:10s circleanime linear infinite;
+}
+
+/*波形の2つ目は5.0秒遅らせてアニメーション*/
+.btnripple2::before {
+    animation-delay:5.0s; 
+}
+
+/*波形のアニメーション*/
+@keyframes circleanime{
+	0%{
+	transform: scale(0.68);
+	}
+	100%{
+	transform: scale(5.0);
+	opacity: 0;
+	}
 }

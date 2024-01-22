@@ -1,4 +1,5 @@
 
+
 /* 🟥以下は試験的に記述（ネオン色）ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー */
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
 
@@ -468,6 +469,63 @@ span {
 
 
 
+/*== 🔵🔵🔵無限に波紋が広がる */
+
+.btnripple2{
+    /*波紋の基点とするためrelativeを指定*/
+	position: relative;
+    /*波紋の形状*/
+	display:inline-block;
+	/* background:#333; */
+	width:100px;
+	height:100px;
+	border-radius: 50%;
+	/* color:#ccc; */
+    outline: none;
+    /*アニメーションの設定*/
+    transition: all .3s;
+}
+
+/*hoverした際の背景色の設定*/
+/* .btnripple2:hover{
+	background:#666;	
+} */
+
+/*波形を2つ設定*/
+.btnripple2::after,
+.btnripple2::before {
+    content: '';
+    /*絶対配置で波形の位置を決める*/
+    position: absolute;
+    left: -25%;
+    top: -25%;
+    /*波形の形状*/
+    border: 0.5px solid #086e90;
+    /* border: 0.5px solid #363d61; */
+    width: 150%;
+    height: 150%;
+    border-radius: 50%;
+    /*はじめは不透明*/
+    opacity: 0.8;
+    /*波形の広がる速度を調整*/
+    animation:10s circleanime linear infinite;
+}
+
+/*波形の2つ目は5.0秒遅らせてアニメーション*/
+.btnripple2::before {
+    animation-delay:5.0s; 
+}
+
+/*波形のアニメーション*/
+@keyframes circleanime{
+	0%{
+	transform: scale(0.68);
+	}
+	100%{
+	transform: scale(5.0);
+	opacity: 0;
+	}
+}
 
 
 
@@ -892,7 +950,7 @@ footer {
 /* レスポンシブ対応 */
 @media(max-width: 768px) {
     font-size: 15px;
-    font-family: 'Courier New', Courier, monospace;
+    /* font-family: 'Courier New', Courier, monospace; */
     /* padding: 10%; */
     height: auto; /* 高さを自動調整 */
     display: flex;
