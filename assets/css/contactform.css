@@ -2,62 +2,76 @@
 body {
   background-color: rgb(16, 35, 51);
   font-weight: bold;
+  font-family: serif;
 }
 
 .container {
-    width: 50%;
-    margin: auto;
-    padding-top: 10%;
-    color: white;
-  }
-  
-  input[type=text], select, textarea {
-    width: 100%;
-    padding: 12px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-    margin-top: 6px;
-    margin-bottom: 16px;
-  }
-  
-  input[type=submit] {
-    background-color: #4CAF50;
-    color: white;
-    padding: 12px 20px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-  }
-  
-  input[type=submit]:hover {
-    background-color: #45a049;
-  }
+  width: 50%;
+  margin: auto;
+  padding-top: 10%;
+  color: white;
+}
+
+/* body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+} */
 
 
-  .btn {
-    height: auto;
-    width: auto;
-    font-size: 10px;
-    display: inline-block;
-    padding: 0.8em 3em;
-    background-color: #7fda80; /* 背景色 */
-    box-shadow: 0 5px 0 #46d548; /* 影の太さ・色 */
-    border: solid 0.5px #46d548;
-    border-radius: 10px;
-    color: #fff;
-    cursor: pointer;
-    text-decoration: none;
+form {
+  max-width: 400px;
+  margin: auto;
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 16px;
+  box-sizing: border-box;
+}
+
+button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+
+.btn {
+  height: auto;
+  width: auto;
+  font-size: 10px;
+  display: inline-block;
+  padding: 0.8em 3em;
+  background-color: #7fda80; /* 背景色 */
+  box-shadow: 0 5px 0 #46d548; /* 影の太さ・色 */
+  border: solid 0.5px #46d548;
+  border-radius: 10px;
+  color: #fff;
+  cursor: pointer;
+  text-decoration: none;
 }
 
 .btn:hover {
-    color: #fff;
-    background-color: #7fda80;
-    transform: scale(1.1);
+  color: #fff;
+  background-color: #7fda80;
+  transform: scale(1.1);
 }
 
 .btn:active {
-    box-shadow: none;
-    transform: translateY(4px);
+  box-shadow: none;
+  transform: translateY(4px);
 }
 
