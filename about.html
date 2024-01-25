@@ -1,16 +1,91 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ja">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./assets/css/about.css">
-    <title>About</title>
-    <!-- 波紋のアニメーション -->
-    <link rel="stylesheet" type="text/css" href="css/7-1-12.css">
+<meta charset="utf-8">
+<title>About</title>
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<!-- リセットCSS読み込み -->
+<link rel="stylesheet" href="./assets/css/reset.css">
+<!-- CSS読み込み -->
+<link rel="stylesheet" href="./assets/css/about.css">
+<title>About</title>
+<!-- 波紋のアニメーション -->
+<link rel="stylesheet" type="text/css" href="css/7-1-12.css">
+<!--==============レイアウトを制御する独自のCSSを読み込み===============-->
+<link rel="stylesheet" type="text/css" href="http://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/move02/5-16/css/5-16.css">
 </head>
 <body>
-    <h1>About</h1>
-    <a href="./index.html" class="btn">ホームに戻る</a>
-    <p class="btnripple2"><span></span></p>
+
+    <div class="about">
+        <h1>About<p class="btnripple2"><span></span></p></h1>
+        <h3>個人の感想</h3>
+
+        <ul class="li">
+            <h4>1ヶ月目<hr></h4>
+            <p>「ソダテク動画」をひたすら進める期間。<br>
+                最初の1ヶ月でソダテクの「IT留学」の項目を全て終わらせられると良い。<br>
+                ミニチーム開発では、チーム開発が始まるので、できればそれまでに個人のソダテク学習は終わらせておきたい。
+                <p><br></p>
+            </p>
+        </ul>
+        
+        <ul class="li">
+            <h4>2ヶ月目<hr></h4>
+            <p>「ミニチーム開発」メインの期間。<br>
+                最初の1ヶ月でソダテクの「IT留学」の項目を全て終わらせられると良い。<br>
+                ToDoリストを作成するために、GitHubを使ってチーム開発をする。
+                <p><br></p>
+        </ul>
+        
+        <ul class="li">
+            <h4>3ヶ月目<hr></h4>
+            <p>「チーム開発」メインの期間。<br>
+                最終プレゼンに向けて、チーム開発に全振りする生活。<br>
+                <p><br></p>
+        </ul>
+
+
+
+        <div id="wrapper">
+
+            <div class="message">
+                <p class="btnripple2"><span></span></p>
+                <h3>後輩たちへ<hr></h3>
+                <p>
+                    <br>
+                    まずは、ソダテクの動画学習をすると思います。
+                    進捗スピードは人それぞれですが、なるべく早い方が良いです。
+                    最初の1ヶ月で動画を全て見終わるくらいのペースが理想です。
+                    <br>
+                </p>
+                <div class="return">
+                    <a href="./index.html" class="btn">ホームに戻る</a>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- <canvas height="150" width="100%" style="position: absolute; bottom: 0px; left: 0px;"></canvas> -->
+
+        <footer>
+            <p>&copy; 2024 Hiroya Komatsu</p>
+        </footer>
+
+
+
+    </div>
+
+
+
+
+
+
+
+
+
+<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="  crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js" integrity="sha256-T0Vest3yCU7pafRw9r+settMBX6JkKN06dqBnpQ8d30=" crossorigin="anonymous"></script>
+<script src="http://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/move02/5-16/js/raindrops.js"></script>
+<script src="http://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/move02/5-16/js/5-16.js"></script>
 </body>
 </html>
