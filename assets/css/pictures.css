@@ -37,26 +37,51 @@ html, body {
     height: 100%;
 }
 
+.pictures {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 40px 70px;
+    
+    /* レスポンシブ対応 */
+    @media (max-width:768px) {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin: 20px;
+    }
+}
 
+.photo-box {
+    width: calc(33.33% - 23.33px); /* 3つの要素が横並びで表示されるように幅を設定 */
+    margin-bottom: 40px; /* 各要素の下に40pxのマージンを追加 */
+    position: relative;
 
+    /* レスポンシブ対応 */
+    @media (max-width: 768px) {
+        width: calc(30% - 1px);
+        margin-bottom: 10px;
+        font-size: 10px;
+        }
+}
 
-.pictures > img {
+.photo-box > img {
     /* border: solid 1px red; */
-    width: 10%;
+    width: 100%;
     height: auto;
     object-fit: cover;
-    border-radius: 5%;
-    transform: scale(1); /* 0.8は縮小率で調整可能 */
-
-/* レスポンシブ対応 */
-@media(max-width: 768px) {
-    font-size: 5px;
-    width: 20%;
-    height: auto; /* 高さを自動調整 */
-    display: flex;
-    flex-direction: column;
-    transform: scale(1); /* 0.8は縮小率で調整可能 */
+    border-radius: 50%;
+    position: relative;
 }
+
+.photo-box > img:active {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 0%;
+    transform: scale(1.3);
+    align-items: center;
+    z-index: 1;
 }
 
 
