@@ -10,16 +10,16 @@ particlesJS("particles-js", {
       }
     },
     "color": {
-      "value": "#F6FF00"
+      "value": "00ffff"
     },
     "shape": {
-      "type": "image",//形状は画像を指定
+      "type": "circle",//形状は画像を指定
       "stroke": {
         "width": 3,
-        "color": "#F6FF00"
+        "color": "#00ffff"
       },
       "image": {
-        "src": "http://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/move02/5-5/img/snow.png",//画像を指定
+        "src": "./assets/img/白.jpg",//画像を指定
         "width": 120,
         "height": 120
       }
