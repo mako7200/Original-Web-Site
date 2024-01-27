@@ -5,7 +5,8 @@
 html, body {
     width: auto;
     height: 100%;
-    margin: auto;
+    margin: 0 auto;
+    padding: 0 auto;
     /* color: white; */
     font-family: serif;
 }
@@ -32,12 +33,14 @@ html, body {
 .about > h1 {
     /* border: red solid 2px; */
     padding: 5%;
+    margin: 0 auto;
     color: gray;
 }
 
 .about > h3 {
     color: rgb(43, 62, 82);
     text-align: center;
+    margin: 0 auto;
 }
 
 .pictures {
