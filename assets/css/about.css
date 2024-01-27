@@ -7,6 +7,21 @@ html, body {
     color: white;
 }
 
+
+/* 背景色が変化するアニメーション */
+body {
+    animation: bgchange 10s ease infinite;/*変化の時間を変更したい場合は20sの部分を好きな時間に変更*/
+}
+
+    @keyframes bgchange{
+        0%   {background:rgb(16, 35, 51);}
+        25%  {background:rgb(13, 32, 48);}
+        50%  {background:rgb(10, 29, 45);}
+        75%  {background:rgb(7, 26, 42);}
+        90%  {background:rgb(4, 23, 39);}
+        100% {background:rgb(1, 20, 36);}
+    }
+
 .about > h1 {
     font-size: 200%;
     padding: 22px;

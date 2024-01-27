@@ -50,7 +50,7 @@ particlesJS("particles-js", {
     "move": {
       "enable": true,
       "speed": 1,//この数値を小さくするとゆっくりな動きになる
-      "direction": "top",//下に向かって落ちる
+      "direction": "top",//上に向かって落ちる（下はbottom）
       "random": true,//動きはランダム
       "straight": false,//動きをとどめない
       "out_mode": "out",//画面の外に出るように描写

@@ -1,34 +1,41 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ja">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>お問い合わせフォーム</title>
-    <link rel="stylesheet" href="./assets/css/contactform.css">
+<meta charset="utf-8">
+<title>Contact</title>
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<!-- CSSの読み込み -->
+<link rel="stylesheet" href="./assets/css/reset.css">
+<link rel="stylesheet" href="./assets/css/contactform.css">
+<!--==============レイアウトを制御する独自のCSSを読み込み（雪が降る背景）===============-->
+<link rel="stylesheet" type="text/css" href="http://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/move02/5-5/css/reset.css">
+<!--==============レイアウトを制御する独自のCSSを読み込み(色が変わる背景)===============-->
+<link rel="stylesheet" type="text/css" href="http://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/move02/5-1/css/5-1.css">
 </head>
 
-
-
 <body>
+  <div id="particles-js"></div>
+  
+  <div class="contact">
+      <h1>Contact</h1>
+      <h3> My Profile </h3><br>
+  
+      <div id="wrapper">
 
-<div class="container">
-  <h2>お問い合わせフォーム</h2>
-
-  <form action="process_form.php" method="post">
-      <label for="name">お名前:</label>
-      <input type="text" id="name" name="name" required>
-
-      <label for="email">メールアドレス:</label>
-      <input type="email" id="email" name="email" required>
-
-      <label for="message">お問い合わせ内容:</label>
-      <textarea id="message" name="message" rows="4" required></textarea>
-
-      <button type="submit">送信</button>
-  </form>
-  <br>
-  <a href="./index.html" class="btn">ホームに戻る</a>
-</div>
-
-</body>
-</html>
+      </div>
+  
+      <div class="return">
+          <a href="./index.html" class="btn">Home</a>
+      </div>
+  
+  </div>
+  
+  
+  
+  <!-- 雪が降る背景のJS -->
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+  <script src="http://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/move02/5-5/js/5-5.js"></script>
+  <!-- JS -->
+  <script src="./assets/js/contactform.js"></script>
+  </body>
+  </html>

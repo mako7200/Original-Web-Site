@@ -1,77 +1,106 @@
 
-body {
-  background-color: rgb(16, 35, 51);
-  font-weight: bold;
+html, body {
+  width: auto;
+  height: 100%;
+  margin: 0 auto;
+  padding: 0 auto;
+  /* color: white; */
   font-family: serif;
 }
 
-.container {
-  width: 50%;
-  margin: auto;
-  padding-top: 10%;
-  color: white;
+/* 背景の色が時間で変わる */
+h2{
+  animation: bgchange 10s ease infinite;/*変化の時間を変更したい場合は20sの部分を好きな時間に変更*/
 }
 
-/* body {
-  font-family: Arial, sans-serif;
-  margin: 20px;
-} */
-
-
-form {
-  max-width: 400px;
-  margin: auto;
+@keyframes bgchange{
+      0%   {background:#000000;}
+      25%  {background:#000000;}
+      50%  {background:#24100c;}
+      75%  {background:#2e2e0b;}
+      90%  {background:#131313;}
+      100% {background:#0c0b0a;}
 }
 
-label {
-  display: block;
-  margin-bottom: 8px;
+#particles-js{ 
+  position:fixed;/*描画固定*/
+  z-index:-1;/*描画を一番下に*/
+  width: auto;
+  height: 100%;
+  background-color: rgb(0, 0, 0);/*背景色*/
 }
 
-input, textarea {
-  width: 100%;
-  padding: 8px;
-  margin-bottom: 16px;
-  box-sizing: border-box;
+#wrapper{
+  position: relative;/*描画を#particles-jsよりも上にするためposition:relative;を指定*/
+  z-index: 1;/*z-indexの数字を大きくすることで描画を#particles-jsよりも上に*/
+  width:auto;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align:center;
 }
 
-button {
-  background-color: #4CAF50;
-  color: white;
-  padding: 10px 15px;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
+
+.contact > h1 {
+  /* border: red solid 2px; */
+  padding: 5%;
+  margin: 0 auto;
+  color: gray;
+  font-size: 200%;
 }
 
-button:hover {
-  background-color: #45a049;
+.contact > h3 {
+  color: rgb(43, 62, 82);
+  text-align: center;
+  margin: 0 auto;
+  padding: 10px ;
 }
 
+
+
+
+/* ホームに戻る */
+.return > a {
+  position: fixed;
+  top: 30px;
+  right: 3%;
+  text-align: center;
+  width: 20%;
+  z-index: 1; /* 必要に応じてz-indexを設定 */
+  opacity: 0.7;
+
+  @media (max-width: 768px) {
+      width: auto;
+      height: auto;
+      top: 20px;
+      right: 0;
+      font-size: 10px;
+      opacity: 0.6;
+  }
+}
 
 .btn {
   height: auto;
-  width: auto;
-  font-size: 10px;
   display: inline-block;
   padding: 0.8em 3em;
-  background-color: #7fda80; /* 背景色 */
-  box-shadow: 0 5px 0 #46d548; /* 影の太さ・色 */
-  border: solid 0.5px #46d548;
+  background-color: #3e4885; /* 背景色 */
+  box-shadow: 0 5px 0 #323966; /* 影の太さ・色 */
+  /* border: solid 0.5px #4753a2; */
   border-radius: 10px;
   color: #fff;
   cursor: pointer;
   text-decoration: none;
+  transform: scale(0.9);
 }
 
 .btn:hover {
   color: #fff;
-  background-color: #7fda80;
-  transform: scale(1.1);
+  background-color: #252fa2;
+  transform: scale(1.0);
 }
 
 .btn:active {
   box-shadow: none;
   transform: translateY(4px);
 }
-
