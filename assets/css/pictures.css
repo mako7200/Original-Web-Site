@@ -1,14 +1,4 @@
 
-/*========= レイアウトのためのCSS ===============*/
-
-#wrapper{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align:center;
-}
-
-
 
 /*========= particle js を描画するエリア設定 ===============*/
 
@@ -23,7 +13,7 @@ html, body {
 #particles-js{ 
     position:fixed;/*描画固定*/
     z-index:-1;/*描画を一番下に*/
-    width: 100%;
+    width: auto;
     height: 100%;
     background-color: rgb(16, 35, 51);/*背景色*/
 }
@@ -31,12 +21,17 @@ html, body {
 #wrapper{
     position: relative;/*描画を#particles-jsよりも上にするためposition:relative;を指定*/
     z-index: 1;/*z-indexの数字を大きくすることで描画を#particles-jsよりも上に*/
-    width:100%;
+    width:auto;
     height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align:center;
 }
 
 .about > h1 {
-    padding: 20px;
+    /* border: red solid 2px; */
+    padding: 5%;
     color: gray;
 }
 
