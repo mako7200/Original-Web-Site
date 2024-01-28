@@ -1,9 +1,9 @@
 
 
 
-// 水滴のアニメーション
+//【背景の動き】水滴がポタポタ落ちるアニメーション
 
-jQuery('#wrapper').raindrops(//指定したエリアに描画
+jQuery('#wrapper').raindrops(
   {
     color:'#A5D2DA',//水の色を指定
     canvasHeight:150, //canvasの高さを指定。初期値は親の高さの50%。

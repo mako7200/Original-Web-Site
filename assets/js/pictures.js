@@ -1,5 +1,5 @@
 
-//【動く背景】雪が舞うアニメーション
+//【背景の動き】雪が降るアニメーション
 particlesJS("particles-js", {
   "particles": {
     "number": {

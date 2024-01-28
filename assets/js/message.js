@@ -1,5 +1,6 @@
 
 
+//【背景の動き】幾何学模様のアニメーション
 particlesJS("particles-js",{
     "particles":{
       "number":{
