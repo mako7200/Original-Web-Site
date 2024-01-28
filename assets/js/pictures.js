@@ -10,16 +10,16 @@ particlesJS("particles-js", {
       }
     },
     "color": {
-      "value": "00ffff"
+      "value": "#F6FF00"//中心の色を指定
     },
     "shape": {
       "type": "circle",//形状は画像を指定
       "stroke": {
         "width": 3,
-        "color": "#00ffff"
+        "color": "#F6FF00"//外側の色を指定
       },
       "image": {
-        "src": "./assets/img/白.jpg",//画像を指定
+        "src": "./assets/img/黄.jpg",//画像を指定
         "width": 120,
         "height": 120
       }
@@ -57,7 +57,7 @@ particlesJS("particles-js", {
       "bounce": false,//跳ね返りなし
       "attract": {
         "enable": true,
-        "rotateX": 300,
+        "rotateX": 500,
         "rotateY": 1200
       }
     }

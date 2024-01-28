@@ -17,3 +17,16 @@ jQuery('#wrapper').raindrops(//指定したエリアに描画
 
 
 
+//アイコンを切り替える。
+document.addEventListener("DOMContentLoaded", function() {
+  var imageSwitch = document.querySelector('.image-switch');
+  var images = ['./assets/img/4.jpg', './assets/img/11.jpg', './assets/img/26.jpg'];
+  var currentIndex = 0;
+
+  function changeImage() {
+      imageSwitch.src = images[currentIndex];
+      currentIndex = (currentIndex + 1) % images.length;
+  }
+
+  setInterval(changeImage, 5000); // 5秒ごとに画像を切り替える
+});

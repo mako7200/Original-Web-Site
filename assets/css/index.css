@@ -145,7 +145,6 @@ header {
     /* 写真を追加したから、widthを調整 */
     width: 90%;
 
-
     /* レスポンシブ対応 */
     @media(max-width: 768px) {
         height: 100%;
@@ -179,21 +178,32 @@ header {
     }
 }
 
-.navbar > p > img {
+
+.navbar > img {
     width: 4rem;
     height: 4rem;
     object-fit: cover;
     border-radius: 50%; /* 正方形にクリップした後、半径50%で円形にする */
+    animation: changeImage 5s infinite; /*5秒ごとにアイコンが切り替わる*/
 
     /* レスポンシブ対応 */
     @media(max-width: 768px) {
-        transform: scale(2.0);
+        transform: scale(3.0);
         width: 1rem;
         height: 1rem;
-        object-fit: cover;
-        border-radius: 50%; /* 正方形にクリップした後、半径50%で円形にする */
     }
 }
+
+.image-switch {
+    animation: changeImage 5s infinite; /*5秒ごとにアイコンが切り替わる*/
+}
+
+@keyframes changeImage {
+    0% { image: url('./assets/img/4.jpg'); }
+    50% { image: url('./assets/img/11.jpg'); }
+    100% { image: url('./assets/img/26.jpg'); }
+}
+
 
   /* ナビゲーションリンクホバースタイル */
 .navbar a:hover {
@@ -471,8 +481,8 @@ span {
     /*波紋の形状*/
 	display:inline-block;
 	/* background:#333; */
-	width:100px;
-	height:100px;
+	width:50px;
+	height:50px;
 	border-radius: 50%;
 	/* color:#ccc; */
     outline: none;
@@ -494,7 +504,7 @@ span {
     left: -25%;
     top: -25%;
     /*波形の形状*/
-    border: 0.5px solid #086e90;
+    border: 0.5px solid #03ffea;
     /* border: 0.5px solid #363d61; */
     width: 150%;
     height: 150%;
@@ -507,7 +517,7 @@ span {
 
 /*波形の2つ目は5.0秒遅らせてアニメーション*/
 .btnripple2::before {
-    animation-delay:5.0s; 
+    animation-delay:7.0s; 
 }
 
 /*波形のアニメーション*/
@@ -625,7 +635,9 @@ span {
     0 0 92px #13a8fe,
     0 0 102px #13e3fe,
     0 0 151px #1381fe;
-/*     border: 1px solid red; */
+
+/* マーカーがマウスイベントを受け取らないようにする */
+    pointer-events: none;
 
 /* レスポンシブ対応 */
 @media(max-width: 768px) {
@@ -683,40 +695,36 @@ a > img {
 
 /* ✅⑥地図の埋め込み */
 .maps {
+    /* border: solid 1px red; */
     height: auto;
     width: auto;
-    /* border: solid 1px red; */
     color: white;
     font-size: 25px;
     display: flex;
     align-items: center;
     flex-direction: column;
-    margin-bottom: 10%;
-    padding: 10px;
+    padding: 50px;
+    margin-bottom: 500px;
 
     /* レスポンシブ対応 */
     @media(max-width: 768px) {
         padding: 5%;
-        height: auto;
-        width: auto;
         display: flex;
         flex-direction: column;
-        transform: scale(0.8);
+        margin-bottom: 10px;
     }
 }
 
 iframe {
     transform: scale(0.7);
 }
-/* iframe:hover {
-    transform: scale(0.8);
-} */
+
 
 .seedtech-map {
     text-align: center;
     /* border: solid 0.1px white; */
-    padding: 10%;
-    margin: 5%;
+    /* padding: 10%; */
+    
     object-fit: cover;
 
         /* レスポンシブ対応 */
@@ -726,8 +734,7 @@ iframe {
             width: auto;
             display: flex;
             flex-direction: column;
-            padding: 20%;
-            transform: scale(0.7);
+            transform: scale(0.5);
         }
 }
 
@@ -749,7 +756,7 @@ iframe {
     width: auto;
     text-align: center;
     /* border: solid 0.1px white; */
-    padding: 10%;
+    /* padding: 10%; */
     /* margin: 5%; */
     object-fit: cover;
 
@@ -759,8 +766,8 @@ iframe {
             width: auto;
             display: flex;
             flex-direction: column;
-            padding: 20%;
-            transform: scale(0.7); /* ()の数字は縮小率で調整可能 */
+            /* padding: 20%; */
+            transform: scale(0.5); /* ()の数字は縮小率で調整可能 */
         }
 }
 
@@ -815,24 +822,24 @@ iframe {
 .cafes > a {
     /* border: solid 0.1px white; */
     border-radius: 10%;
-    margin: 20px;
+    margin: 10px;
     padding: 5%;
     width: 33%;
     text-decoration: none;
     color: white;
     text-align: center;
-    font-weight: 900;
     font-size: 23px;
+    line-height: 1.5;
 
 /* レスポンシブ対応 */
 @media(max-width: 768px) {
-    border: solid 0.1px rgb(0, 183, 255);
-    font-size: 20px;
+    font-size: 15px;
     width: auto;
     height: auto; /* 高さを自動調整 */
     display: flex;
     flex-direction: column;
-    transform: scale(0.8); /* 0.8は縮小率で調整可能 */
+    transform: scale(0.6); /* 0.8は縮小率で調整可能 */
+    margin: 1px;
 }
 }
 
@@ -845,19 +852,9 @@ iframe {
 /* レスポンシブ対応 */
 @media(max-width: 768px) {
     height: auto; /* 高さを自動調整 */
-    transform: scale(0.8); /* 0.8は縮小率で調整可能 */
 }
 }
 
-.cafes > a > img:hover {
-    transform: scale(0.9);
-
-/* レスポンシブ対応 */
-@media(max-width: 768px) {
-    height: auto; /* 高さを自動調整 */
-    transform: scale(0.9); /* 0.8は縮小率で調整可能 */
-}
-}
 
 /* ✅⑧最後のメッセージ */
 .message {

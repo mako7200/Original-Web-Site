@@ -11,16 +11,16 @@ particlesJS("particles-js", {
         }
       },
       "color": {
-        "value": "#F6FF00"
+        "value": "#e0ffff"
       },
       "shape": {
-        "type": "circle",//形状は画像を指定
+        "type": "circle",   //形状は画像を指定
         "stroke": {
           "width": 3,
-          "color": "#F6FF00"
+          "color": "#e0ffff"
         },
         "image": {
-          "src": "./assets/img/黄.jpg",//画像を指定
+          "src": "./assets/img/白.jpg",   //画像を指定
           "width": 120,
           "height": 120
         }
@@ -50,15 +50,15 @@ particlesJS("particles-js", {
       },
       "move": {
         "enable": true,
-        "speed": 1,//この数値を小さくするとゆっくりな動きになる
-        "direction": "top",//上に向かって落ちる（下はbottom）
+        "speed": 0.5,//この数値を小さくするとゆっくりな動きになる
+        "direction": "bottom",//落ちる方向（上はtop・下はbottom）
         "random": true,//動きはランダム
         "straight": false,//動きをとどめない
         "out_mode": "out",//画面の外に出るように描写
         "bounce": false,//跳ね返りなし
         "attract": {
           "enable": true,
-          "rotateX": 300,
+          "rotateX": 1200,
           "rotateY": 1200
         }
       }

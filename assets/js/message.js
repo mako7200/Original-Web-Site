@@ -3,7 +3,7 @@
 particlesJS("particles-js",{
     "particles":{
       "number":{
-        "value":38,//この数値を変更すると幾何学模様の数が増減できる
+        "value":50,//この数値を変更すると幾何学模様の数が増減できる
         "density":{
           "enable":true,
           "value_area":800
@@ -18,7 +18,7 @@ particlesJS("particles-js",{
           "width":0,
         },
     "polygon":{
-      "nb_sides":3//多角形の角の数
+      "nb_sides":6//多角形の角の数
     },
     "image":{
       "width":190,
@@ -54,7 +54,7 @@ particlesJS("particles-js",{
       },
       "move":{
         "enable":true,
-        "speed":1,//この数値を小さくするとゆっくりな動きになる
+        "speed":2,//この数値を小さくするとゆっくりな動きになる
         "direction":"none",//方向指定なし
         "random":false,//動きはランダムにしない
         "straight":false,//動きをとどめない

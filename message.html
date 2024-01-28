@@ -7,8 +7,10 @@
 <!--CSSの読み込み -->
 <link rel="stylesheet" href="./assets/css/reset.css">
 <link rel="stylesheet" href="./assets/css/message.css">
-<!--==============レイアウトを制御する独自のCSSを読み込み===============-->
-<link rel="stylesheet" type="text/css" href="http://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/move02/5-4/css/reset.css">
+<!--==============レイアウトを制御する独自のCSSを読み込み(動く背景：幾何学模様)===============-->
+<link rel="stylesheet" type="text/css" href="http://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/move02/5-4/css/5-4.css">
+<!--==============レイアウトを制御する独自のCSSを読み込み(色が変わる背景)===============-->
+<link rel="stylesheet" type="text/css" href="http://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/move02/5-1/css/5-1.css">
 </head>
 
 
@@ -17,27 +19,44 @@
 
 <body>
 
-    <div id="particles-js"></div>
+  <div id="particles-js"></div>
 
-    <div class="title">
+  <div class="message">
       <h1>Message</h1>
-    </div>
+      <h3>【メッセージ】</h3>
+      
+      <div id="wrapper">
 
-    <div id="wrapper">
-        <p>最後に、私からのメッセージをお届けします。<br> <br>これから私がお話しすることは、私がセブ島に来て <strong>実際に感じたこと</strong>です。
-    <br> <br>ほんの少しでも、あなたの参考になれば幸いです。<br> <br>セブ島に来て、まず感じたことは「暑い」「汚い」「貧しい人が多い」でした。
-    <br> <br>言わずもがなですが、<strong>経験は一生の宝物</strong>です。<br> <br>知っているのと、実際に経験してみるのとでは、天と地ほどの差があります。
-    <br> <br>このIT留学が、人生のターニングポイントになる可能性は大いにあります。<br> <br>なぜなら、<strong>今までの価値観がぶっ壊れる</strong>からです。
-    <br> <br>セブ島に来たことがない人、海外に初めて来る人などは、特にそれを感じるはずです。<br> <br>どれだけ日本という国が素晴らしいのかを、身をもって実感するはずです。
-    <br> <br>幸せとは一体なんなのか、今一度あなたは考えるはずです。<br> <br>幸せとは、感じるものであり、非常に主観的です。
-    <br> <br>仲間と一緒に、同じ目標に向かって努力できる環境は、幸せですか？<br> <br><strong>幸せを決めるのは、いつもあなた自身です。</strong>
-    <br> <br>何事も、<strong>自分で決めつけている</strong>に過ぎないのです。<br> <br>今こうして誰かにメッセージを伝えられることが、非常に幸せです。
-    <br> <br>ここまで読んでくださり、ありがとうございました。<br> <br> <br> <br>70期 : 小松啓也 (Hiroya Komatsu)</p><br>
-    </div>
+        <div class="message-area">
+          <h5>最後に、私からのメッセージです。
+            <br>これからお話しすることは、私がセブ島に来て<i class="highlight-marker">実際に感じたこと</i>です。
+            ほんの少しでも、あなたの参考になれば幸いです。
+            セブ島に来て、まず感じたことは「暑い」「汚い」「貧しい人が多い」でした。
+            言わずもがなですが、<i class="highlight-marker">経験は一生の宝</i>です。
+            知っているのと、実際に経験してみるのとでは、天と地ほどの差があります。
+            このIT留学が、人生のターニングポイントになる可能性は大いにあります。
+            なぜなら、<i class="highlight-marker">今までの価値観がぶっ壊れる</i>からです。
+            セブ島に来たことがない人、海外に初めて来る人などは、特にそれを感じるはずです。
+            日本という国の素晴らしさに気づくはずです。
+            「幸せ」とは一体なんなのでしょうか。
+            「幸せになる」のではなく<i class="highlight-marker">「幸せを感じる」</i>のです。
+            私は、目標に向かい努力できる環境に幸せを感じます。
+            そういった身近な幸せを見つけて、感じてください。噛み締めてください。
+            <br>
+            
+            <div class="name-area">
+              <br>70期 : 小松啓也 (Hiroya Komatsu)
+            </div>
+          </h5>
+        </div>
 
-    <div class="return">
-      <a href="./index.html" class="btn">Home</a><br>
-    </div>
+      </div>
+
+      <div class="return">
+        <a href="./index.html" class="btn">Home</a><br>
+      </div>
+
+  </div>
 
 
 
@@ -49,10 +68,10 @@
 
 
 
-
-
+<!-- 動く背景(幾何学模様)の独自のJS -->
 <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
 <script src="http://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/move02/5-4/js/5-4.js"></script>
+<!-- JSの読み込み -->
 <script src="./assets/js/message.js"></script>
 </body>
 

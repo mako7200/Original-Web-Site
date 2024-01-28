@@ -1,25 +1,8 @@
 
 html, body {
-  width: auto;
   height: 100%;
-  margin: 0 auto;
-  padding: 0 auto;
-  /* color: white; */
+  width: auto;
   font-family: serif;
-}
-
-/* 背景の色が時間で変わる */
-h2{
-  animation: bgchange 10s ease infinite;/*変化の時間を変更したい場合は20sの部分を好きな時間に変更*/
-}
-
-@keyframes bgchange{
-      0%   {background:#000000;}
-      25%  {background:#000000;}
-      50%  {background:#24100c;}
-      75%  {background:#2e2e0b;}
-      90%  {background:#131313;}
-      100% {background:#0c0b0a;}
 }
 
 #particles-js{ 
@@ -27,7 +10,8 @@ h2{
   z-index:-1;/*描画を一番下に*/
   width: auto;
   height: 100%;
-  background-color: rgb(0, 0, 0);/*背景色*/
+  /* background-color: rgb(0, 0, 0); */
+  background-color: rgb(16, 35, 51);
 }
 
 #wrapper{
@@ -41,20 +25,32 @@ h2{
   text-align:center;
 }
 
+/* 背景の色が時間で変わる */
+h1{
+  animation: bgchange 10s ease infinite;/*変化の時間を変更したい場合は20sの部分を好きな時間に変更*/
+  opacity: 0.3;
+}
+@keyframes bgchange{
+      0%   {background:#000000;}
+      25%  {background:#000000;}
+      50%  {background:#24100c;}
+      75%  {background:#2e2e0b;}
+      90%  {background:#131313;}
+      100% {background:#0c0b0a;}
+}
+
 
 .contact > h1 {
   /* border: red solid 2px; */
-  padding: 5%;
-  margin: 0 auto;
   color: gray;
+  padding: 22px;
   font-size: 200%;
 }
 
 .contact > h3 {
   color: rgb(43, 62, 82);
   text-align: center;
-  margin: 0 auto;
-  padding: 10px ;
+  padding: 22px;
 }
 
 
@@ -63,7 +59,7 @@ h2{
 /* ホームに戻る */
 .return > a {
   position: fixed;
-  top: 30px;
+  top: 20px;
   right: 3%;
   text-align: center;
   width: 20%;
@@ -74,7 +70,7 @@ h2{
       width: auto;
       height: auto;
       top: 20px;
-      right: 0;
+      right: 20px;
       font-size: 10px;
       opacity: 0.6;
   }
@@ -93,13 +89,11 @@ h2{
   text-decoration: none;
   transform: scale(0.9);
 }
-
 .btn:hover {
   color: #fff;
   background-color: #252fa2;
   transform: scale(1.0);
 }
-
 .btn:active {
   box-shadow: none;
   transform: translateY(4px);
