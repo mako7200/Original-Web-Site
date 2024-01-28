@@ -28,5 +28,5 @@ document.addEventListener("DOMContentLoaded", function() {
       currentIndex = (currentIndex + 1) % images.length;
   }
 
-  setInterval(changeImage, 5000); // 5秒ごとに画像を切り替える
+  setInterval(changeImage, 2000); // 5秒ごとに画像を切り替える
 });
