@@ -17,10 +17,10 @@ jQuery('#wrapper').raindrops(
 
 
 
-//アイコンを切り替える。
+//アイコンを一定時間ごとに自動で切り替える
 document.addEventListener("DOMContentLoaded", function() {
   var imageSwitch = document.querySelector('.image-switch');
-  var images = ['./assets/img/4.jpg', './assets/img/11.jpg', './assets/img/26.jpg'];
+  var images = ['./assets/img/4.jpg', './assets/img/26.jpg', './assets/img/11.jpg', './assets/img/M3.jpg', './assets/img/M.jpg', './assets/img/Sedaバー.jpg', './assets/img/15.jpg', './assets/img/16.jpg', './assets/img/17.jpg', './assets/img/25.jpg'];
   var currentIndex = 0;
 
   function changeImage() {
@@ -28,5 +28,5 @@ document.addEventListener("DOMContentLoaded", function() {
       currentIndex = (currentIndex + 1) % images.length;
   }
 
-  setInterval(changeImage, 1000); // 1秒ごとに画像を切り替える
+  setInterval(changeImage, 3000); // 秒数で画像を切り替える（1000＝1秒）
 });

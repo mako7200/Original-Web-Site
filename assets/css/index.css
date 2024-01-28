@@ -179,7 +179,7 @@ header {
 }
 
 
-
+/*一定時間で画像を自動で切り替える*/
 .image-switch {
     width: 4rem;
     height: 4rem;

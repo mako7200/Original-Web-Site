@@ -145,7 +145,7 @@ footer > p {
 /* ホームに戻る */
 .return > a {
     position: fixed;
-    top: 88px;
+    top: 20px;
     right: 3%;
     text-align: center;
     width: 20%;
