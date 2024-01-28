@@ -9,8 +9,9 @@ html, body {
 
 
 /* 背景色が変化するアニメーション */
-body {
+.about > h1{
     animation: bgchange 20s ease infinite;/*変化の時間を変更したい場合は20sの部分を好きな時間に変更*/
+    opacity: 0.9;
 }
 
     @keyframes bgchange{
@@ -44,7 +45,12 @@ body {
     padding: 22px;
 }
 
-
+.circle {
+    text-align: center;
+    position: relative;
+    top: 100px;
+    opacity: 0.7;
+}
 
 /*== 🔵🔵🔵無限に波紋が広がる */
 .btnripple2{

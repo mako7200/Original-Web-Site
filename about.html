@@ -4,15 +4,11 @@
 <meta charset="utf-8">
 <title>About</title>
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
-<!-- リセットCSS読み込み -->
+<!-- リセットCSS・CSS読み込み -->
 <link rel="stylesheet" href="./assets/css/reset.css">
-<!-- CSS読み込み -->
 <link rel="stylesheet" href="./assets/css/about.css">
 <title>About</title>
-<!-- 波紋のアニメーション -->
-<link rel="stylesheet" type="text/css" href="css/7-1-12.css">
-<!--==============レイアウトを制御する独自のCSSを読み込み===============-->
-<link rel="stylesheet" type="text/css" href="http://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/move02/5-16/css/5-16.css">
+
 </head>
 
 
@@ -20,9 +16,12 @@
 <body>
 
     <div class="about">
-        <h1>About<p class="btnripple2"><span></span></p></h1>
+        <h1>About</h1>
+        <div class="circle">
+            <p class="btnripple2"><span></span></p>
+        </div>
         <h3>個人の感想</h3>
-
+        
         <ul class="li">
             <h4>1ヶ月目<hr></h4>
             <p>「ソダテク動画」をひたすら進める期間。<br>
@@ -85,10 +84,12 @@
 
 
 
-
+<!-- 独自のJS（水滴が落ちる背景）読み込み -->
 <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="  crossorigin="anonymous"></script>
 <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js" integrity="sha256-T0Vest3yCU7pafRw9r+settMBX6JkKN06dqBnpQ8d30=" crossorigin="anonymous"></script>
 <script src="http://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/move02/5-16/js/raindrops.js"></script>
 <script src="http://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/move02/5-16/js/5-16.js"></script>
+<!-- JSの読み込み -->
+<script src="./assets/js/about.js"></script>
 </body>
 </html>
