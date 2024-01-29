@@ -13,3 +13,17 @@ jQuery('#wrapper').raindrops(//指定したエリアに描画
     frequency:5//雨粒の落ちる頻度を指定。数値が大きいほど頻度は多くなる。初期値は3。
 }
 );
+
+//アイコンを一定時間ごとに自動で切り替える
+document.addEventListener("DOMContentLoaded", function() {
+    var imageSwitch = document.querySelector('.image-switch');
+    var images = ['./assets/img/4.jpg', './assets/img/26.jpg', './assets/img/11.jpg'];
+    var currentIndex = 0;
+
+    function changeImage() {
+        imageSwitch.src = images[currentIndex];
+        currentIndex = (currentIndex + 1) % images.length;
+    }
+
+    setInterval(changeImage, 2000); // 秒数で画像を切り替える（1000＝1秒）
+});
