@@ -563,25 +563,13 @@ span {
     }
 }
 
-.pictures > a {
+.picture-box {
     /* border: solid 1px red; */
     margin: 5%;
     padding-top: 5%;
     width: auto;
     text-decoration: none;
     color: white;
-    text-shadow:
-    0 0 7px #13e3fe,
-    0 0 10px #13e3fe,
-    0 0 21px #13e3fe,
-    0 0 42px #13bffe,
-    0 0 82px #13acfe,
-    0 0 92px #13a8fe,
-    0 0 102px #13e3fe,
-    0 0 151px #1381fe;
-
-/* マーカーがマウスイベントを受け取らないようにする */
-    pointer-events: none;
 
 /* レスポンシブ対応 */
 @media(max-width: 768px) {
@@ -594,13 +582,18 @@ span {
 }
 }
 
-a > img {
+.picture-box > img {
     /* border: solid 1px red; */
     width: 100%;
     height: auto;
     object-fit: cover;
     border-radius: 5%;
     transform: scale(0.8); /* 0.8は縮小率で調整可能 */
+
+    /*【ズーム】写真を拡大*/
+    transition: transform 0.3s ease; /* クリック時のアニメーション */
+    cursor: pointer; /* クリックカーソル */
+    position: relative; /*相対位置指定*/
 
 /* レスポンシブ対応 */
 @media(max-width: 768px) {
@@ -612,7 +605,7 @@ a > img {
 }
 }
 
-.pictures > a:hover {
+.picture-box:hover {
     background-color: black;
     border-radius: 10%;
     text-shadow:
@@ -640,51 +633,50 @@ a > img {
 /* ✅⑥地図の埋め込み */
 .maps {
     /* border: solid 1px red; */
+    width: 100%;
     height: auto;
-    width: auto;
     color: white;
-    font-size: 25px;
+    font-size: 100%;
     display: flex;
     align-items: center;
     flex-direction: column;
-    padding: 50px;
-    margin-bottom: 500px;
+    margin: 20% auto;
 
     /* レスポンシブ対応 */
     @media(max-width: 768px) {
-        padding: 5%;
-        display: flex;
         flex-direction: column;
-        margin-bottom: 10px;
     }
 }
 
+/* Googleマップ */
 iframe {
+    width: auto;
+    height: 100%;
+    border-radius: 1rem;
     transform: scale(0.7);
 }
 
-
+/* シードテックの地図 */
 .seedtech-map {
+    width: 50%;
+    height: auto;
     text-align: center;
-    /* border: solid 0.1px white; */
-    /* padding: 10%; */
-    
+    padding: 5%;
     object-fit: cover;
+    transform: scale(1.8);
+    margin: 10% auto;
 
         /* レスポンシブ対応 */
         @media(max-width: 768px) {
-            /* margin: 1%; */
-            height: auto;
-            width: auto;
             display: flex;
             flex-direction: column;
-            transform: scale(0.5);
+            font-size: 50%;
+            transform: scale(1.0);
+            margin: 5% auto;
         }
 }
-
 .seedtech-map:hover{
     background-color: black;
-    border-radius: 10%;
     text-shadow:
     0 0 7px #13e3fe,
     0 0 10px #13e3fe,
@@ -696,28 +688,27 @@ iframe {
     0 0 151px #1381fe;
 }
 
+/* 寮の地図 */
 .dormitory-map {
-    width: auto;
+    width: 50%;
+    height: auto;
     text-align: center;
-    /* border: solid 0.1px white; */
-    /* padding: 10%; */
-    /* margin: 5%; */
+    padding: 5%;
     object-fit: cover;
+    transform: scale(1.8);
+    margin: 10% auto;
 
         /* レスポンシブ対応 */
         @media(max-width: 768px) {
-            height: auto; /* 高さを自動調整 */
-            width: auto;
             display: flex;
             flex-direction: column;
-            /* padding: 20%; */
-            transform: scale(0.5); /* ()の数字は縮小率で調整可能 */
+            font-size: 50%;
+            transform: scale(1.0);
+            margin: 5% auto;
         }
 }
-
 .dormitory-map:hover{
     background-color: black;
-    border-radius: 10%;
     text-shadow:
     0 0 7px #13e3fe,
     0 0 10px #13e3fe,
@@ -753,8 +744,8 @@ iframe {
 .cafe-box {
     width: 100%;
     height: auto;
-    padding: 3%;
-    margin: 5% 0;
+    padding: 5%;
+    margin: 1%;
     text-decoration: none;
     color: white;
     text-align: center;
@@ -764,6 +755,18 @@ iframe {
     @media(max-width: 768px) {
         font-size: 15px;
     }
+}
+.cafe-box:hover{
+    background-color: black;
+    text-shadow:
+    0 0 7px #13e3fe,
+    0 0 10px #13e3fe,
+    0 0 21px #13e3fe,
+    0 0 42px #13bffe,
+    0 0 82px #13acfe,
+    0 0 92px #13a8fe,
+    0 0 102px #13e3fe,
+    0 0 151px #1381fe;
 }
 
 .cafe-box > img {
@@ -815,7 +818,6 @@ img.zoomed {
 }
 .cafe-box > a:hover {
     background-color: rgb(0, 174, 255);
-    
 }
 
 
