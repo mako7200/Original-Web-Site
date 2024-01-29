@@ -138,7 +138,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    opacity: 0.7;
+    opacity: 0.9;
     transform: scale(1.0);
     flex-wrap: nowrap;   /*画面サイズ関係なく常に横並び*/
 
@@ -160,11 +160,11 @@ header {
 .navbar > a {
     float: left;
     display: block;
-    color: #f2f2f2;
+    color: #ffffff;
     text-align: center;
     text-decoration: none;
     justify-content: space-between;
-    padding:1% 5%;
+    padding:1% 3%;
     flex-wrap: nowrap;
 
     /* レスポンシブ対応 */
@@ -181,20 +181,22 @@ header {
 
 /*一定時間で画像を自動で切り替える*/
 .image-switch {
+    position: relative;
+    left: 3%;
     width: 4rem;
     height: 4rem;
     object-fit: cover;
     border-radius: 50%; /* 正方形にクリップした後、半径50%で円形にする */
     /* animation: changeImage 2s infinite; */
-}
+
     /* レスポンシブ対応 */
     @media(max-width: 768px) {
-        .image-switch {
-            transform: scale(3.0);
-            width: 1rem;
-            height: 1rem;
-        }
+        transform: scale(3.0);
+        width: 1rem;
+        height: 1rem;
+        left: 0;
     }
+}
 
 
 /* @keyframes changeImage {
@@ -318,7 +320,7 @@ header {
 /* <main> */
 main {
     height: auto;
-    width: auto;
+    width: 100%;
     background-color: rgb(16, 35, 51);
     /* padding: 20px; */
 }
@@ -412,63 +414,6 @@ span {
 }
 
 
-
-/*動くスクロール（Scroll）のアニメーション*/
-
-/*スクロールダウン全体の場所*/
-.scrolldown1{
-    /*描画位置※位置は適宜調整してください*/
-	position:absolute;
-	right:20%;
-	bottom:10px;
-    /*全体の高さ*/
-	height:50px;
-}
-
-/*Scrollテキストの描写*/
-.scrolldown1 span{
-    /*描画位置*/
-	position: absolute;
-	left:-15px;
-	top: -15px;
-    /*テキストの形状*/
-	color: #eee;
-	font-size: 0.7rem;
-	letter-spacing: 0.05em;
-}
-
-/* 線の描写 */
-.scrolldown1::after{
-	content: "";
-    /*描画位置*/
-	position: absolute;
-	top: 0;
-    /*線の形状*/
-	width: 1px;
-	height: 30px;
-	background: #eee;
-    /*線の動き1.4秒かけて動く。永遠にループ*/
-	animation: pathmove 2.0s ease-in-out infinite;
-	opacity:0;
-}
-
-/*高さ・位置・透過が変化して線が上から下に動く*/
-@keyframes pathmove{
-	0%{
-		height:0;
-		top:0;
-		opacity: 0;
-	}
-	30%{
-		height:30px;
-		opacity: 1;
-	}
-	100%{
-		height:0;
-		top:50px;
-		opacity: 0;
-	}
-}
 
 
 
@@ -602,7 +547,6 @@ span {
 .pictures {
     width: auto;
     height: auto;
-    /* border: solid 0.1px white; */
     border-radius: 10%;
     font-size: 20px;
     display: flex;
@@ -788,71 +732,90 @@ iframe {
 
 /* ✅⑦カフェの紹介 */
 .cafes {
-    /* border: solid 1px brown; */
-    color: white;
+    width: 100%;
     height: auto;
+    padding: 5px;
     display: flex;
-    justify-content: space-between;
+    text-align: center;
     align-items: center;
-    font-size: 30px;
+    justify-content: space-between;
 
-    /* レスポンシブ対応 */
     @media(max-width: 768px) {
+        padding: 0 auto;
+        margin: 0 auto;
         font-size: 15px;
-        height: auto; /* 高さを自動調整 */
+        height: auto;
         display: flex;
         flex-direction: column;
     }
 }
 
-.cafes > a:hover{
-    background-color: #050801;
-    border-radius: 10%;
-    text-shadow:
-    0 0 7px #13e3fe,
-    0 0 10px #13e3fe,
-    0 0 21px #13e3fe,
-    0 0 42px #13bffe,
-    0 0 82px #13acfe,
-    0 0 92px #13a8fe,
-    0 0 102px #13e3fe,
-    0 0 151px #1381fe;
-}
-
-.cafes > a {
-    /* border: solid 0.1px white; */
-    border-radius: 10%;
-    margin: 10px;
-    padding: 5%;
-    width: 33%;
+.cafe-box {
+    width: 100%;
+    height: auto;
+    padding: 3%;
+    margin: 5% 0;
     text-decoration: none;
     color: white;
     text-align: center;
-    font-size: 23px;
+    font-size: 18px;
     line-height: 1.5;
 
-/* レスポンシブ対応 */
-@media(max-width: 768px) {
-    font-size: 15px;
-    width: auto;
-    height: auto; /* 高さを自動調整 */
-    display: flex;
-    flex-direction: column;
-    transform: scale(0.6); /* 0.8は縮小率で調整可能 */
-    margin: 1px;
-}
+    @media(max-width: 768px) {
+        font-size: 15px;
+    }
 }
 
-
-.cafes > a > img{
+.cafe-box > img {
+    width: 90%;
+    height: auto;
     margin: 10px;
+    border-radius: 5%;
     transform: scale(0.9);
     object-fit: cover;
 
-/* レスポンシブ対応 */
-@media(max-width: 768px) {
-    height: auto; /* 高さを自動調整 */
+    /*【ズーム】写真を拡大*/
+    transition: transform 0.3s ease; /* クリック時のアニメーション */
+    cursor: pointer; /* クリックカーソル */
+    position: relative; /*相対位置指定*/
+
+    /* レスポンシブ対応 */
+    @media(max-width: 768px) {
+        width: 50%;
+        height: auto; /* 高さを自動調整 */
+    }
 }
+
+img.zoomed {
+    position: relative; /* 絶対位置指定 */
+    transform: scale(1.3); /* ズーム時の拡大率と画面の中央配置 */
+    z-index: 1;
+    border-radius: 0;
+}
+
+.cafe-sentence {
+    color: white;
+    border: solid 1px rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    opacity: 0.8;
+    padding: 5%;
+    margin: 5% auto;
+
+    @media (max-width: 768px) {
+        font-size: 10px;
+        margin: 2% 15%;
+    }
+}
+
+.cafe-box > a {
+    border-radius: 5px;
+    background-color: blue;
+    color: white;
+    padding: 2%;
+}
+.cafe-box > a:hover {
+    background-color: rgb(0, 174, 255);
+    
 }
 
 

@@ -36,22 +36,31 @@ html, body {
 }
 
 .about > h3 {
+    font-size: 150%;
     padding: 22px;
-    color: white;
+    color: gray;
 }
 
+h4 {
+    padding: 0 5%;
+    font-size: 130%;
+    color: gray;
+}
 .li {
     padding: 22px;
 }
 .li > p {
     line-height: 1.5;
+    padding: 5%;
+    margin: 5%;
 }
+
 
 /*【プロフィール欄】*/
 .photo-box {
     /* border: solid 1px red; */
-    border-radius: 10px;
     /* background-color: rgba(0, 255, 166, 0.1); */
+    border-radius: 10px;
     width: auto;
     height: 100%;
     padding: 5%;
@@ -96,40 +105,54 @@ html, body {
     z-index: 1;
 }
 
-/*一定時間で画像を自動で切り替える*/
+/* プロフィール詳細ボタン */
+.profile-html {
+    line-height: 1.5;
+    padding: 5%;
+    text-align: center;
+
+    @media (max-width:768px) {
+        font-size: 10px;
+        text-align: right;
+    }
+}
+.profile-html > a {
+    color: white;
+    opacity: 0.5;
+}
+
+
+/*【自動画像切り替え】一定時間で画像を自動で切り替える*/
 .image-switch {
     object-fit: cover;
 }
-    @media(max-width: 768px) {
+@media(max-width: 768px) {
         .image-switch {
             width: 1rem;
             height: 1rem;
         }
     }
 
-/* 1つ目の波紋の位置 */
+
+    /* 波紋の位置 */
 .circle {
     text-align: center;
     position: relative;
     top: 100px;
     opacity: 0.7;
 }
-
-/*== 🔵🔵🔵無限に波紋が広がる */
+/*== 🔵【波紋】無限に波紋が広がる */
 .btnripple2{
     /*波紋の基点とするためrelativeを指定*/
 	position: relative;
     /*波紋の形状*/
 	display:inline-block;
-	/* background:#333; */
 	width:100px;
 	height:100px;
 	border-radius: 50%;
-	/* color:#ccc; */
     outline: none;
     /*アニメーションの設定*/
     transition: all .3s;
-    /* z-index: -1; */
 }
 
 /*hoverした際の背景色の設定*/
@@ -171,8 +194,11 @@ html, body {
 	transform: scale(5.0);
 	opacity: 0;
 	}
+
 }
 
+
+/* 後輩たちへ */
 .message {
     /* border: red solid 2px; */
     padding: 22px;
@@ -180,11 +206,10 @@ html, body {
 
 .message > p {
     line-height: 1.5;
+    padding: 5%;
+    margin: 5%;
 }
 
-.return {
-    margin-top: 20%;
-}
 
 /* 波のアニメーション */
 canvas {

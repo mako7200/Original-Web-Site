@@ -30,3 +30,8 @@ document.addEventListener("DOMContentLoaded", function() {
 
   setInterval(changeImage, 2000); // 秒数で画像を切り替える（1000＝1秒）
 });
+
+
+function zoomImage(img) {
+  img.classList.toggle("zoomed"); // クリックされた画像の拡大状態を切り替える
+}
