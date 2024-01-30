@@ -3,9 +3,9 @@ html, body {
     width: auto;
     height: auto;
     margin: auto;
+    font-family: serif;
     background-color: rgb(16, 35, 51);
     color: white;
-    font-family: serif;
 }
 
 
@@ -29,16 +29,24 @@ html, body {
     }
 
 .about > h1 {
-    font-size: 200%;
-    padding: 22px;
-    text-align: left;
     color: gray;
+    font-size: 5rem;
+    padding: 22px;
+
+    @media(max-width: 768px) {
+        font-size: 3rem;
+    }
 }
 
 .about > h3 {
-    font-size: 150%;
-    padding: 22px;
-    color: gray;
+    /* color: gray; */
+    color: rgb(54, 55, 55);
+    font-size: 3rem;
+    padding: 1rem 2rem;
+
+    @media(max-width:768px) {
+        font-size: 2rem;
+    }
 }
 
 h4 {

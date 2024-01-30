@@ -1,7 +1,8 @@
 
 html, body {
-  height: 100%;
   width: auto;
+  height: auto;
+  margin: auto;
   font-family: serif;
 }
 
@@ -54,16 +55,22 @@ h1{
 
 
 .contact > h1 {
-  /* border: red solid 2px; */
   color: gray;
+  font-size: 5rem;
   padding: 22px;
-  font-size: 200%;
+  @media(max-width: 768px) {
+    font-size: 3rem;
+  }
 }
 
 .contact > h3 {
-  color: gray;
-  text-align: center;
+  /* color: gray; */
+  color: rgb(54, 55, 55);
+  font-size: 3rem;
   padding: 22px;
+    @media(max-width:768px) {
+    font-size: 2rem;
+  }
 }
 
 .contact-address {
@@ -110,6 +117,18 @@ h1{
 .instagram:hover {
   transform: scale(1.1);
   background-color: rgb(255, 0, 111, 0.8);
+}
+
+.facebook {
+  padding: 5%;
+  color: black;
+  font-weight: bolder;
+  background-color: rgba(0, 60, 255, 0.5);
+  text-decoration: none;
+}
+.facebook:hover {
+  transform: scale(1.1);
+  background-color: rgba(0, 60, 255, 0.8);
 }
 
 .twitter {

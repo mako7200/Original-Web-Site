@@ -24,16 +24,22 @@ html, body {
     }
 
 .profile > h1 {
-    /* border: red solid 2px; */
     color: gray;
+    font-size: 5rem;
     padding: 22px;
-    font-size: 200%;
+    @media(max-width: 768px) {
+    font-size: 3rem;
+    }
 }
 
 .profile > h3 {
-    color: gray;
-    text-align: center;
+    /* color: gray; */
+    color: rgb(54, 55, 55);
+    font-size: 3rem;
     padding: 22px;
+    @media(max-width:768px) {
+    font-size: 2rem;
+    }
 }
 
 header {

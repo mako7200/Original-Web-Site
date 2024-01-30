@@ -26,35 +26,42 @@ html, body {
     text-align:center;
 }
 
-.pictures > h1 {
-    /* border: red solid 2px; */
-    font-size: 200%;
-    padding: 22px;
-    color: gray;
-}
 /* 背景の色が時間で変わる */
 h1{
     animation: bgchange 10s ease infinite;/*変化の時間を変更したい場合は20sの部分を好きな時間に変更*/
     opacity: 0.9;
 }
-    @keyframes bgchange{
-        0%   {background:rgb(16, 35, 51);}
-        10%  {background:rgb(26, 40, 61);}
-        20%  {background:rgb(36, 43, 71);}
-        30%  {background:rgb(46, 47, 81);}
-        40%  {background:rgb(56, 51, 91);}
-        50%  {background:rgb(66, 56, 101);}
-        60%  {background:rgb(56, 51, 91);}
-        70%  {background:rgb(46, 47, 81);}
-        80%  {background:rgb(36, 43, 71);}
-        90%  {background:rgb(26, 40, 61);}
-        100%  {background:rgb(16, 35, 51);}
-    }
+@keyframes bgchange{
+    0%   {background:rgb(16, 35, 51);}
+    10%  {background:rgb(26, 40, 61);}
+    20%  {background:rgb(36, 43, 71);}
+    30%  {background:rgb(46, 47, 81);}
+    40%  {background:rgb(56, 51, 91);}
+    50%  {background:rgb(66, 56, 101);}
+    60%  {background:rgb(56, 51, 91);}
+    70%  {background:rgb(46, 47, 81);}
+    80%  {background:rgb(36, 43, 71);}
+    90%  {background:rgb(26, 40, 61);}
+    100%  {background:rgb(16, 35, 51);}
+}
 
-.pictures > h3 {
+.pictures > h1 {
+    color: gray;
+    font-size: 5rem;
     padding: 22px;
+    @media(max-width: 768px) {
+        font-size: 3rem;
+    }
+}
+.pictures > h3 {
     color: rgb(54, 55, 55);
+    font-size: 3rem;
+    padding: 8rem 2rem 0;
     text-align: center;
+    @media(max-width:768px) {
+        font-size: 1.8rem;
+        padding: 5rem 2rem 0;
+    }
 }
 
 .photos {
@@ -133,7 +140,6 @@ img.zoomed {
         opacity: 0.4;
     }
 }
-
 .btn {
     height: auto;
     display: inline-block;
@@ -147,13 +153,11 @@ img.zoomed {
     text-decoration: none;
     transform: scale(0.9);
 }
-
 .btn:hover {
     color: #fff;
     background-color: #252fa2;
     transform: scale(1.0);
 }
-
 .btn:active {
     box-shadow: none;
     transform: translateY(4px);
