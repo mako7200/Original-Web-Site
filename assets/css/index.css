@@ -96,8 +96,8 @@ footer > a span:nth-child(3){
 /* <body> */
 body {
     height: auto;
-    font-family: serif;
     margin: 0;
+    font-family: serif;
 }
 
 html {
@@ -864,7 +864,7 @@ img.zoomed {
         margin: 2% 15%;
     }
 }
-
+/* Facebookボタン */
 .cafe-box > a {
     border-radius: 5px;
     background-color: blue;
@@ -937,32 +937,27 @@ img.zoomed {
 
   /* ✅試験的に導入 */
 .greeting{
-    /* border: solid 0.1px white; */
     color: white;
-    height: 100px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    width: 100%;
+    height: auto;
+    padding: 20px;
+    background-color: black;
+    text-align: center;
 }
 
 
 
 /* ✅⑨フッター */
 footer {
-
-    /* border: solid 1px red; */
     height: 10%;
-    background-color: rgba(0, 0, 0);
+    background-color: black;
     text-align: center;
     align-items: center;
     justify-content: space-between;
-    /* padding: 10px; */
     
 /* レスポンシブ対応 */
 @media(max-width: 768px) {
-    font-size: 15px;
-    /* font-family: 'Courier New', Courier, monospace; */
-    /* padding: 10%; */
+    width: 100%;
     height: auto; /* 高さを自動調整 */
     display: flex;
     flex-direction: column;
@@ -972,40 +967,42 @@ footer {
 
 footer > a {
     font-size: 15px;
-    background-color: black;
+    font-weight: bolder;
+    border-radius: 1rem;
     margin-right: 20px;
     text-align: center;
 
     /* レスポンシブ対応 */
     @media(max-width: 768px) {
-        transform: scale(0.8);
-        margin: 10px;
+        border-radius: 2rem;
+        transform: scale(0.7);
+        margin: 3px auto;
         padding: 5%;
     }
 }
 
 .line {
     color: black;
-    background-color: aqua;
+    background-color: rgb(0, 255, 255, 0.9);
 }
 .line:hover {
-    transform: scale(1.2);
+    transform: scale(1.1);
 }
 
 .instagram {
     color: black;
-    background-color: aqua;
+    background-color: rgb(0, 255, 255, 0.9);
 }
 .instagram:hover {
-    transform: scale(1.2);
+    transform: scale(1.1);
 }
 
 .twitter {
     color: black;
-    background-color: aqua;
+    background-color: rgb(0, 255, 255, 0.9);
 }
 .twitter:hover {
-    transform: scale(1.2);
+    transform: scale(1.1);
 }
 
 footer > p {
@@ -1016,7 +1013,7 @@ footer > p {
 
     /* レスポンシブ対応 */
     @media (max-width: 768px) {
-        font-size: 10px;
+        font-size: 15px;
         width: 100%;
         height: auto;
     }

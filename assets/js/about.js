@@ -17,7 +17,7 @@ jQuery('#wrapper').raindrops(//指定したエリアに描画
 //アイコンを一定時間ごとに自動で切り替える
 document.addEventListener("DOMContentLoaded", function() {
     var imageSwitch = document.querySelector('.image-switch');
-    var images = ['./assets/img/4.jpg', './assets/img/26.jpg', './assets/img/11.jpg'];
+    var images = ['./assets/img/4.jpg', './assets/img/33.jpg', './assets/img/11.jpg', './assets/img/26.jpg', './assets/img/32.jpg'];
     var currentIndex = 0;
 
     function changeImage() {
