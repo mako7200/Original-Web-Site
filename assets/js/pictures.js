@@ -76,3 +76,10 @@ particlesJS("particles-js", {
   },
   "retina_detect": true
 }); 
+
+
+// 画像拡大
+function zoomImage(img) {
+  img.classList.toggle("zoomed"); // クリックされた画像の拡大状態を切り替える
+}
+
