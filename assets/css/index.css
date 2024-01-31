@@ -181,7 +181,7 @@ header {
 }
 
 /* 背景の色が時間で変わる */
-header {
+header, .greeting{
     animation: bgchange 10s ease infinite;/*変化の時間を変更したい場合は20sの部分を好きな時間に変更*/
     opacity: 1;
 }
@@ -635,13 +635,13 @@ span {
 /* ✅⑥地図の埋め込み */
 .maps {
     /* border: solid 1px red; */
-    width: 100%;
+    width: 80%;
     height: auto;
     color: white;
     font-size: 100%;
     display: flex;
     align-items: center;
-    flex-direction: column;
+    /* flex-direction: column; */
     margin: 20% auto;
 
     /* レスポンシブ対応 */
@@ -652,10 +652,10 @@ span {
 
 /* Googleマップ */
 iframe {
-    width: auto;
-    height: 100%;
+    width: 100%;
+    height: auto;
     border-radius: 1rem;
-    transform: scale(0.7);
+    transform: scale(0.8);
 }
 
 /* シードテックの地図 */
@@ -665,15 +665,14 @@ iframe {
     text-align: center;
     padding: 5%;
     object-fit: cover;
-    transform: scale(1.8);
     margin: 10% auto;
 
         /* レスポンシブ対応 */
         @media(max-width: 768px) {
+            width: 70%;
             display: flex;
             flex-direction: column;
-            font-size: 50%;
-            transform: scale(1.0);
+            font-size: 80%;
             margin: 5% auto;
         }
 }
@@ -697,15 +696,14 @@ iframe {
     text-align: center;
     padding: 5%;
     object-fit: cover;
-    transform: scale(1.8);
     margin: 10% auto;
 
         /* レスポンシブ対応 */
         @media(max-width: 768px) {
+            width: 70%;
             display: flex;
             flex-direction: column;
-            font-size: 50%;
-            transform: scale(1.0);
+            font-size: 80%;
             margin: 5% auto;
         }
 }
@@ -787,7 +785,7 @@ iframe {
     /* レスポンシブ対応 */
     @media(max-width: 768px) {
         width: 50%;
-        height: auto; /* 高さを自動調整 */
+        height: auto;
     }
 }
 /* 【画像拡大】 */
@@ -808,15 +806,18 @@ img.zoomed {
 
     @media (max-width: 768px) {
         font-size: 10px;
-        margin: 2% 15%;
+        margin: 0 15% 4%;
     }
 }
-/* Facebookボタン */
+/*【Facebookボタン】*/
 .cafe-box > a {
     border-radius: 5px;
     background-color: blue;
     color: white;
     padding: 2%;
+    @media(max-width: 768px) {
+        
+    }
 }
 .cafe-box > a:hover {
     background-color: rgb(0, 174, 255);
@@ -869,7 +870,7 @@ img.zoomed {
 .message > a:hover {
     background-color: rgb(0, 0, 0); /* ホバー時の背景色 */
     color:rgb(0, 255, 221);
-    transform: scale(1.2);
+    transform: scale(1.1);
     text-shadow:
     0 0 7px #23fe13,
     0 0 10px #32fe13,
