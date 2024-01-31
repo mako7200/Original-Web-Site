@@ -74,13 +74,13 @@ h1{
 }
 
 .contact-address {
+  width: 100%;
+  height: auto;
+  padding: 1rem;
   text-align: center;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 5%;
-  width: 100%;
-  height: auto;
 }
 
 .contact-address > a {
@@ -92,6 +92,7 @@ h1{
   @media (max-width: 768px) {
     transform: scale(0.8);
     font-size: 1rem;
+    margin-bottom: 1rem ;
   }
 }
 
@@ -185,4 +186,31 @@ h1{
 .btn:active {
   box-shadow: none;
   transform: translateY(4px);
+}
+
+
+/* 【動く背景】雫がポタポタ落ちる */
+canvas {
+  height: 2rem;
+  width: 100%;
+
+  @media(max-width:768px) {
+      height: 15px;
+  }
+}
+
+/* コピーライト */
+footer > p {
+  width: 100%;
+  height: auto;
+  font-size: 2rem;
+  color: white;
+  background-color: #A5D2DA;
+  text-align: center;
+  font-weight: bold;
+
+  @media (max-width: 768px) {
+      font-size: 1rem;
+      padding: 1rem 0;
+  }
 }

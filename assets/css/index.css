@@ -504,7 +504,7 @@ span {
 
     /* レスポンシブ対応 */
     @media(max-width: 768px) {
-        height: auto; /* 高さを自動調整 */
+        height: auto;
         width: auto;
         padding: 50% 5%;
         margin: auto;
@@ -512,7 +512,6 @@ span {
 }
 
 .concept > h3 {
-    /* border: solid 1px white; */
     border-radius: 10%;
     text-align: center;
     font-size: 40px;
@@ -535,7 +534,7 @@ span {
 
 /* レスポンシブ対応 */
 @media(max-width: 768px) {
-    font-size: 15px;
+    font-size: 0.8rem;
     height: auto; /* 高さを自動調整 */
     width: auto;
     margin: 5px;
@@ -954,14 +953,15 @@ footer > a {
 }
 
 footer > p {
-    font-size: 20px;
+    font-size: 2rem;
+    padding: 5px;
     color: white;
     background-color: #A5D2DA;
-    padding: 5px;
+    font-weight: bold;
 
     /* レスポンシブ対応 */
     @media (max-width: 768px) {
-        font-size: 15px;
+        font-size: 1rem;
         width: 100%;
         height: auto;
     }
@@ -980,6 +980,7 @@ footer > p {
     }
 }
 
+/* 【動く背景】雫がポタポタ落ちる */
 canvas {
     width: 100% !important;
     height: 30px !important;
