@@ -169,21 +169,22 @@ header {
     /* border: solid 1px rgb(16, 35, 51); */
     height: auto;
     width: 100%;
+    background-color: rgb(221, 160, 221, 0.2);
     display: flex;
-    /* background-color: rgba(51, 51, 51); */
     position: fixed;
     z-index: 1;
+    font-weight: bold;
 
         /* レスポンシブ対応 */
         @media(max-width: 768px) {
-            font-weight: bold;
         }
 }
 
 /* 背景の色が時間で変わる */
-header, .greeting{
-    animation: bgchange 10s ease infinite;/*変化の時間を変更したい場合は20sの部分を好きな時間に変更*/
+/* header {
+    animation: bgchange 20s ease infinite;
     opacity: 1;
+
 }
     @keyframes bgchange{
         0%   {background:rgb(16, 35, 51);}
@@ -197,7 +198,7 @@ header, .greeting{
         80%  {background:rgb(36, 43, 71);}
         90%  {background:rgb(26, 40, 61);}
         100%  {background:rgb(16, 35, 51);}
-    }
+    } */
 
 /* ナビゲーションバースタイル */
 .navbar {
@@ -218,6 +219,8 @@ header, .greeting{
 }
 
 .navbar > a {
+    width: 18%;
+    height: auto;
     display: block;
     color: #ffffff;
     text-align: center;
@@ -227,6 +230,7 @@ header, .greeting{
 
     /* レスポンシブ対応 */
     @media(max-width: 768px) {
+        width: 20%;
         padding: 10px;
     }
 }
@@ -890,7 +894,22 @@ img.zoomed {
     padding: 20px;
     background-color: black;
     text-align: center;
+    z-index: 2;
 }
+
+/* 背景の色が時間で変わる */
+.greeting{
+    animation: bgchange 15s ease infinite;/*変化の時間を変更したい場合は20sの部分を好きな時間に変更*/
+    opacity: 1;
+}
+    @keyframes bgchange{
+        0%   {background:rgb(16, 35, 51);}
+        25%  {background:rgba(186, 254, 98, 0.8);}
+        50%  {background:rgb(254, 160, 248, 0.8);}
+        75%  {background:rgba(90, 242, 247, 0.8);}
+        90%  {background:rgb(0, 0, 255, 0.9);}
+        100%  {background:rgb(16, 35, 51);}
+    }
 
 
 
@@ -913,43 +932,67 @@ footer {
 }
 
 footer > a {
+    width: 20%;
+    height: auto;
     font-size: 15px;
     font-weight: bolder;
     border-radius: 1rem;
     margin-right: 20px;
     text-align: center;
+    color: white;
 
     /* レスポンシブ対応 */
     @media(max-width: 768px) {
+        width: 60%;
         border-radius: 2rem;
         transform: scale(0.7);
         margin: 3px auto;
         padding: 5%;
     }
 }
+footer > a:hover{
+    text-decoration: none;
+}
+
 
 .line {
-    color: black;
-    background-color: rgb(0, 255, 255, 0.9);
+    background-color: rgb(0, 255, 255, 0.7);
 }
 .line:hover {
     transform: scale(1.1);
+    @media (max-width:768px) {
+        transform: scale(0.8);
+    }
 }
 
 .instagram {
-    color: black;
-    background-color: rgb(0, 255, 255, 0.9);
+    background-color: rgb(0, 255, 255, 0.7);
 }
 .instagram:hover {
     transform: scale(1.1);
+    @media (max-width:768px) {
+        transform: scale(0.8);
+    }
 }
 
 .twitter {
-    color: black;
-    background-color: rgb(0, 255, 255, 0.9);
+    background-color: rgb(0, 255, 255, 0.7);
 }
 .twitter:hover {
     transform: scale(1.1);
+    @media (max-width:768px) {
+        transform: scale(0.8);
+    }
+}
+
+.facebook {
+    background-color: rgb(0, 0, 255, 0.7);
+}
+.facebook:hover {
+    transform: scale(1.1);
+    @media (max-width:768px) {
+        transform: scale(0.8);
+    }
 }
 
 footer > p {
