@@ -1,5 +1,21 @@
 
 
+//ハンバーガーメニュー
+// $(".openbtn").click(function () {
+//   $(this).toggleClass('active');
+// });
+$(document).ready(function(){
+  $(".open-btn").click(function () {
+    $(this).toggleClass('active');
+    $(".navbar").toggle();
+  });
+  // メニューが表示された時にハンバーガーメニューを非表示にする
+  $(".navbar a").click(function() {
+    $(".open-btn").removeClass('active');
+    $(".navbar").hide();
+  });
+});
+
 
 //【背景の動き】水滴がポタポタ落ちるアニメーション
 
