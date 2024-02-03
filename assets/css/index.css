@@ -169,7 +169,7 @@ header {
     /* border: solid 1px rgb(16, 35, 51); */
     height: auto;
     width: 100%;
-    background:rgb(31, 37, 72, 0.9);
+    background:rgba(0, 0, 0, 0.3);
     display: flex;
     position: fixed;
     z-index: 1;
@@ -188,7 +188,7 @@ header {
 	position: fixed;
 	background:rgb(31, 37, 72);
     border: solid 0.1px rgb(255, 255, 255, 0.5);
-    box-shadow: 4px 4px 5px rgb(0, 0, 0);
+    box-shadow: 2px 2px 10px rgb(255, 255, 255, 0.5);
 	cursor: pointer;
     top: 15px;
     right: 5%;
@@ -320,13 +320,13 @@ header {
     height: auto;
     display: inline-block;
     padding: 3rem;
-    background-color: #3e4885; /* 背景色 */
-    box-shadow: 0 5px 0 #323966; /* 影の太さ・色 */
+    background-color: rgb(62, 72, 133, 0.5);
     border-radius: 10px;
     cursor: pointer;
     text-decoration: none;
     justify-content: space-between;
-    box-shadow: 4px 4px 5px rgb(0, 0, 0);
+    /* box-shadow: 4px 4px 5px rgb(0, 0, 0); */
+    box-shadow: 2px 2px 10px rgb(255, 255, 255, 0.5);
 }
 
 .btn:active {
@@ -346,7 +346,7 @@ header {
     object-fit: cover;
     border-radius: 50%;
     transform: scale(0.8);
-    box-shadow: 4px 4px 5px rgb(0, 0, 0);
+    box-shadow: 2px 2px 10px rgb(255, 255, 255, 0.5);
 
     @media(max-width: 768px) {
         width: 5rem;
@@ -631,6 +631,9 @@ span {
     0 0 102px #13e3fe,
     0 0 151px #1381fe;
 }
+.picture-box:hover > img {
+    box-shadow: 0px 0px 20px rgb(255, 255, 255);
+}
 
 .picture-box > p {
     width: 100%;
@@ -719,6 +722,9 @@ span {
     0 0 92px #13a8fe,
     0 0 102px #13e3fe,
     0 0 151px #1381fe;
+}
+.cafe-box:hover > img {
+    box-shadow: 0px 0px 20px rgb(255, 255, 255);
 }
 
 .cafe-box > img {
@@ -991,6 +997,7 @@ footer > a {
     color: white;
     padding: 1rem;
     margin: 1rem;
+    box-shadow: 0px 0px 20px rgb(255, 255, 255);
 
     /* レスポンシブ対応 */
     @media(max-width: 768px) {
