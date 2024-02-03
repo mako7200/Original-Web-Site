@@ -94,16 +94,14 @@ footer > a span:nth-child(3){
 
 
 /* <body> */
-body {
+html, body {
+    width: 100%;
     height: auto;
-    margin: 0;
+    margin: 0 auto;
     font-family: serif;
 }
 
-html {
-    height: auto;
-    margin: 0;
-}
+
 
 /* メインの色、宇宙色。rgb(16, 35, 51) */
 
@@ -254,6 +252,9 @@ header {
     left: 5%;
     height: auto;
     padding: 1rem;
+    /*ここに、ポジションを右側に固定するCSSを記述したい。それか、マージンで調整するか。*/
+    /*以下の「margin」で右側に位置するように調整している*/
+    margin: 0 0 0 3rem;
     overflow: hidden;
     background-color: none;
     display: flex;
@@ -263,25 +264,25 @@ header {
     
     @media(max-width: 768px) {
         opacity: 1;
+        margin: 0;
         white-space: nowrap;
-        display: none;   /*【ハンバーガーメニューのため】*/
+        display: none;   /*【ハンバーガーメニュー用に、非表示にした！】*/
     }
 }
 /* ヘッダー内ボタン要素たち */
 .navbar > a {
-    width: 18%;
+    width: 18%;   /*ボタンの横幅*/
     height: auto;
     display: block;
     color: white;
     text-align: center;
     text-decoration: none;
-    padding:1% 3%;
+    padding: 1rem;      /*ボタンの大きさを調節*/
     flex-wrap: nowrap;
 
-    /* レスポンシブ対応 */
     @media(max-width: 768px) {
         width: 40%;
-        padding: 10px;
+        padding: 15px;
         margin: 20px 20px 20px 20px;
         position: relative;
     }
@@ -379,7 +380,7 @@ main {
 .main-title {
     /* border: solid 1px red; */
     height: auto;
-    width: auto;
+    width: 100%;
     color: white;
     padding-top: 20%;
     display: flex;
@@ -600,7 +601,6 @@ span {
 
     /* レスポンシブ対応 */
     @media(max-width: 768px) {
-        padding: 20%;
         display: flex;
         flex-direction: column;
     }
@@ -680,7 +680,7 @@ span {
 .cafes {
     width: 100%;
     height: auto;
-    padding: 5px;
+    /* padding: 5px; */
     display: flex;
     text-align: center;
     align-items: center;
@@ -699,7 +699,7 @@ span {
 .cafe-box {
     width: 100%;
     height: auto;
-    padding: 5%;
+    /* padding: 5%; */
     margin: 1% auto;
     text-decoration: none;
     color: white;
@@ -708,7 +708,7 @@ span {
     line-height: 1.5;
 
     @media(max-width: 768px) {
-        padding: 10%;
+        /* padding: 10%; */
         font-size: 15px;
     }
 }
@@ -944,7 +944,7 @@ iframe {
 .greeting{
     width: 100%;
     height: auto;
-    padding: 2%;
+    padding: 2rem 0;
     font-size: 150%;
     color: white;
     background-color: black;
@@ -952,6 +952,7 @@ iframe {
     z-index: 2;
 
     @media(max-width: 768px) {
+        padding: 1rem 0;
         font-size: 100%;
     }
 }
@@ -988,6 +989,7 @@ footer {
 }
 }
 
+/*【SNSアイコン】*/
 footer > a {
     width: 5rem;
     height: 5rem;
@@ -1057,7 +1059,7 @@ footer > a:hover{
 /*コピーライト*/
 footer > p {
     font-size: 2rem;
-    padding: 5px;
+    padding: 5px 0;
     color: white;
     background-color: #A5D2DA;
     font-weight: bold;
