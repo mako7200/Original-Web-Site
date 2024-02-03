@@ -10,8 +10,8 @@ html, body {
 
 
 /* 背景色が変化するアニメーション */
-.about > h1{
-    animation: bgchange 20s ease infinite;/*変化の時間を変更したい場合は20sの部分を好きな時間に変更*/
+/* .about > h1{
+    animation: bgchange 20s ease infinite;
     opacity: 0.9;
 }
     @keyframes bgchange{
@@ -26,9 +26,10 @@ html, body {
         80%  {background:rgb(36, 43, 71);}
         90%  {background:rgb(26, 40, 61);}
         100%  {background:rgb(16, 35, 51);}
-    }
+    } */
 
 .about > h1 {
+    background:rgba(6, 25, 37, 0.9);
     color: gray;
     font-size: 5rem;
     padding: 1rem 2rem;

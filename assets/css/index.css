@@ -185,7 +185,8 @@ header {
 .open-btn{
     display: none;   /*通常時は非表示*/
 	position: fixed;
-	background:rgba(31, 37, 72, 0.9);
+	/* background:rgba(31, 37, 72, 0.9); */
+    background:rgba(6, 25, 37, 0.9);
     border: solid 0.1px rgb(255, 255, 255, 0.5);
     box-shadow: 2px 2px 4px rgb(255, 255, 255, 0.5);
 	cursor: pointer;
@@ -248,13 +249,12 @@ header {
 
 
 .navbar {
-    width: 80%;
-    left: 5%;
+    position: relative;
+    width: 100%;
     height: auto;
-    padding: 1rem;
     /*ここに、ポジションを右側に固定するCSSを記述したい。それか、マージンで調整するか。*/
     /*以下の「margin」で右側に位置するように調整している*/
-    margin: 0 0 0 3rem;
+    margin: 0 5% 0 5%;
     overflow: hidden;
     background-color: none;
     display: flex;
@@ -263,13 +263,14 @@ header {
     flex-wrap: nowrap;   /*画面サイズ関係なく常に横並び*/
     
     @media(max-width: 768px) {
-        opacity: 1;
-        margin: 0;
+        height: 100vh;
         white-space: nowrap;
         display: none;   /*【ハンバーガーメニュー用に、非表示にした！】*/
+        flex-direction: column;
+        margin: 20% 0% 0% 18%;
     }
 }
-/* ヘッダー内ボタン要素たち */
+/*【Home】【About】【Pictures】【COntact】【Message】*/
 .navbar > a {
     width: 18%;   /*ボタンの横幅*/
     height: auto;
@@ -277,19 +278,25 @@ header {
     color: white;
     text-align: center;
     text-decoration: none;
-    padding: 1rem;      /*ボタンの大きさを調節*/
+    padding: 40px 0 40px 0;      /*ボタンの大きさを調節*/
     flex-wrap: nowrap;
+    cursor: pointer;
 
+    /*【スマホ版：ヘッダー内の要素】*/
     @media(max-width: 768px) {
-        width: 40%;
-        padding: 15px;
-        margin: 20px 20px 20px 20px;
+        width: 40%;   /*ボタンの横幅*/
+        padding: 18px;   /*ボタンの大きさ*/
+        margin: 10px 10px 20px 10px;   /*ボタン間の距離*/
         position: relative;
+        /* background:rgba(31, 37, 72, 0.9); */
+        background:rgba(6, 25, 37, 0.9);
+        border-radius: 10px;
+        justify-content: space-between;
+        box-shadow: 2px 2px 4px rgb(255, 255, 255, 0.5);
     }
 }
-/* ナビゲーションリンクホバースタイル */
+
 .navbar a:hover {
-    font-size: 120%;
     /* background-color: rgba(51, 51, 51, 0.5); */
     color: white;
     text-shadow:
@@ -317,7 +324,8 @@ header {
     }
 }
 
-.btn {
+/*「.navbar」と「.btn」が重複したため、コメントアウト*/
+/* .btn {
     width: 100%;
     height: auto;
     display: inline-block;
@@ -327,10 +335,8 @@ header {
     cursor: pointer;
     text-decoration: none;
     justify-content: space-between;
-    /* box-shadow: 4px 4px 5px rgb(0, 0, 0); */
-    /* box-shadow: 2px 2px 10px rgb(255, 255, 255, 0.5); */
     box-shadow: 2px 2px 4px rgb(255, 255, 255, 0.5);
-}
+}s */
 
 .btn:active {
     box-shadow: none;
@@ -997,9 +1003,9 @@ footer {
 
 /*【SNSアイコン】*/
 footer > a {
-    width: 5rem;
-    height: 5rem;
-    font-size: 2rem;
+    width: 50px;
+    height: 50px;
+    font-size: 40px;
     border-radius: 50%;
     font-weight: bolder;
     text-align: center;
@@ -1010,9 +1016,9 @@ footer > a {
 
     /* レスポンシブ対応 */
     @media(max-width: 768px) {
-        width: 3rem;
-        height: 3rem;
-        font-size: 1rem;
+        width: 25px;
+        height: 25px;
+        font-size: 25px;
         border-radius: 50%;
         margin: 1rem 0.5rem;
     }
