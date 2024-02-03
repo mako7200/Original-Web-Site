@@ -167,7 +167,7 @@ header {
     /* border: solid 1px rgb(16, 35, 51); */
     height: auto;
     width: 100%;
-    background:rgb(15, 34, 46);
+    background:rgba(6, 25, 37, 0.9);
     display: flex;
     position: fixed;
     z-index: 1;
@@ -267,7 +267,7 @@ header {
         white-space: nowrap;
         display: none;   /*【ハンバーガーメニュー用に、非表示にした！】*/
         flex-direction: column;
-        margin: 40% 0% 0% 10%;
+        margin: 40% 0% 0% 5%;
     }
 }
 /*【Home】【About】【Pictures】【COntact】【Message】*/
