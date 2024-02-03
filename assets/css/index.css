@@ -326,6 +326,7 @@ header {
     cursor: pointer;
     text-decoration: none;
     justify-content: space-between;
+    box-shadow: 4px 4px 5px rgb(0, 0, 0);
 }
 
 .btn:active {
@@ -345,6 +346,8 @@ header {
     object-fit: cover;
     border-radius: 50%;
     transform: scale(0.8);
+    box-shadow: 4px 4px 5px rgb(0, 0, 0);
+
     @media(max-width: 768px) {
         width: 5rem;
         height: 5rem;
@@ -434,8 +437,7 @@ span {
         height: auto; /* 高さを自動調整 */
         display: flex;
         flex-direction: column;
-
-    }
+}
 }
 
 
@@ -651,6 +653,7 @@ span {
     object-fit: cover;
     border-radius: 5%;
     transform: scale(0.8);
+    box-shadow: 4px 4px 5px rgb(0, 0, 0);
     /*【ズーム】写真を拡大*/
     transition: transform 0.3s ease; /* クリック時のアニメーション */
     cursor: pointer; /* クリックカーソル */
@@ -725,7 +728,7 @@ span {
     border-radius: 5%;
     transform: scale(0.9);
     object-fit: cover;
-
+    box-shadow: 4px 4px 5px rgb(0, 0, 0);
     /*【ズーム】写真を拡大*/
     transition: transform 0.3s ease; /* クリック時のアニメーション */
     cursor: pointer; /* クリックカーソル */
