@@ -49,6 +49,8 @@ h1{
     color: gray;
     font-size: 5rem;
     padding: 22px;
+    box-shadow: 2px 2px 10px rgb(255, 255, 255, 0.5);
+    
     @media(max-width: 768px) {
         font-size: 3rem;
     }
