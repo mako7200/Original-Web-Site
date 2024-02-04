@@ -387,6 +387,10 @@ main {
 
 /* ✅③タイトル・サブタイトル */
 .main-title {
+    background-image: url("../img/68.jpg");
+    filter: blur(0.1px); /* ぼかし */
+    background-size: cover; /* 画像を要素にフィット */
+    background-repeat: no-repeat; /* 画像の繰り返しを停止 */
     /* border: solid 1px red; */
     height: auto;
     width: 100%;
@@ -397,8 +401,6 @@ main {
     align-items: center;
     justify-content: center;
     text-align: center;
-
-/* 🟥以下は試験的に記述----------------------------------- */
     text-shadow:
     0 0 7px #13e3fe,
     0 0 10px #13e3fe,
@@ -408,15 +410,13 @@ main {
     0 0 92px #13a8fe,
     0 0 102px #13e3fe,
     0 0 151px #1381fe;
-
-/* レスポンシブ対応 */
-@media(max-width: 768px) {
-    padding: 45% 0 20% 0;
-    font-size: 15px;
-    width: auto;
-    height: auto; /* 高さを自動調整 */
-    display: flex;
-    flex-direction: column;
+    
+    @media(max-width: 768px) {
+        padding: 45% 0 20% 0;
+        font-size: 15px;
+        display: flex;
+        flex-direction: column;
+        background-image: none;   /*モバイル版では非表示*/
 }
 }
 
@@ -427,13 +427,13 @@ main {
     font-size: 40px;
 
     /* レスポンシブ対応 */
-@media(max-width: 768px) {
-    font-size: 25px;
-    padding-bottom: 10%;
-    width: auto;
-    height: auto; /* 高さを自動調整 */
-    display: flex;
-    flex-direction: column;
+    @media(max-width: 768px) {
+        font-size: 25px;
+        padding-bottom: 10%;
+        width: auto;
+        height: auto; /* 高さを自動調整 */
+        display: flex;
+        flex-direction: column;
 }
 }
 
@@ -603,6 +603,7 @@ span {
     text-align: center;
     align-items: center;
     justify-content: space-between;
+    /* box-shadow: 2px 2px 10px rgb(255, 255, 255, 0.5); */
 
     @media(max-width: 768px) {
         width: 50%;
@@ -613,6 +614,7 @@ span {
 
 .picture-box {
     /* border: 1px solid red; */
+    box-shadow: 2px 2px 10px rgb(255, 255, 255, 0.5);
     width: 100%;
     height: auto;
     margin: auto 2rem;
@@ -810,6 +812,7 @@ img.zoomed {
     align-items: center;
     /* flex-direction: column; */
     margin: 20% auto;
+    box-shadow: 2px 2px 10px rgb(255, 255, 255, 0.5);
 
     /* レスポンシブ対応 */
     @media(max-width: 768px) {
