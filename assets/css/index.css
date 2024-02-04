@@ -112,7 +112,7 @@ html, body {
     /*描画位置※位置は適宜調整してください*/
 	position:absolute;
 	right:20%;
-	bottom:10px;
+	bottom:20px;
     /*全体の高さ*/
 	height:50px;
 }
@@ -124,7 +124,7 @@ html, body {
 	top: -15px;
     /*テキストの形状*/
 	color: #eee;
-	font-size: 0.7rem;
+	font-size: 12px;
 	letter-spacing: 0.05em;
 }
 /* 線の描写 */
@@ -132,13 +132,14 @@ html, body {
 	content: "";
     /*描画位置*/
 	position: absolute;
-	top: 0;
+	top: -20;
     /*線の形状*/
 	width: 1px;
-	height: 50px;
-	background: #37eba6;
+	height: 200px;
+	background: white;
+    box-shadow: 0px 0px 4px white;
     /*線の動き1.4秒かけて動く。永遠にループ*/
-	animation: pathmove 2.0s ease-in-out infinite;
+	animation: pathmove 2.5s ease-in-out infinite;
 	opacity:0;
 }
 /*高さ・位置・透過が変化して線が上から下に動く*/
@@ -149,12 +150,12 @@ html, body {
 		opacity: 0;
 	}
 	30%{
-		height:30px;
+		height:40px;
 		opacity: 1;
 	}
 	100%{
 		height:0;
-		top:50px;
+		top:100px;
 		opacity: 0;
 	}
 }
@@ -391,8 +392,7 @@ main {
     filter: blur(0.1px); /* ぼかし */
     background-size: cover; /* 画像を要素にフィット */
     background-repeat: no-repeat; /* 画像の繰り返しを停止 */
-    /* border: solid 1px red; */
-    height: auto;
+    height: 100vh;   /*画面の最大サイズに設定*/
     width: 100%;
     color: white;
     padding-top: 20%;
@@ -412,7 +412,7 @@ main {
     0 0 151px #1381fe;
     
     @media(max-width: 768px) {
-        padding: 45% 0 20% 0;
+        
         font-size: 15px;
         display: flex;
         flex-direction: column;
@@ -986,14 +986,14 @@ iframe {
         100%  {background:rgb(16, 35, 51);}
     }
 
-
-
+/* 宇宙の背景色 */
+/* rgb(16, 35, 51) */
 
 /* ✅⑨フッター */
 footer {
     width: 100%;
     height: auto;
-    background-color: black;
+    background-color: rgb(16, 35, 51);
     text-align: center;
     align-items: center;
     justify-content: space-between;
@@ -1076,12 +1076,13 @@ footer > p {
     font-size: 2rem;
     padding: 5px 0;
     color: white;
-    background-color: #A5D2DA;
+    background-color: #061925e6;
     font-weight: bold;
 
     /* レスポンシブ対応 */
     @media (max-width: 768px) {
         font-size: 1rem;
+        padding: 1rem 0;
         width: 100%;
         height: auto;
     }

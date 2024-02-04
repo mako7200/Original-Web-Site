@@ -290,14 +290,14 @@ footer > p {
     padding: 1rem 0;
     font-size: 2rem;
     color: white;
-    background-color: #A5D2DA;
+    background-color: #061925e6;
     text-align: center;
     font-weight: bold;
 
     /* レスポンシブ対応 */
     @media (max-width: 768px) {
-        padding: 0.5rem 0;
-        font-size: 1rem;
+        padding: 1rem 0;
+        font-size: 15px;
     }
 }
 
