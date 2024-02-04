@@ -1,4 +1,9 @@
 
+
+/* お洒落なボックスシャドウ */
+/* box-shadow: 2px 2px 10px rgb(255, 255, 255, 0.5); */
+
+
 html, body {
     width: auto;
     height: auto;
@@ -29,50 +34,53 @@ html, body {
     } */
 
 .about > h1 {
+    text-shadow: 2px 2px 4px rgb(255, 255, 255, 0.5);
     background:rgba(6, 25, 37, 0.9);
-    color: gray;
     font-size: 5rem;
-    padding: 1rem 2rem;
+    color: gray;
     box-shadow: 2px 2px 10px rgb(255, 255, 255, 0.5);
+    padding: 1rem 2rem;
 
     @media(max-width: 768px) {
+        padding: 1rem;
         font-size: 3rem;
-        padding: 1rem ;
     }
 }
 
 .about > h3 {
-    /* color: gray; */
-    color: rgb(54, 55, 55);
+    text-shadow: 1px 1px 2px rgb(255, 255, 255, 0.5);
+    color: gray;
     font-size: 3rem;
-    padding: 1rem 3rem;
+    margin: 10% 20% 5% 20%;
 
     @media(max-width:768px) {
-        font-size: 2rem;
-        padding: 1rem ;
-    }
+    font-size: 1.8rem;
+    margin: 15% 10% 5% 10%;
+}
 }
 
 h4 {
-    padding: 0 5%;
+    padding: 5% 5% 0% 5%;
     font-size: 130%;
     color: gray;
+
     @media (max-width:768px) {
-        padding: 0 5%;
-        font-size: 130%;
-        color: gray;
+        
     }
 }
-.li {
-    padding: 22px;
-    @media(max-width:768px) {
 
+.li {
+    box-shadow: 2px 2px 10px rgb(255, 255, 255, 0.5);
+    margin: 10% 20% 10% 20%;
+
+    @media(max-width:768px) {
+        margin: 10% 5% 10% 5%;
     }
 }
 .li > p {
-    line-height: 1.5;
+    line-height: 2.0;
     padding: 5%;
-    margin: 5%;
+    margin: 0% 5% 5% 5%;
     @media(max-width:768px) {
         
     }
@@ -119,11 +127,12 @@ h4 {
 
 .profile-sentence > h6 {
     font-size: 1rem;
-    padding: 0.5rem 0;
+    float: right;
+    margin: 0px 20px 5px 0px;
 
     @media(max-width: 768px){
         font-size: 10px;
-        color: rgb(212, 107, 177);
+        text-decoration: underline;
     }
 }
 
@@ -152,17 +161,19 @@ h4 {
     content: '';
     position: absolute;
     left: 0;
-    top: 7px; /* 修正 */
+    top: 7px;
     width: 100%;
-    height: 50%; /* 修正 */
-    background-color: rgba(157, 188, 249, 0.3); /* 修正 */
+    height: 60%;
+    /* background-color: rgba(157, 188, 249); */
+    background-color: aqua;
     z-index: -1;
-
-    @media (max-width: 768px) {
-    background-color: rgba(157, 188, 249, 0.3); /* 修正 */
+    opacity: 0.5;
 }
+@media (max-width: 768px) {
+    .highlight-marker::before {
+    opacity: 0.5;
+    }
 }
-
 
 
 
@@ -205,10 +216,12 @@ h4 {
 .circle {
     text-align: center;
     position: relative;
-    top: 100px;
+    top: 110px;
+    left: -30%;
     opacity: 0.7;
     @media(max-width:768px) {
-        
+        top: 100px;
+        left: -20%;
     }
 }
 /*== 🔵【波紋】無限に波紋が広がる */
@@ -240,6 +253,7 @@ h4 {
     top: -25%;
     /*波形の形状*/
     border: 0.5px solid #25aad6;
+    box-shadow: 0px 0px 10px rgba(6, 226, 255, 0.5);
     /* border: 0.5px solid #363d61; */
     width: 100%;
     height: 100%;
@@ -247,18 +261,18 @@ h4 {
     /*はじめは不透明*/
     opacity: 0.5;
     /*波形の広がる速度を調整*/
-    animation:20s circleanime linear infinite;
+    animation:50s circleanime linear infinite;
 }
 
 /*波形の2つ目は5.0秒遅らせてアニメーション*/
 .btnripple2::before {
-    animation-delay:5.0s; 
+    animation-delay: 0.01s; 
 }
 
 /*波形のアニメーション*/
 @keyframes circleanime{
 	0%{
-	transform: scale(0.68);
+	transform: scale(0);
 	}
 	100%{
 	transform: scale(5.0);
@@ -268,36 +282,12 @@ h4 {
 }
 
 
-/* 後輩たちへ */
-.message {
-    padding: 22px;
-    @media(max-width:768px) {
-        font-size: 0.8rem;
-    }
-}
 
-.message > p {
-    line-height: 1.5;
-    padding: 5%;
-    margin: 5% 15%;
-    @media(max-width:768px) {
-        margin: 5% 10% 10%;
-    }
-}
-
-
-/* 【動く背景】雫がポタポタ落ちる */
-canvas {
-    height: 2rem;
-    width: 100%;
-    @media(max-width:768px) {
-        height: 2rem;
-    }
-}
-
+/* コピーライト */
 footer > p {
     width: 100%;
-    height: 2rem;
+    height: auto;
+    padding: 1rem 0;
     font-size: 2rem;
     color: white;
     background-color: #A5D2DA;
@@ -306,6 +296,7 @@ footer > p {
 
     /* レスポンシブ対応 */
     @media (max-width: 768px) {
+        padding: 0.5rem 0;
         font-size: 1rem;
     }
 }

@@ -1,4 +1,9 @@
 
+/* お洒落なボックスシャドウ */
+/* box-shadow: 2px 2px 10px rgb(255, 255, 255, 0.5); */
+/* お洒落なテキストシャドウ */
+/* text-shadow: 2px 2px 4px rgb(255, 255, 255, 0.5); */
+
 html, body {
   height: 100%;
   width: auto;
@@ -52,10 +57,11 @@ html, body {
 
 .message > h1 {
   background:rgba(6, 25, 37, 0.9);
-    color: gray;
-    font-size: 5rem;
-    padding: 1rem 2rem;
-    box-shadow: 2px 2px 10px rgb(255, 255, 255, 0.5);
+  text-shadow: 2px 2px 4px rgb(255, 255, 255, 0.5);
+  color: gray;
+  font-size: 5rem;
+  padding: 1rem 2rem;
+  box-shadow: 2px 2px 10px rgb(255, 255, 255, 0.5);
 
     @media(max-width: 768px) {
       padding: 1rem;
@@ -64,29 +70,36 @@ html, body {
 }
 
 .message > h3 {
-    /* color: gray; */
-    color: rgb(54, 55, 55);
-    font-size: 3rem;
-    padding: 8rem 2rem 0;
-    
-    @media(max-width:768px) {
-        font-size: 1.8rem;
-        padding: 5rem 2rem 0;
-    }
+  text-shadow: 1px 1px 2px rgb(255, 255, 255, 0.5);
+  color: gray;
+  font-size: 3rem;
+  margin: 10% 20% 5% 20%;
+  
+  @media(max-width:768px) {
+      font-size: 1.8rem;
+      margin: 15% 10% 5% 10%;
+  }
 }
 
 .message-area {
-  color: white;
-  padding: 20px;
+  margin: 5% 20%;
+  box-shadow: 2px 2px 10px rgb(255, 255, 255, 0.5);
+  border-radius: 10px;
+
+  @media screen and (max-width:768px) {
+    margin: 5% 10%;
+  }
 }
 
 .message-area > h5 {
+  color: white;
   font-size: 25px;
-  padding: 30px;
   line-height: 3.0;
+  margin: 5px;
 
   @media (max-width:768px) {
-    font-size: 0.8rem;
+    font-size: 15px;
+    line-height: 2.5;
   }
 }
 
@@ -99,20 +112,18 @@ html, body {
   content: '';
   position: absolute;
   left: 0;
-  top: 40px;
+  top: 35px;
   width: 100%;
-  height: 30%;
-  background-color: rgb(157, 188, 249); /* マーカーの色を設定 */
-  opacity: 0.5; /* マーカーの透明度を設定 */
+  height: 50%;
+  border-radius: 10px;
+  background-color: rgb(27, 145, 204); /* マーカーの色を設定 */
   pointer-events: none; /* マーカーがマウスイベントを受け取らないようにする */
   z-index: -1; /* マーカーをテキストの背後に配置 */
+  opacity: 0.5;
 }
 @media (max-width: 768px) {
   .highlight-marker::before {
-      height: 40%;
-      background-color: rgb(157, 188, 249);
-      top: 20px;
-      opacity: 0.3;
+    top: 15px;
   }
 }
 

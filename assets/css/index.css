@@ -1,8 +1,7 @@
 
 
-/* 🟥以下は試験的に記述（ネオン色）ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー */
+/* 試験的に記述（ネオン色）*/
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
-
 footer > a{
     position: relative;
     display: inline-block;
@@ -84,12 +83,12 @@ footer > a span:nth-child(3){
         right: 100%;
     }
 }
-/* 🟥上記は試験的に記述ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー */
 
 
 
 
-
+/* お洒落なテキストシャドウ */
+/* text-shadow: 2px 2px 4px rgb(255, 255, 255, 0.5); */
 
 
 
@@ -249,6 +248,7 @@ header {
 
 
 .navbar {
+    text-shadow: 2px 2px 4px rgb(255, 255, 255, 0.5);
     position: relative;
     width: 100%;
     height: auto;
@@ -502,30 +502,30 @@ span {
     left: -25%;
     top: -25%;
     /*波形の形状*/
-    border: 0.5px solid #03ffea;
     /* border: 0.5px solid #363d61; */
+    box-shadow: 2px 2px 15px rgb(255, 255, 255, 0.9);
     width: 150%;
     height: 150%;
     border-radius: 50%;
     /*はじめは不透明*/
-    opacity: 0.5;
+    opacity: 0.9;
     /*波形の広がる速度を調整*/
     animation:20s circleanime linear infinite;
 }
 
 /*波形の2つ目は5.0秒遅らせてアニメーション*/
 .btnripple2::before {
-    animation-delay:7.0s; 
+    animation-delay:0.01s; 
 }
 
 /*波形のアニメーション*/
 @keyframes circleanime{
 	0%{
-	transform: scale(0.68);
+        transform: scale(0);
 	}
 	100%{
-	transform: scale(5.0);
-	opacity: 0;
+	transform: scale(9.0);
+	opacity: 0;    /*自然に消えるような演出*/
 	}
 }
 
