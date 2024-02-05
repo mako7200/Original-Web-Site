@@ -116,7 +116,7 @@ html, body {
     /*全体の高さ*/
 	height:50px;
 }
-/*Scrollテキストの描写*/
+/*Scroll「文字」*/
 .scrolldown1 span{
     /*描画位置*/
 	position: absolute;
@@ -127,7 +127,7 @@ html, body {
 	font-size: 12px;
 	letter-spacing: 0.05em;
 }
-/* 線の描写 */
+/* Scroll「線」 */
 .scrolldown1::after{
 	content: "";
     /*描画位置*/
@@ -253,11 +253,11 @@ header {
 .navbar {
     text-shadow: 2px 2px 4px rgb(255, 255, 255, 0.5);
     position: relative;
-    width: 100%;
+    width: 100vh;
     height: auto;
     /*ここに、ポジションを右側に固定するCSSを記述したい。それか、マージンで調整するか。*/
     /*以下の「margin」で右側に位置するように調整している*/
-    margin: 0 5% 0 5%;
+    margin: 0 5% 0 10%;
     overflow: hidden;
     background-color: none;
     display: flex;
@@ -469,9 +469,9 @@ span {
 
 
 
-/*動く波紋のアニメーション*/
 
-.btnripple2{
+/*【動く波紋】*/
+.btn-ripple2{
     /*波紋の基点とするためrelativeを指定*/
 	position: relative;
     /*波紋の形状*/
@@ -485,15 +485,13 @@ span {
     /*アニメーションの設定*/
     transition: all .3s;
 }
-
 /*hoverした際の背景色の設定*/
-/* .btnripple2:hover{
+/* .btn-ripple2:hover{
 	background:#666;	
 } */
-
-/*波形を2つ設定*/
-.btnripple2::after,
-.btnripple2::before {
+/*波紋を2つ設定*/
+.btn-ripple2::after,
+.btn-ripple2::before {
     content: '';
     /*絶対配置で波形の位置を決める*/
     position: absolute;
@@ -508,16 +506,14 @@ span {
     /*はじめは不透明*/
     opacity: 0.9;
     /*波形の広がる速度を調整*/
-    animation:20s circleanime linear infinite;
+    animation:20s circle-anime linear infinite;
 }
-
-/*波形の2つ目は5.0秒遅らせてアニメーション*/
-.btnripple2::before {
+/*波紋の2つ目は5.0秒遅らせる*/
+.btn-ripple2::before {
     animation-delay:0.01s; 
 }
-
-/*波形のアニメーション*/
-@keyframes circleanime{
+/*波紋のサイズ*/
+@keyframes circle-anime{
 	0%{
         transform: scale(0);
 	}
@@ -525,6 +521,29 @@ span {
 	transform: scale(9.0);
 	opacity: 0;    /*自然に消えるような演出*/
 	}
+}
+/*レスポンシブ対応*/
+@media (max-width: 768px) {
+    @keyframes circle-anime {
+        0% {
+            transform: scale(0);
+        }
+        100% {
+            transform: scale(6.0);
+            opacity: 0; /* 自然に消えるような演出 */
+        }
+    }
+}
+@media (max-width: 480px) {
+    @keyframes circle-anime {
+        0% {
+            transform: scale(0);
+        }
+        100% {
+            transform: scale(4.9);
+            opacity: 0; /* 自然に消えるような演出 */
+        }
+    }
 }
 
 
@@ -543,7 +562,6 @@ span {
 .concept {
     width: auto;
     height: auto;
-    border-radius: 10px;
     box-shadow: 2px 2px 10px rgb(255, 255, 255, 0.5);
     color: white;
     padding: 5% 5% 5% 5%;
@@ -602,7 +620,7 @@ span {
     /* box-shadow: 2px 2px 10px rgb(255, 255, 255, 0.5); */
 
     @media(max-width: 768px) {
-        width: 50%;
+        width: 65%;
         display: flex;
         flex-direction: column;
     }
@@ -618,7 +636,7 @@ span {
     
     @media(max-width: 768px) {
         font-size: 15px;
-        margin: 10px auto ;
+        margin: 10% auto ;
         display: flex;
         flex-direction: column;
     }
@@ -668,12 +686,11 @@ span {
     cursor: pointer; /* クリックカーソル */
     position: relative; /*相対位置指定*/
 
-/* レスポンシブ対応 */
-@media(max-width: 768px) {
-    display: flex;
-    flex-direction: column;
-    
-}
+    @media(max-width: 768px) {
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+    }
 }
 
 
@@ -692,6 +709,7 @@ span {
     justify-content: space-between;
 
     @media(max-width: 768px) {
+        width: 65%;
         margin: 10rem auto;
         font-size: 15px;
         display: flex;
@@ -701,7 +719,6 @@ span {
 
 .cafe-box {
     box-shadow: 2px 2px 10px rgb(255, 255, 255, 0.5);
-    border-radius: 10px;
     width: 100%;
     height: auto;
     margin: auto 20px 0 20px;
@@ -738,10 +755,11 @@ span {
 }
 
 .cafe-box > img {
-    width: 80%;
+    width: 100%;
     height: auto;
-    border-radius: 5%;
+    margin: 0 auto;
     object-fit: cover;
+    border-radius: 5%;
     box-shadow: 4px 4px 5px rgb(0, 0, 0);
     transform: scale(0.8);
     /*【ズーム】写真を拡大*/
@@ -751,8 +769,10 @@ span {
 
     /* レスポンシブ対応 */
     @media(max-width: 768px) {
-        width: 70%;
+        width: 90%;
         height: auto;
+        display: flex;
+        flex-direction: column;
     }
 }
 /* 【画像拡大】 */
@@ -772,7 +792,7 @@ img.zoomed {
     margin: 10px;
 
     @media (max-width: 768px) {
-        margin: 5px 40px 5px 40px;
+        margin: 1% 3% 5% 3%;
         font-size: 10px;
     }
 }
@@ -1012,7 +1032,7 @@ footer > a {
     color: white;
     padding: 1rem;
     margin: 1rem;
-    box-shadow: 0px 0px 20px rgb(255, 255, 255);
+    box-shadow: 0px 0px 4px rgb(255, 255, 255);
 
     /* レスポンシブ対応 */
     @media(max-width: 768px) {
