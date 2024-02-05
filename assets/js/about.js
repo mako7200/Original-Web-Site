@@ -1,8 +1,23 @@
 
 
+//【グローバルナビゲーション】
+$(".open-btn").click(function () {//ボタンがクリックされたら
+	$(this).toggleClass('active');//ボタン自身に activeクラスを付与し
+    $("#g-nav").toggleClass('panel-active');//ナビゲーションにpanel-activeクラスを付与
+    $(".circle-bg").toggleClass('circle-active');//丸背景にcircle-activeクラスを付与
+});
+
+$("#g-nav a").click(function () {//ナビゲーションのリンクがクリックされたら
+    $(".open-btn").removeClass('active');//ボタンの activeクラスを除去し
+    $("#g-nav").removeClass('panel-active');//ナビゲーションのpanel-activeクラスを除去
+    $(".circle-bg").removeClass('circle-active');//丸背景のcircle-activeクラスを除去
+});
+
+
+
+
 
 //【背景の動き】水滴がポタポタ落ちるアニメーション
-
 jQuery('#wrapper').raindrops(//指定したエリアに描画
 {
     color:'#061925e6',//水の色を指定
@@ -14,6 +29,9 @@ jQuery('#wrapper').raindrops(//指定したエリアに描画
     frequency:3//雨粒の落ちる頻度を指定。数値が大きいほど頻度は多くなる。初期値は3。
 }
 );
+
+
+
 
 //アイコンを一定時間ごとに自動で切り替える
 document.addEventListener("DOMContentLoaded", function() {
@@ -28,5 +46,6 @@ document.addEventListener("DOMContentLoaded", function() {
 
     setInterval(changeImage, 8000); // 秒数で画像を切り替える（1000＝1秒）
 });
+
 
 
