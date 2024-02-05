@@ -24,7 +24,6 @@ var bar = new ProgressBar.Line(splash_text, {//id名を指定
 		bar.setText(Math.round(bar.value() * 100) + ' %'); //テキストの数値
 	}
 });
-
 //アニメーションスタート
 bar.animate(1.0, function () {//バーを描画する割合を指定します 1.0 なら100%まで描画します
 	$("#splash_text").fadeOut(10);//フェイドアウトでローディングテキストを削除
@@ -35,6 +34,27 @@ bar.animate(1.0, function () {//バーを描画する割合を指定します 1.
 
 
 
+
+// 【モーダル表示（広告やセール情報）】
+//初回のみモーダルをすぐ出す判定。flagがモーダル表示のstart_open後に代入される
+var access = $.cookie('access')
+if(!access){
+  flag = true;
+  $.cookie('access', false);
+}else{
+  flag = false	
+}
+//モーダル表示
+$(".modal-open").modaal({
+start_open:flag, // ページロード時に表示するか
+overlay_close:true,//モーダル背景クリック時に閉じるか
+before_open:function(){// モーダルが開く前に行う動作
+  $('html').css('overflow-y','hidden');/*縦スクロールバーを出さない*/
+},
+after_close:function(){// モーダルが閉じた後に行う動作
+  $('html').css('overflow-y','scroll');/*縦スクロールバーを出す*/
+}
+});
 
 
 
