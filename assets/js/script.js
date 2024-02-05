@@ -1,10 +1,11 @@
 //テキストのカウントアップ+バーの設定
 var bar = new ProgressBar.Line(splash_text, {//id名を指定
 	easing: 'easeInOut',//アニメーション効果linear、easeIn、easeOut、easeInOutが指定可能
-	duration: 1000,//時間指定(1000＝1秒)
+	duration: 2000,//時間指定(1000＝1秒)
 	strokeWidth: 0.5,//進捗ゲージの太さ
-	color: 'white',//進捗ゲージのカラー
-	trailWidth: 0.5,//ゲージベースの線の太さ
+	color: 'red',//進捗ゲージのカラー
+	trailWidth:
+  0.5,//ゲージベースの線の太さ
 	trailColor: '#bbb',//ゲージベースの線のカラー
 	text: {//テキストの形状を直接指定				
 		style: {//天地中央に配置
@@ -14,9 +15,9 @@ var bar = new ProgressBar.Line(splash_text, {//id名を指定
 			padding: '0',
 			margin: '-30px 0 0 0',//バーより上に配置
 			transform:'translate(-50%,-50%)',
-			'font-size':'1rem',
+			'font-size':'16px',
 			color: 'white',
-      'text-shadow':'2px 2px 10px rgb(255, 255, 255)'
+      'text-shadow':'1px 1px 4px rgb(255, 255, 255)'
 		},
 		autoStyleContainer: false //自動付与のスタイルを切る
 	},

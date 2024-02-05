@@ -1,5 +1,58 @@
 
 
+/*========= Loading ===============*/
+
+/* Loading背景画面設定*/
+#splash {
+  /*fixedで全面に固定*/
+position: fixed;
+width: 100%;
+height: 100%;
+z-index: 999;
+text-align:center;
+color:#fff;
+}
+/* Loading画像中央配置*/
+#splash_text {
+position: absolute;
+top: 50%;
+left: 50%;
+  z-index: 999;
+transform: translate(-50%, -50%);
+color: #fff;
+width: 100%;
+}
+/*割れる画面のアニメーション*/
+.loader_cover {
+  width: 100%;
+  height: 50%;
+  background-color: rgb(0, 0, 0);
+  transition: all 3.0s cubic-bezier(.04, .435, .315, .9);
+  transform: scaleY(1);
+}
+/*上の画面*/
+.loader_cover-up {
+  transform-origin: center top;
+}
+/*下の画面*/
+.loader_cover-down {
+  position: absolute;
+  bottom: 0;
+  transform-origin: center bottom;
+}
+/*クラス名がついたらY軸方向に0*/
+.coveranime {
+  transform: scaleY(0);
+}
+
+
+
+
+
+
+
+/*========= 【グローバルナビゲーション】 ===============*/
+
 /*アクティブになったエリア*/
 #g-nav.panel-active{
   /*position:fixed;にし、z-indexの数値を大きくして前面へ*/
@@ -9,7 +62,6 @@ top: 0;
 width:100%;
   height: 100vh;
 }
-
 /*丸の拡大*/
 .circle-bg{
   position: fixed;
@@ -24,11 +76,9 @@ transform: scale(0);/*scaleをはじめは0に*/
   left:calc(50% - 50px);/*50%から円の半径を引いた値*/
   transition: all .6s;/*0.6秒かけてアニメーション*/
 }
-
 .circle-bg.circle-active{
 transform: scale(50);/*クラスが付与されたらscaleを拡大*/
 }
-
 /*【背景】ナビゲーション展開時*/
 #g-nav-list{
   display: none;/*はじめは非表示*/
@@ -41,11 +91,9 @@ transform: scale(50);/*クラスが付与されたらscaleを拡大*/
   -webkit-overflow-scrolling: touch;
   background:rgba(6, 25, 37, 0.9);
 }
-
 #g-nav.panel-active #g-nav-list{
   display: block; /*クラスが付与されたら出現*/
 }
-
 /*ナビゲーション*/
 #g-nav ul {
 opacity: 0;/*はじめは透過0*/
@@ -56,12 +104,10 @@ opacity: 0;/*はじめは透過0*/
   left:50%;
   transform: translate(-50%,-50%);
 }
-
 /*背景が出現後にナビゲーションを表示*/
 #g-nav.panel-active ul {
   opacity:1;
 }
-
 /* 背景が出現後にナビゲーション li を表示※レイアウトによって調整してください。不必要なら削除*/
 #g-nav.panel-active ul li{
 animation-name:gnaviAnime;
@@ -78,13 +124,11 @@ opacity: 0;
 opacity: 1;
 }
 }
-
 /*リストのレイアウト設定*/
 #g-nav li{
 text-align: center; 
 list-style: none;
 }
-
 /*【HOME】【AbOUT】【PICTURES】・・・*/
 #g-nav li a{
 color: white;
@@ -96,8 +140,6 @@ letter-spacing: 0.1em;
 font-weight: bold;
   text-shadow: 2px 2px 2px rgb(255, 255, 255, 0.5);
 }
-
-
 /*【3本線の「ボックス」】*/
 .open-btn{
   position:fixed;
@@ -115,7 +157,6 @@ font-weight: bold;
     right: 6%;
   }
 }
-
 /*【3本線の「文字（三）」】*/	
 .open-btn span{
   display: inline-block;
@@ -127,30 +168,24 @@ font-weight: bold;
 background-color: white;
   width: 45%;
 }
-
 .open-btn span:nth-of-type(1) {
 top:15px;	
 }
-
 .open-btn span:nth-of-type(2) {
 top:23px;
 }
-
 .open-btn span:nth-of-type(3) {
 top:31px;
 }
-
 .open-btn.active span:nth-of-type(1) {
   top: 18px;
   left: 18px;
   transform: translateY(6px) rotate(-45deg);
   width: 30%;
 }
-
 .open-btn.active span:nth-of-type(2) {
 opacity: 0;
 }
-
 .open-btn.active span:nth-of-type(3){
   top: 30px;
   left: 18px;
