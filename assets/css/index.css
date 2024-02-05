@@ -91,8 +91,8 @@ footer > a span:nth-child(3){
 /* text-shadow: 2px 2px 4px rgb(255, 255, 255, 0.5); */
 /* お洒落な「ボックスシャドウ」 */
 /* box-shadow: 2px 2px 10px rgb(255, 255, 255, 0.5); */
-
-
+/* ヘッダーの背景色 */
+/* background:rgba(6, 25, 37, 0.9); */
 
 /* <body> */
 html, body {

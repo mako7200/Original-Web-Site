@@ -1,5 +1,6 @@
 
 
+
 //【背景の動き】水滴がポタポタ落ちるアニメーション
 
 jQuery('#wrapper').raindrops(//指定したエリアに描画
@@ -29,6 +30,3 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 
-
-// #584b4f
-// #bdc3c7
