@@ -1,4 +1,168 @@
 
+
+/*アクティブになったエリア*/
+#g-nav.panel-active{
+  /*position:fixed;にし、z-indexの数値を大きくして前面へ*/
+  position:fixed;
+  z-index: 999;
+top: 0;
+width:100%;
+  height: 100vh;
+}
+
+/*丸の拡大*/
+.circle-bg{
+  position: fixed;
+z-index:3;
+  /*丸の形*/
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  /*丸のスタート位置と形状*/
+transform: scale(0);/*scaleをはじめは0に*/
+  top:calc(50% - 50px);/*50%から円の半径を引いた値*/
+  left:calc(50% - 50px);/*50%から円の半径を引いた値*/
+  transition: all .6s;/*0.6秒かけてアニメーション*/
+}
+
+.circle-bg.circle-active{
+transform: scale(50);/*クラスが付与されたらscaleを拡大*/
+}
+
+/*【背景】ナビゲーション展開時*/
+#g-nav-list{
+  display: none;/*はじめは非表示*/
+  /*ナビの数が増えた場合縦スクロール*/
+  position: fixed;
+  z-index: 999; 
+  width: 100%;
+  height: 100vh;
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+  background:rgba(6, 25, 37, 0.9);
+}
+
+#g-nav.panel-active #g-nav-list{
+  display: block; /*クラスが付与されたら出現*/
+}
+
+/*ナビゲーション*/
+#g-nav ul {
+opacity: 0;/*はじめは透過0*/
+  /*ナビゲーション天地中央揃え※レイアウトによって調整してください。不必要なら削除*/
+  position: absolute;
+  z-index: 999;
+  top:50%;
+  left:50%;
+  transform: translate(-50%,-50%);
+}
+
+/*背景が出現後にナビゲーションを表示*/
+#g-nav.panel-active ul {
+  opacity:1;
+}
+
+/* 背景が出現後にナビゲーション li を表示※レイアウトによって調整してください。不必要なら削除*/
+#g-nav.panel-active ul li{
+animation-name:gnaviAnime;
+animation-duration:1s;
+animation-delay:.2s;/*0.2 秒遅らせて出現*/
+animation-fill-mode:forwards;
+opacity:0;
+}
+@keyframes gnaviAnime{
+0% {
+opacity: 0;
+}
+100% {
+opacity: 1;
+}
+}
+
+/*リストのレイアウト設定*/
+#g-nav li{
+text-align: center; 
+list-style: none;
+}
+
+/*【HOME】【AbOUT】【PICTURES】・・・*/
+#g-nav li a{
+color: white;
+text-decoration: none;
+padding:10px;
+display: block;
+text-transform: uppercase;
+letter-spacing: 0.1em;
+font-weight: bold;
+  text-shadow: 2px 2px 2px rgb(255, 255, 255, 0.5);
+}
+
+
+/*【3本線の「ボックス」】*/
+.open-btn{
+position:fixed;
+top:10px;
+right: 10px;
+z-index: 9999;/*ボタンを最前面に*/
+cursor: pointer;
+  width: 50px;
+  height:50px;
+  box-shadow: 2px 2px 10px rgb(255, 255, 255, 0.5);
+  border-radius: 5px;
+
+  @media (max-width:768px) {
+      top: 2.5%;
+      right: 6%;
+  }
+}
+
+/*【3本線の「文字（三）」】*/	
+.open-btn span{
+  display: inline-block;
+  transition: all .4s;
+  position: absolute;
+  left: 14px;
+  height: 3px;
+  border-radius: 2px;
+background-color: white;
+  width: 45%;
+}
+
+.open-btn span:nth-of-type(1) {
+top:15px;	
+}
+
+.open-btn span:nth-of-type(2) {
+top:23px;
+}
+
+.open-btn span:nth-of-type(3) {
+top:31px;
+}
+
+.open-btn.active span:nth-of-type(1) {
+  top: 18px;
+  left: 18px;
+  transform: translateY(6px) rotate(-45deg);
+  width: 30%;
+}
+
+.open-btn.active span:nth-of-type(2) {
+opacity: 0;
+}
+
+.open-btn.active span:nth-of-type(3){
+  top: 30px;
+  left: 18px;
+  transform: translateY(-6px) rotate(45deg);
+  width: 30%;
+}
+
+
+
+
+
+
 /* お洒落なボックスシャドウ */
 /* box-shadow: 2px 2px 10px rgb(255, 255, 255, 0.5); */
 /* お洒落なテキストシャドウ */
@@ -30,56 +194,44 @@ html, body {
   text-align:center;
 }
 
-.message {
-  z-index: -1;
-  /* background-color: rgb(16, 35, 51); */
-}
-
-/* 背景の色が時間で変わる */
-/* .message > h1{
-    animation: bgchange 10s ease infinite;
-    opacity: 0.9;
-}
-      @keyframes bgchange{
-          0%   {background:rgb(16, 35, 51);}
-          10%  {background:rgb(26, 40, 61);}
-          20%  {background:rgb(36, 43, 71);}
-          30%  {background:rgb(46, 47, 81);}
-          40%  {background:rgb(56, 51, 91);}
-          50%  {background:rgb(66, 56, 101);}
-          60%  {background:rgb(56, 51, 91);}
-          70%  {background:rgb(46, 47, 81);}
-          80%  {background:rgb(36, 43, 71);}
-          90%  {background:rgb(26, 40, 61);}
-          100%  {background:rgb(16, 35, 51);}
-    } */
 
 
-.message > h1 {
+/*【ヘッダー】*/
+header {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: row;
   background:rgba(6, 25, 37, 0.9);
   text-shadow: 2px 2px 4px rgb(255, 255, 255, 0.5);
-  color: gray;
-  font-size: 5rem;
-  padding: 1rem 2rem;
   box-shadow: 2px 2px 10px rgb(255, 255, 255, 0.5);
-
-    @media(max-width: 768px) {
-      padding: 1rem;
-      font-size: 3rem;
-    }
 }
 
-.message > h3 {
+.message > h1 {
+  text-shadow: 2px 2px 4px rgb(255, 255, 255, 0.5);
+  font-size: 5rem;
+  color: gray;
+  padding: 1rem 2rem;
+
+  @media(max-width: 768px) {
+      padding: 1rem;
+      font-size: 3rem;
+  }
+}
+
+.main-title > h3 {
   text-shadow: 1px 1px 2px rgb(255, 255, 255, 0.5);
   color: gray;
   font-size: 3rem;
   margin: 10% 20% 5% 20%;
-  
+
   @media(max-width:768px) {
-      font-size: 1.8rem;
-      margin: 15% 10% 5% 10%;
-  }
+  font-size: 1.8rem;
+  margin: 15% 10% 5% 10%;
 }
+}
+
+
 
 .message-area {
   margin: 5% 20%;
@@ -131,7 +283,7 @@ html, body {
 
 
 /* ホームに戻る */
-.return > a {
+/* .return > a {
   width: 10%;
   height: auto;
   top: 1.5rem;
@@ -152,9 +304,8 @@ html, body {
   height: auto;
   display: inline-block;
   padding: 0.8em 3em;
-  background-color: #3e4885; /* 背景色 */
-  box-shadow: 0 5px 0 #323966; /* 影の太さ・色 */
-  /* border: solid 0.5px #4753a2; */
+  background-color: #3e4885;
+  box-shadow: 0 5px 0 #323966;
   border-radius: 10px;
   color: #fff;
   cursor: pointer;
@@ -170,4 +321,4 @@ html, body {
 .btn:active {
   box-shadow: none;
   transform: translateY(4px);
-}
+} */

@@ -217,9 +217,11 @@ header {
     height:50px;
 	border-radius: 5px;
     z-index: 9999;
-
-    @media(max-width:768px) {
+    
+    @media (max-width:768px) {
         display: block;   /*メニュー表示*/
+        top: 2.5%;
+        right: 6%;
     }
 }
 
