@@ -1,56 +1,5 @@
-
-
-/*========= LoadingのためのCSS ===============*/
-
-/* Loading背景画面設定*/
-#splash {
-    /*fixedで全面に固定*/
-	position: fixed;
-	width: 100%;
-	height: 100%;
-	z-index: 999;
-	text-align:center;
-	color:#fff;
-}
-
-/* Loading画像中央配置*/
-#splash_text {
-	position: absolute;
-	top: 50%;
-	left: 50%;
-    z-index: 999;
-	transform: translate(-50%, -50%);
-	color: #fff;
-	width: 100%;
-}
-
-/*割れる画面のアニメーション*/
-.loader_cover {
-    width: 100%;
-    height: 50%;
-    background-color: rgb(0, 0, 0);
-    transition: all 3.0s cubic-bezier(.04, .435, .315, .9);
-    transform: scaleY(1);
-}
-/*上の画面*/
-.loader_cover-up {
-    transform-origin: center top;
-}
-
-/*下の画面*/
-.loader_cover-down {
-    position: absolute;
-    bottom: 0;
-    transform-origin: center bottom;
-}
-/*クラス名がついたらY軸方向に0*/
-.coveranime {
-    transform: scaleY(0);
-}
-
-
-/* 試験的に記述（ネオン色）*/
-/* @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
+/*========= ネオン（必ずCSSの一番上に記述する） ===============*/
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
 footer > a{
     position: relative;
     display: inline-block;
@@ -131,7 +80,61 @@ footer > a span:nth-child(3){
     50%,100%{
         right: 100%;
     }
-} */
+}
+
+
+
+
+
+/*========= Loading ===============*/
+
+/* Loading背景画面設定*/
+#splash {
+    /*fixedで全面に固定*/
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	z-index: 999;
+	text-align:center;
+	color:#fff;
+}
+
+/* Loading画像中央配置*/
+#splash_text {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+    z-index: 999;
+	transform: translate(-50%, -50%);
+	color: #fff;
+	width: 100%;
+}
+
+/*割れる画面のアニメーション*/
+.loader_cover {
+    width: 100%;
+    height: 50%;
+    background-color: rgb(0, 0, 0);
+    transition: all 3.0s cubic-bezier(.04, .435, .315, .9);
+    transform: scaleY(1);
+}
+/*上の画面*/
+.loader_cover-up {
+    transform-origin: center top;
+}
+
+/*下の画面*/
+.loader_cover-down {
+    position: absolute;
+    bottom: 0;
+    transform-origin: center bottom;
+}
+/*クラス名がついたらY軸方向に0*/
+.coveranime {
+    transform: scaleY(0);
+}
+
+
 
 
 
@@ -155,7 +158,7 @@ html, body {
 /* メインの色、宇宙色。rgb(16, 35, 51) */
 
 
-/*【スクロールボタン】*/
+/*========= Scrollボタン ===============*/
 .scrolldown1{
     /*描画位置※位置は適宜調整してください*/
 	position:absolute;
@@ -192,7 +195,6 @@ html, body {
         0 0 42px #ffffff;
 }
 }
-
 
 /* Scroll「線」 */
 .scrolldown1::after{
@@ -250,7 +252,7 @@ header {
 }
 
 
-/* 【ハンバーガーメニュー】 */
+/*========= 【ハンバーガーメニュー】 ===============*/
 .open-btn{
     display: none;   /*通常時は非表示*/
 	position: fixed;
