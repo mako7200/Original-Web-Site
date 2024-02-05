@@ -120,13 +120,32 @@ html, body {
 .scrolldown1 span{
     /*描画位置*/
 	position: absolute;
-	left:-15px;
-	top: -15px;
+	left:-25px;
+	top: -35px;
     /*テキストの形状*/
 	color: #eee;
-	font-size: 12px;
+	font-size: 15px;
 	letter-spacing: 0.05em;
+    text-shadow:
+    0 0 7px #ffffff,
+    0 0 10px #ffffff,
+    0 0 21px #ffffff,
+    0 0 42px #ffffff;
+
+    @media(max-width:768px) {
+        left: -15px;
+        top: -15px;
+        font-size: 10px;
+        letter-spacing: 0.05em;
+        text-shadow:
+        0 0 7px #ffffff,
+        0 0 10px #ffffff,
+        0 0 21px #ffffff,
+        0 0 42px #ffffff;
 }
+}
+
+
 /* Scroll「線」 */
 .scrolldown1::after{
 	content: "";
@@ -579,6 +598,15 @@ span {
     font-size: 40px;
     text-align: left;
     line-height: 2.0;
+    text-shadow:
+    0 0 7px #fe13b0,
+    0 0 10px #fe13d3,
+    0 0 21px #fe13bf,
+    0 0 42px #fe13bb,
+    0 0 82px #fe13cb,
+    0 0 92px #13a8fe,
+    0 0 102px #13e3fe,
+    0 0 151px #1381fe;
 
     @media(max-width: 768px) {
         font-size: 20px;
@@ -982,6 +1010,15 @@ iframe {
     background-color: black;
     text-align: center;
     z-index: 9999;
+    text-shadow:
+    0 0 7px #ffffff,
+    0 0 10px #ffffff,
+    0 0 21px #ffffff,
+    0 0 42px #ffffff,
+    0 0 82px #fe13cb,
+    0 0 92px #13a8fe,
+    0 0 102px #13e3fe,
+    0 0 151px #1381fe;
 
     @media(max-width: 768px) {
         padding: 1rem 0;

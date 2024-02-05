@@ -115,11 +115,11 @@ html, body {
   top: 35px;
   width: 100%;
   height: 50%;
-  border-radius: 10px;
-  background-color: rgb(27, 145, 204); /* マーカーの色を設定 */
+  border-radius: 5px;
+  background-color: rgb(255, 0, 0); /* マーカーの色を設定 */
   pointer-events: none; /* マーカーがマウスイベントを受け取らないようにする */
   z-index: -1; /* マーカーをテキストの背後に配置 */
-  opacity: 0.5;
+  opacity: 0.8;
 }
 @media (max-width: 768px) {
   .highlight-marker::before {
