@@ -1,4 +1,15 @@
-//テキストのカウントアップ+バーの設定
+/*===========================================================*/
+/*【】*/
+/*===========================================================*/
+
+
+
+
+
+/*===========================================================*/
+/*【ローディング】*/          // (テキストのカウントアップ+バーの設定)
+/*===========================================================*/
+
 var bar = new ProgressBar.Line(splash_text, {//id名を指定
 	easing: 'easeInOut',//アニメーション効果linear、easeIn、easeOut、easeInOutが指定可能
 	duration: 2000,//時間指定(1000＝1秒)
@@ -35,31 +46,45 @@ bar.animate(1.0, function () {//バーを描画する割合を指定します 1.
 
 
 
-// 【モーダル表示（広告やセール情報）】
-//初回のみモーダルをすぐ出す判定。flagがモーダル表示のstart_open後に代入される
-var access = $.cookie('access')
-if(!access){
+
+/*===========================================================*/
+/*【モーダルウィンドウ】*/
+/*===========================================================*/
+
+// 初回のみモーダルをすぐ出す判定。
+// flagがモーダル表示のstart_open後に代入される
+
+// ユーザーのアクセス情報をクッキーから取得
+var access = $.cookie('access');
+
+if (!access) { // アクセス情報がない場合
   flag = true;
+  // ページロード時に常にモーダルを表示させるためには、 $.cookie('access') の値を true にする
   $.cookie('access', false);
-}else{
-  flag = false	
+} else { // アクセス情報がある場合
+  flag = false; 
+  // 常にモーダルを表示させるためには、flag を true にする
 }
-//モーダル表示
+
+// モーダル表示
 $(".modal-open").modaal({
-start_open:flag, // ページロード時に表示するか
-overlay_close:true,//モーダル背景クリック時に閉じるか
-before_open:function(){// モーダルが開く前に行う動作
-  $('html').css('overflow-y','hidden');/*縦スクロールバーを出さない*/
-},
-after_close:function(){// モーダルが閉じた後に行う動作
-  $('html').css('overflow-y','scroll');/*縦スクロールバーを出す*/
-}
+  start_open: flag, // ページロード時に表示するか
+  overlay_close: true, // モーダル背景クリック時に閉じるか
+  before_open: function() { // モーダルが開く前に行う動作
+    $('html').css('overflow-y', 'hidden'); /*縦スクロールバーを出さない*/
+  },
+  after_close: function() { // モーダルが閉じた後に行う動作
+    $('html').css('overflow-y', 'scroll'); /*縦スクロールバーを出す*/
+  }
 });
 
 
 
 
-//【ハンバーガーメニュー】
+/*===========================================================*/
+/*【ハンバーガーメニュー】*/
+/*===========================================================*/
+
 // $(".open-btn").click(function () {
 //   $(this).toggleClass('active');
 // });
@@ -76,7 +101,10 @@ $(document).ready(function(){
 });
 
 
-//【背景の動き】水滴がポタポタ落ちるアニメーション
+
+/*===========================================================*/
+/*【水滴がポタポタ落ちるアニメーション】*/      //(背景の動き)
+/*===========================================================*/
 
 jQuery('#wrapper').raindrops(//指定したエリアに描画
 {
@@ -92,7 +120,11 @@ jQuery('#wrapper').raindrops(//指定したエリアに描画
 
 
 
-//アイコンを一定時間ごとに自動で切り替える
+
+/*===========================================================*/
+/*【画像を自動で切替】*/
+/*===========================================================*/
+
 document.addEventListener("DOMContentLoaded", function() {
   var imageSwitch = document.querySelector('.image-switch');
   var images = ['./assets/img/26.jpg', './assets/img/M.jpg', './assets/img/M3.jpg', './assets/img/Sedaバー.jpg', './assets/img/21.jpg', './assets/img/16.jpg','./assets/img/17.jpg','./assets/img/15.jpg', './assets/img/25.jpg', './assets/img/27.jpg', './assets/img/11.jpg'];
@@ -109,7 +141,10 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 
-// 画像拡大
+
+/*===========================================================*/
+/*【画像を拡大】*/
+/*===========================================================*/
 function zoomImage(img) {
   img.classList.toggle("zoomed"); // クリックされた画像の拡大状態を切り替える
 }
