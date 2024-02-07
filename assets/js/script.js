@@ -59,7 +59,7 @@ var access = $.cookie('access');   //ユーザーのアクセス情報をクッ�
 
 if (!access) {   //アクセス情報がない場合
   flag = true;
-  $.cookie('ac  cess', false);   //ページロード時に常にモーダルを表示させるためには、 $.cookie('access') の値を true にする
+  $.cookie('access', false);   //ページロード時に常にモーダルを表示させるためには、 $.cookie('access') の値を true にする
 } else {    //アクセス情報がある場合
   flag = false;   //常にモーダルを表示させるためには、flag を true にする
 }
