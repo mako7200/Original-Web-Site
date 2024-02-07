@@ -156,10 +156,15 @@ footer > a span:nth-child(3){
 }
 .modaal-content-container {
     width: 100%;
-    height: 50vh;
+    height: 70vh;
+    line-height: 2.0;
     overflow: hidden;   /*文字の飛び出しを防ぐ*/
-    line-height: 1.5;
     font-family: serif;
+    
+    @media (max-width: 768px) {
+        line-height: 1.5;
+        height: 60vh;
+    }
 }
 .modaal-content-container > h1 {
     width: 100%;
@@ -178,6 +183,7 @@ footer > a span:nth-child(3){
     
     @media (max-width: 768px) {
         font-size: 19px;
+        margin: 5px auto 5px;
     }
 }
 .modaal-content-container > p {
@@ -186,7 +192,7 @@ footer > a span:nth-child(3){
     font-family: monospace;
     color: rgba(0, 0, 0, 0.8);
     border-radius: 10px;
-    border: 0.1px solid rgba(128, 128, 128, 0.5);
+    border: 1px solid rgba(128, 128, 128);
     margin: 10% auto 5%;
     padding: 30px;
     display: flex;
@@ -195,8 +201,8 @@ footer > a span:nth-child(3){
     @media (max-width: 768px) {
         width: 100%;
         font-size: 14px;
+        margin: 15% auto 5%;
         padding: 10px;
-        
     }
 }
 
@@ -224,7 +230,7 @@ footer > a span:nth-child(3){
 .modaal-close:focus:before,
 .modaal-close:hover:after,
 .modaal-close:hover:before{
-	background:#666;
+	background: black;
 }
 
 

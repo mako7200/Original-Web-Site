@@ -51,30 +51,28 @@ bar.animate(1.0, function () {//バーを描画する割合を指定します 1.
 /*【モーダルウィンドウ】*/
 /*===========================================================*/
 
-// 初回のみモーダルをすぐ出す判定。
-// flagがモーダル表示のstart_open後に代入される
+//初回のみモーダルをすぐ出す判定。
+//flagがモーダル表示のstart_open後に代入される
 
-// ユーザーのアクセス情報をクッキーから取得
-var access = $.cookie('access');
 
-if (!access) { // アクセス情報がない場合
+var access = $.cookie('access');   //ユーザーのアクセス情報をクッキーから取得
+
+if (!access) {   //アクセス情報がない場合
   flag = true;
-  // ページロード時に常にモーダルを表示させるためには、 $.cookie('access') の値を true にする
-  $.cookie('access', false);
-} else { // アクセス情報がある場合
-  flag = false; 
-  // 常にモーダルを表示させるためには、flag を true にする
+  $.cookie('ac  cess', false);   //ページロード時に常にモーダルを表示させるためには、 $.cookie('access') の値を true にする
+} else {    //アクセス情報がある場合
+  flag = false;   //常にモーダルを表示させるためには、flag を true にする
 }
 
 // モーダル表示
 $(".modal-open").modaal({
-  start_open: flag, // ページロード時に表示するか
-  overlay_close: true, // モーダル背景クリック時に閉じるか
+  start_open: flag,   //ページロード時に表示するか
+  overlay_close: true,   //モーダル背景クリック時に閉じるか
   before_open: function() { // モーダルが開く前に行う動作
-    $('html').css('overflow-y', 'hidden'); /*縦スクロールバーを出さない*/
+    $('html').css('overflow-y', 'hidden');   /*縦スクロールバーを出さない*/
   },
-  after_close: function() { // モーダルが閉じた後に行う動作
-    $('html').css('overflow-y', 'scroll'); /*縦スクロールバーを出す*/
+  after_close: function() {   //モーダルが閉じた後に行う動作
+    $('html').css('overflow-y', 'scroll');   /*縦スクロールバーを出す*/
   }
 });
 
