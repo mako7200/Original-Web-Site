@@ -729,10 +729,14 @@ span {
 .main-contents {
     margin: 10% auto;
 
-    @media(max-width: 768px) {
-
+        @media(max-width: 768px) {
     }
 }
+
+
+
+
+
 
 /* 作成背景 */
 .concept {
@@ -748,7 +752,6 @@ span {
         margin: 40% 10% 30% 10%;
     }
 }
-
 .concept > h3 {
     border-radius: 10%;
     text-align: center;
@@ -771,7 +774,6 @@ span {
         height: auto; /* 高さを自動調整 */
     }
 }
-
 .concept > p {
     /* border: solid 1px red; */
     line-height: 2.0;
@@ -789,6 +791,10 @@ span {
 }
 
 }
+
+
+
+
 
 
 
