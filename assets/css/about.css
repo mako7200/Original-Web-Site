@@ -1,6 +1,13 @@
+/*===========================================================*/
+/*【】*/
+/*===========================================================*/
 
 
-/*アクティブになったエリア*/
+
+/*===========================================================*/
+/*【グローバルナビゲーション】*/
+/*===========================================================*/
+
 #g-nav.panel-active{
     /*position:fixed;にし、z-indexの数値を大きくして前面へ*/
     position:fixed;
@@ -87,76 +94,133 @@ opacity: 1;
 
 /*【HOME】【AbOUT】【PICTURES】・・・*/
 #g-nav li a{
-	color: white;
-	text-decoration: none;
-	padding:10px;
-	display: block;
-	text-transform: uppercase;
-	letter-spacing: 0.1em;
-	font-weight: bold;
+    font-size: 2rem;
+    line-height: 3.0;
+    color: white;
+    text-decoration: none;
+    padding:10px;
+    display: block;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-weight: bold;
     text-shadow: 2px 2px 2px rgb(255, 255, 255, 0.5);
-}
 
+    @media (max-width: 768px) {
+        font-size: 1.3rem;
+        line-height: 1.5;
+        color: white;
+        text-decoration: none;
+        padding:10px;
+        display: block;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        font-weight: bold;
+        text-shadow: 2px 2px 2px rgb(255, 255, 255, 0.5);
+    }
+}
+#g-nav li a:hover {
+    text-shadow: 0px 0px 10px rgb(255, 255, 255);
+    transform: scale(1.1);
+}
 
 /*【3本線の「ボックス」】*/
 .open-btn{
-	position:fixed;
-	top:10px;
-	right: 10px;
-	z-index: 9999;/*ボタンを最前面に*/
-	cursor: pointer;
+    position:fixed;
+    top: 2.0%;
+    right: 3%;
+    z-index: 9999;/*ボタンを最前面に*/
+    cursor: pointer;
+    width: 70px;
+    height:70px;
+    box-shadow: 2px 2px 10px rgb(255, 255, 255, 0.5);
+    border-radius: 5px;
+    
+    @media (max-width:768px) {
+    position:fixed;
+    top: 2.3%;
+    right: 6%;
+    z-index: 9999;
+    cursor: pointer;
     width: 50px;
     height:50px;
     box-shadow: 2px 2px 10px rgb(255, 255, 255, 0.5);
     border-radius: 5px;
-
-    @media (max-width:768px) {
-        top: 2.5%;
-        right: 6%;
     }
 }
-	
 /*【3本線の「文字（三）」】*/	
 .open-btn span{
     display: inline-block;
     transition: all .4s;
     position: absolute;
     left: 14px;
-    height: 3px;
+    height: 5px;
     border-radius: 2px;
-	background-color: white;
-    width: 45%;
-}
+    background-color: white;
+    width: 60%;
 
+    @media (max-width:768px) {
+        display: inline-block;
+        transition: all .4s;
+        position: absolute;
+        left: 14px;
+        height: 3px;
+        border-radius: 2px;
+        background-color: white;
+        width: 45%;
+    }
+}
 .open-btn span:nth-of-type(1) {
-	top:15px;	
-}
+    top: 20px;
 
+    @media (max-width:768px) {
+        top:15px;	
+    }
+}
 .open-btn span:nth-of-type(2) {
-	top:23px;
+    top:35px;
+    
+    @media (max-width:768px) {
+        top:23px;	
+    }
 }
-
 .open-btn span:nth-of-type(3) {
-	top:31px;
-}
+    top:49px;
 
+    @media (max-width:768px) {
+        top:31px;	
+    }
+}
+/* 【×ボタン】 */
 .open-btn.active span:nth-of-type(1) {
-    top: 18px;
+    top: 28px;
     left: 18px;
     transform: translateY(6px) rotate(-45deg);
-    width: 30%;
-}
+    width: 50%;   /*サイズを調整*/
 
+    @media (max-width:768px) {
+        top: 18px;
+        left: 18px;
+        transform: translateY(6px) rotate(-45deg);
+        width: 30%;
+    }
+}
 .open-btn.active span:nth-of-type(2) {
-	opacity: 0;
+    opacity: 0;
+}
+.open-btn.active span:nth-of-type(3){
+    left: 18px;
+    top: 40px;
+    width: 50%;
+    transform: translateY(-6px) rotate(45deg);
+
+    @media (max-width:768px) {
+        left: 18px;
+        top: 30px;
+        width: 30%;
+        transform: translateY(-6px) rotate(45deg);
+    }
 }
 
-.open-btn.active span:nth-of-type(3){
-    top: 30px;
-    left: 18px;
-    transform: translateY(-6px) rotate(45deg);
-    width: 30%;
-}
 
 
 
