@@ -63,7 +63,7 @@ if (!access) {   //アクセス情報がない場合
     flag = true;
   $.cookie('access', false);   //ページロード時に常にモーダルを表示させるためには、 $.cookie('access') の値を true にする
 } else {    //アクセス情報がある場合
-  flag = false;   //常にモーダルを表示させるためには、flag を true にする
+  flag = true;   //常にモーダルを表示させるためには、flag を true にする
 }
 
 // モーダル表示
