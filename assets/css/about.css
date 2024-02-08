@@ -306,7 +306,13 @@ h4 {
         font-size: 15px;
     }
 }
-
+.li > p > span {
+    color: red;
+    font-weight: bold;
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 2px 0 5px 0;
+    font-size: 110%;
+}
 
 /*【プロフィール欄】*/
 .photo-box {
