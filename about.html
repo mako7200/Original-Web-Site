@@ -8,6 +8,8 @@
 <link rel="stylesheet" href="./assets/css/reset.css">
 <!-- CSS -->
 <link rel="stylesheet" href="./assets/css/about.css">
+<!-- モーダルのCSS -->
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/Modaal/0.4.4/css/modaal.min.css">
 
 <title>ABOUT</title>
 </head>
@@ -43,6 +45,28 @@
 
 
 <main>
+
+<!--===========================================================-->
+<!--【モーダルウィンドウ】-->
+<!--===========================================================-->
+<p><a href="#info" class="modal-open"></a></p>
+<section id="info">
+    <!-- <div class="modaal-content-container"> -->
+    <h1>
+        ※ 必読推奨<br>
+    </h1>
+    <h2>
+        <br>プログラミングの進め方<br>
+        <h4>必ず読んでいただきたいページになります。</h4>
+    </h2>
+    <p>
+        この3ヶ月のIT留学を効率よく勉強するためのエッセンスを詰め込みました。<br>
+        私の知見を共有し、ほんの少しでも参考にしていただければ幸いです。
+    </p>
+    <h3>70期 : 小松啓也</h3>
+    <!-- </div> -->
+</section>
+
 <div id="wrapper">
 
     <div class="main-title">
@@ -211,14 +235,18 @@
 
 <!-- jQueryの読み込み -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-<!-- 独自のJS（水滴が落ちる背景）読み込み -->
-<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="  crossorigin="anonymous"></script>
+<!-- モーダル -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Modaal/0.4.4/js/modaal.min.js"></script>
+<!-- jquery.cookie.js -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.js"></script>
+<!-- jQuery UI (水滴がポタポタ落ちるで使用) -->
 <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js" integrity="sha256-T0Vest3yCU7pafRw9r+settMBX6JkKN06dqBnpQ8d30=" crossorigin="anonymous"></script>
+<!-- raindrops.js (水滴がポタポタ落ちるで使用)-->
 <script src="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/move02/5-16/js/raindrops.js"></script>
 
 
 
-<!-- JSの読み込み -->
+<!-- 自作JS -->
 <script src="./assets/js/about.js"></script>
 </body>
 </html>
