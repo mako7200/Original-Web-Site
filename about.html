@@ -14,13 +14,28 @@
 <title>ABOUT</title>
 </head>
 
+<!--===========================================================-->
+<!--【】-->
+<!--===========================================================-->
+
 
 
 <body>
+<!--===========================================================-->
+<!--【ローディング】-->
+<!--===========================================================-->
+    <div id="splash">
+        <div id="splash_text"></div>
+        <div class="loader_cover loader_cover-up"></div><!--上に上がるエリア-->
+        <div class="loader_cover loader_cover-down"></div><!--下に下がるエリア-->
+    </div>
 
 
-    <header>
-        <!--ナビゲーション-->
+
+<header>
+<!--===========================================================-->
+<!--【グローバルナビゲーション】-->
+<!--===========================================================-->
         <div class="open-btn"><span></span><span></span><span></span></div>
         <nav id="g-nav">
         <div id="g-nav-list"><!--ナビの数が増えた場合縦スクロールするためのdiv※不要なら削除-->
@@ -35,17 +50,18 @@
         </div>
         </nav>
         <div class="circle-bg"></div>
-        <!--ナビゲーション-->
+
 
         <div class="about">
             <h1>ABOUT</h1>
         </div>
-    </header>
+</header>
+
+
 
 
 
 <main>
-
 <!--===========================================================-->
 <!--【モーダルウィンドウ】-->
 <!--===========================================================-->
@@ -72,10 +88,10 @@
     <div class="main-title">
         <h3>ABOUT</h3>
         <ul class="li">
-            <h4>※ 必読推奨<hr></h4>
+            <h4>※ 必読推奨</h4>
             <p>
                 <span>シードテックの生徒には必ず読んでいただきたい項目です。<br>
-                必ず今後に関わる「価値のある情報」を盛り込みました。<br>
+                今後に関わる「価値のある情報」を盛り込みました。<br>
                 私の経験と知識を濃縮してお届けします。どうぞ、お楽しみください。<br>
                 </span>
             </p>
@@ -83,7 +99,7 @@
     </div>
 
         <ul class="li">
-            <h4>1ヶ月目<hr></h4>
+            <h4>1ヶ月目</h4>
             <p><i class="highlight-marker">【オリジナルWebサイト】</i><br>
                 開発ゴールは「オリジナルWebサイト」の作成。学習の中心はHTMLとCSS。<br>
                 （このサイトもこの期間に作ったもの。卒業後も更新中。）<br>
@@ -100,7 +116,7 @@
         </ul>
 
         <ul class="li">
-            <h4>2ヶ月目<hr></h4>
+            <h4>2ヶ月目</h4>
                 <p><i class="highlight-marker">【ミニチーム開発】</i><br>
                 2ヶ月目から(正確には6週目から)は、ミニチーム開発が始まる。
                 開発ゴールは「ToDoリスト」の作成。この時期から、本格的に<span>チームとしての開発</span>が始まる。<br>
@@ -118,7 +134,7 @@
         </ul>
 
         <ul class="li">
-            <h4>3ヶ月目<hr></h4>
+            <h4>3ヶ月目</h4>
             <p><i class="highlight-marker">【チーム開発】</i><br>
                 卒業発表に向けて、チーム開発に全振りする生活。<span>体調管理</span>が非常に重要。睡眠時間は常に不足している。<br>
                 お昼休みに<span>仮眠</span>をとったり、休憩時間に甘いものや飲み物をコンビニで買ったり、なにしろ<span>集中力を持続させる</span>ことが大切。<br>
@@ -140,7 +156,7 @@
         </ul>
 
         <ul class="li">
-            <h4>Profile<hr></h4>
+            <h4>Profile</h4>
             <div class="photo-box">
                 <img src="./assets/img/55.jpg" alt="" class="image-switch">
                 <div class="profile-sentence">
@@ -198,7 +214,7 @@
             <div class="circle">
                 <p class="btnripple2"><span></span></p>
             </div>
-            <h4>後輩たちへ<hr></h4>
+            <h4>後輩たちへ</h4>
             <p>
                 まずは、ソダテクの動画学習をするかと思います。<br>
                 進捗スピードは人それぞれですが、60%の理解でスピード感を持って進めてください。<br>
@@ -233,7 +249,7 @@
 
 
 
-<!-- jQueryの読み込み -->
+<!-- jQuery -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 <!-- モーダル -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Modaal/0.4.4/js/modaal.min.js"></script>
@@ -243,7 +259,8 @@
 <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js" integrity="sha256-T0Vest3yCU7pafRw9r+settMBX6JkKN06dqBnpQ8d30=" crossorigin="anonymous"></script>
 <!-- raindrops.js (水滴がポタポタ落ちるで使用)-->
 <script src="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/move02/5-16/js/raindrops.js"></script>
-
+<!-- ProgressBar.js （ローディングで使用）-->
+<script src="https://rawgit.com/kimmobrunfeldt/progressbar.js/master/dist/progressbar.min.js"></script>
 
 
 <!-- 自作JS -->
