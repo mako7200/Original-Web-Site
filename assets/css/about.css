@@ -456,9 +456,9 @@ h4 {
     }
 }
 .li > p > span {
-    color: red;
+    color: rgb(179, 79, 79);
     font-weight: bold;
-    background-color: rgba(255, 255, 255, 0.2);
+    
     padding: 2px 0 5px 0;
     font-size: 110%;
 }
