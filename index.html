@@ -14,10 +14,12 @@
   <link rel="stylesheet" href="./assets/css/reset.css">
   <!-- ModaalのCSS -->
   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/Modaal/0.4.4/css/modaal.min.css">
+  <!-- slick -->
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
+  <!-- 文字をネオン色にするCSS -->
+  <link href='https://fonts.googleapis.com/css?family=Sacramento:400' rel='stylesheet' type='text/css'>
   <!-- 自作CSS -->
   <link rel="stylesheet" href="./assets/css/index.css">
-  <!-- 文字をネオン色にするCSS -->
-    <link href='https://fonts.googleapis.com/css?family=Sacramento:400' rel='stylesheet' type='text/css'>
 </head>
 
 
@@ -136,19 +138,66 @@
     
       <div class="picture-box">
         <p>学校の写真</p>
-        <img src="./assets/img/学校の写真.jpg" alt="Image" onclick="zoomImage(this)">
-      </div>
+        <ul class="gallery">
+          <li><img src="./assets/img/学校の写真.jpg" alt="Image"></li>
+          <li><img src="./assets/img/46.jpg" alt="Image"></li>
+          <li><img src="./assets/img/66.jpg" alt="Image"></li>
+        </ul>
+        <!-- <ul class="choice-btn">
+          <li><img src="./assets/img/学校の写真.jpg" alt="Image"></li>
+          <li><img src="./assets/img/寮の写真.jpg" alt="Image"></li>
+          <li><img src="./assets/img/日常の写真.jpg" alt="Image"></li>
+        </ul> -->
+        <!-- <img src="./assets/img/学校の写真.jpg" alt="Image" onclick="zoomImage(this)"> -->
+      <!-- </div> -->
 
       <div class="picture-box">
         <p>寮の写真</p>
-        <img src="./assets/img/寮の写真.jpg" alt="Image" onclick="zoomImage(this)">
+        <ul class="gallery">
+          <li><img src="./assets/img/寮の写真.jpg" alt=""></li>
+          <li><img src="./assets/img/56.jpg" alt=""></li>
+          <li><img src="./assets/img/57.jpg" alt=""></li>
+        </ul>
+        <!-- <ul class="choice-btn">
+          <li><img src="./assets/img/学校の写真.jpg" alt=""></li>
+          <li><img src="./assets/img/寮の写真.jpg" alt=""></li>
+          <li><img src="./assets/img/日常の写真.jpg" alt=""></li>
+        </ul> -->
+        <!-- <img src="./assets/img/寮の写真.jpg" alt="Image" onclick="zoomImage(this)"> -->
       </div>
 
       <div class="picture-box">
         <p>日常の写真</p>
-        <img src="./assets/img/日常の写真.jpg" alt="Image" onclick="zoomImage(this)">
+        <ul class="gallery">
+          <li><img src="./assets/img/日常の写真.jpg" alt=""></li>
+          <li><img src="./assets/img/86.jpg" alt=""></li>
+          <li><img src="./assets/img/32.jpg" alt=""></li>
+        </ul>
+        <!-- <ul class="choice-btn">
+          <li><img src="./assets/img/学校の写真.jpg" alt=""></li>
+          <li><img src="./assets/img/寮の写真.jpg" alt=""></li>
+          <li><img src="./assets/img/日常の写真.jpg" alt=""></li>
+        </ul> -->
+        <!-- <img src="./assets/img/日常の写真.jpg" alt="Image" onclick="zoomImage(this)"> -->
       </div>
     </div>
+
+
+    <!-- 【スライダー】 -->
+
+    <!-- <ul class="gallery">
+      <li><img src="./assets/img/.jpg" alt=""></li>
+      <li><img src="./assets/img/.jpg" alt=""></li>
+      <li><img src="./assets/img/.jpg" alt=""></li>
+    </ul>
+    <ul class="choice-btn">
+      <li><img src="./assets/img/.jpg" alt=""></li>
+      <li><img src="./assets/img/.jpg" alt=""></li>
+      <li><img src="./assets/img/.jpg" alt=""></li>
+    </ul> -->
+
+
+
 </div>
 <!-- __________________________________________________________________________________ -->
 
@@ -161,7 +210,17 @@
 
     <div class="cafe-box">
       <h5>「THE CIVET COFFEE」<br>(Roasters)</h5>
-      <img src="./assets/img/カフェ3.jpg" alt="Image" class="cafe-photo cafe-photo1" onclick="zoomImage(this)">
+      <ul class="gallery">
+        <li><img src="./assets/img/カフェ3.jpg" alt=""></li>
+        <li><img src="./assets/img/9.jpg" alt=""></li>
+        <li><img src="./assets/img/40.jpg" alt=""></li>
+      </ul>
+      <ul class="choice-btn">
+        <li><img src="./assets/img/カフェ3.jpg" alt=""></li>
+        <li><img src="./assets/img/9.jpg" alt=""></li>
+        <li><img src="./assets/img/40.jpg" alt=""></li>
+      </ul>
+      <!-- <img src="./assets/img/カフェ3.jpg" alt="Image" class="cafe-photo cafe-photo1" onclick="zoomImage(this)"> -->
       <div class="cafe-sentence">落ち着いた雰囲気で、長時間1人または複数人で勉強したい時にオススメの場所。店員の接客態度は良いが、たまにストリートチルドレンが侵入してくる。<br>
       </div>
       <a href="https://www.facebook.com/civetsm/">
@@ -171,7 +230,17 @@
 
     <div class="cafe-box">
       <h5>「COFFEE BAY」<br>(Cebu City)</h5>
-      <img src="./assets/img/カフェ2.jpg" alt="Image" class="cafe-photo cafe-hoto2" onclick="zoomImage(this)">
+      <ul class="gallery">
+        <li><img src="./assets/img/カフェ2.jpg" alt=""></li>
+        <li><img src="./assets/img/カフェ4.jpg" alt=""></li>
+        <li><img src="./assets/img/45.jpg" alt=""></li>
+      </ul>
+      <ul class="choice-btn">
+        <li><img src="./assets/img/カフェ2.jpg" alt=""></li>
+        <li><img src="./assets/img/カフェ4.jpg" alt=""></li>
+        <li><img src="./assets/img/45.jpg" alt=""></li>
+      </ul>
+      <!-- <img src="./assets/img/カフェ2.jpg" alt="Image" class="cafe-photo cafe-hoto2" onclick="zoomImage(this)"> -->
       <div class="cafe-sentence">少し賑やかな空間で、仲間と話しながら勉強したい時にオススメの場所。24時間営業で寮からも近い距離にあるので便利。客層は学生が多め。<br>
       </div>
       <a href="https://www.facebook.com/coffeebayph/">
@@ -181,7 +250,17 @@
 
     <div class="cafe-box">
       <h5>「BubbleZ」<br>(Cebu)</h5>
-      <img src="./assets/img/カフェ1.jpg" alt="Image" class="cafe-photo cafe-photo3" onclick="zoomImage(this)">
+      <ul class="gallery">
+        <li><img src="./assets/img/カフェ1.jpg" alt=""></li>
+        <li><img src="./assets/img/31.jpg" alt=""></li>
+        <li><img src="./assets/img/47.jpg" alt=""></li>
+      </ul>
+      <ul class="choice-btn">
+        <li><img src="./assets/img/カフェ1.jpg" alt=""></li>
+        <li><img src="./assets/img/31.jpg" alt=""></li>
+        <li><img src="./assets/img/47.jpg" alt=""></li>
+      </ul>
+      <!-- <img src="./assets/img/カフェ1.jpg" alt="Image" class="cafe-photo cafe-photo3" onclick="zoomImage(this)"> -->
       <div class="cafe-sentence">ミルクティーを飲みながら1人で勉強したい時にオススメの場所。座席数が少なく、店内が非常に明るいのが特徴。隣にキッチンレモンがある。<br>
       </div>
     <a href="https://www.facebook.com/BubbleZCebu/">
@@ -275,7 +354,8 @@
 <script src="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/move02/5-16/js/raindrops.js"></script>
 <!-- ProgressBar.js (ローディングに関わる) -->
 <script src="https://rawgit.com/kimmobrunfeldt/progressbar.js/master/dist/progressbar.min.js"></script>
-
+<!-- slick (画像のスライダーに関わる)-->
+<script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 
 <!-- 自作JS -->
 <script src="./assets/js/script.js"></script>
