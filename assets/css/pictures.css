@@ -1,0 +1,491 @@
+/*===========================================================*/
+/*【】*/
+/*===========================================================*/
+
+
+
+
+/*===========================================================*/
+/*【Loading】*/
+/*===========================================================*/
+
+/* Loading背景画面設定*/
+#splash {
+    /*fixedで全面に固定*/
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	z-index: 999;
+	text-align:center;
+	color:#fff;
+}
+/* Loading画像中央配置*/
+#splash_text {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+    z-index: 999;
+	transform: translate(-50%, -50%);
+	color: #fff;
+	width: 100%;
+}
+/*割れる画面のアニメーション*/
+.loader_cover {
+    width: 100%;
+    height: 50%;
+    background-color: rgb(0, 0, 0);
+    transition: all 3.0s cubic-bezier(.04, .435, .315, .9);
+    transform: scaleY(1);
+}
+/*上の画面*/
+.loader_cover-up {
+    transform-origin: center top;
+}
+/*下の画面*/
+.loader_cover-down {
+    position: absolute;
+    bottom: 0;
+    transform-origin: center bottom;
+}
+/*クラス名がついたらY軸方向に0*/
+.coveranime {
+    transform: scaleY(0);
+}
+
+
+
+
+
+/*===========================================================*/
+/*【グローバルナビゲーション】*/
+/*===========================================================*/
+
+/*アクティブになったエリア*/
+#g-nav.panel-active{
+    position:fixed;
+    /*position:fixed;にし、z-indexの数値を大きくして前面へ*/
+    top: 0;
+    z-index: 999;
+    height: 100vh;
+    width:100%;
+}
+/*丸の拡大*/
+.circle-bg{
+    z-index:3;
+    position: fixed;
+    width: 100px;
+    /*丸の形*/
+    border-radius: 50%;
+    height: 100px;
+    transform: scale(0);/*scaleをはじめは0に*/
+    /*丸のスタート位置と形状*/
+    left:calc(50% - 50px);/*50%から円の半径を引いた値*/
+    top:calc(50% - 50px);/*50%から円の半径を引いた値*/
+    transition: all .6s;/*0.6秒かけてアニメーション*/
+}
+.circle-bg.circle-active{
+    transform: scale(50);/*クラスが付与されたらscaleを拡大*/
+}
+/*【背景】ナビゲーション展開時*/
+#g-nav-list{
+    display: none;/*はじめは非表示*/
+    /*ナビの数が増えた場合縦スクロール*/
+    position: fixed;
+    z-index: 999; 
+    width: 100%;
+    height: 100vh;
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+    background:rgba(6, 25, 37, 0.9);
+}
+#g-nav.panel-active #g-nav-list{
+    display: block; /*クラスが付与されたら出現*/
+}
+/*ナビゲーション*/
+#g-nav ul {
+    /*ナビゲーション天地中央揃え※レイアウトによって調整してください。不必要なら削除*/
+    opacity: 0;/*はじめは透過0*/
+    position: absolute;
+    z-index: 999;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+}
+/*背景が出現後にナビゲーションを表示*/
+#g-nav.panel-active ul {
+    opacity:1;
+}
+/* 背景が出現後にナビゲーション li を表示※レイアウトによって調整してください。不必要なら削除*/
+#g-nav.panel-active ul li{
+    animation-name:gnaviAnime;
+    animation-duration:1s;
+    animation-delay:.2s;/*0.2 秒遅らせて出現*/
+    animation-fill-mode:forwards;
+    opacity:0;
+}
+@keyframes gnaviAnime{
+0% {
+opacity: 0;
+}
+100% {
+opacity: 1;
+}
+}
+/*リストのレイアウト設定*/
+#g-nav li{
+    text-align: center; 
+    list-style: none;
+}
+/*【HOME】【AbOUT】【PICTURES】・・・*/
+#g-nav li a{
+    font-size: 2rem;
+    line-height: 3.0;
+    color: white;
+    text-decoration: none;
+    padding:10px;
+    display: block;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-weight: bold;
+    text-shadow: 2px 2px 2px rgb(255, 255, 255, 0.5);
+
+    @media (max-width: 768px) {
+        font-size: 1.3rem;
+        line-height: 1.5;
+        color: white;
+        text-decoration: none;
+        padding:10px;
+        display: block;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        font-weight: bold;
+        text-shadow: 2px 2px 2px rgb(255, 255, 255, 0.5);
+    }
+}
+#g-nav li a:hover {
+    text-shadow: 0px 0px 10px rgb(255, 255, 255);
+    transform: scale(1.1);
+}
+
+/*【3本線の「ボックス」】*/
+.open-btn{
+    position:fixed;
+    top: 2.0%;
+    right: 3%;
+    z-index: 9999;/*ボタンを最前面に*/
+    cursor: pointer;
+    width: 70px;
+    height:70px;
+    box-shadow: 2px 2px 10px rgb(255, 255, 255, 0.5);
+    border-radius: 5px;
+    
+    @media (max-width:768px) {
+    position:fixed;
+    top: 2.3%;
+    right: 6%;
+    z-index: 9999;
+    cursor: pointer;
+    width: 50px;
+    height:50px;
+    box-shadow: 2px 2px 10px rgb(255, 255, 255, 0.5);
+    border-radius: 5px;
+    }
+}
+/*【3本線の「文字（三）」】*/	
+.open-btn span{
+    display: inline-block;
+    transition: all .4s;
+    position: absolute;
+    left: 14px;
+    height: 5px;
+    border-radius: 2px;
+    background-color: white;
+    width: 60%;
+
+    @media (max-width:768px) {
+        display: inline-block;
+        transition: all .4s;
+        position: absolute;
+        left: 14px;
+        height: 3px;
+        border-radius: 2px;
+        background-color: white;
+        width: 45%;
+    }
+}
+.open-btn span:nth-of-type(1) {
+    top: 20px;
+
+    @media (max-width:768px) {
+        top:15px;	
+    }
+}
+.open-btn span:nth-of-type(2) {
+    top:35px;
+    
+    @media (max-width:768px) {
+        top:23px;	
+    }
+}
+.open-btn span:nth-of-type(3) {
+    top:49px;
+
+    @media (max-width:768px) {
+        top:31px;	
+    }
+}
+/* 【×ボタン】 */
+.open-btn.active span:nth-of-type(1) {
+    top: 28px;
+    left: 18px;
+    transform: translateY(6px) rotate(-45deg);
+    width: 50%;   /*サイズを調整*/
+
+    @media (max-width:768px) {
+        top: 18px;
+        left: 18px;
+        transform: translateY(6px) rotate(-45deg);
+        width: 30%;
+    }
+}
+.open-btn.active span:nth-of-type(2) {
+    opacity: 0;
+}
+.open-btn.active span:nth-of-type(3){
+    left: 18px;
+    top: 40px;
+    width: 50%;
+    transform: translateY(-6px) rotate(45deg);
+
+    @media (max-width:768px) {
+        left: 18px;
+        top: 30px;
+        width: 30%;
+        transform: translateY(-6px) rotate(45deg);
+    }
+}
+
+
+
+
+
+
+
+
+
+html, body {
+    width: auto;
+    height: 100%;
+    font-family: serif;
+}
+
+#particles-js{ 
+    position:fixed;/*描画固定*/
+    z-index:-1;/*描画を一番下に*/
+    width: auto;
+    height: 100%;
+    /* background-color: rgb(16, 35, 51); */
+    background-color: rgb(0, 0, 0);
+}
+
+#wrapper{
+    position: relative;/*描画を#particles-jsよりも上にするためposition:relative;を指定*/
+    z-index: 1;/*z-indexの数字を大きくすることで描画を#particles-jsよりも上に*/
+    width:auto;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align:center;
+    flex-direction: column;
+}
+
+/*【ヘッダー】*/
+header {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    background:rgba(6, 25, 37, 0.9);
+    text-shadow: 2px 2px 4px rgb(255, 255, 255, 0.5);
+    box-shadow: 2px 2px 10px rgb(255, 255, 255, 0.5);
+}
+
+.pictures > h1 {
+    text-shadow: 2px 2px 4px rgb(255, 255, 255, 0.5);
+    font-size: 5rem;
+    color: gray;
+    padding: 1rem 2rem;
+
+    @media(max-width: 768px) {
+        padding: 1rem;
+        font-size: 3rem;
+    }
+}
+
+.main-title > h3 {
+    text-shadow: 1px 1px 2px rgb(255, 255, 255, 0.5);
+    color: gray;
+    font-size: 3rem;
+    margin: 10% 20% 5% 20%;
+    text-align: center;
+
+    @media(max-width:768px) {
+    font-size: 1.8rem;
+    margin: 15% 10% 5% 10%;
+}
+}
+
+
+
+
+.photos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 40px 70px;
+    
+    /* レスポンシブ対応 */
+    @media (max-width:768px) {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin: 20px;
+    }
+}
+
+.photo-box {
+    width: calc(33.33% - 23.33px); /* 3つの要素が横並びで表示されるように幅を設定 */
+    margin-bottom: 40px; /* 各要素の下に40pxのマージンを追加 */
+    position: relative;
+
+    /* レスポンシブ対応 */
+    @media (max-width: 768px) {
+        width: calc(30% - 1px);
+        margin-bottom: 10px;
+        font-size: 10px;
+        }
+}
+
+.photo-box > h5 {
+    font-size: 20px;
+    padding: 1rem 0 0 0;
+    color: gray;
+
+    @media(max-width:768px) {
+        font-size: 10px;
+        padding: 0.5rem 0 0 0;
+    }
+}
+
+.photo-box > img {
+    /* border: solid 1px red; */
+    width: 60%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 50%;
+    position: relative;
+    /* box-shadow: 2px 2px 10px rgb(255, 255, 255); */
+    box-shadow: 0px 0px 10px rgb(255, 255, 255);
+    /*【ズーム】写真を拡大*/
+    transition: transform 0.3s ease; /* クリック時のアニメーション */
+    cursor: pointer; /* クリックカーソル */
+    position: relative; /*相対位置指定*/
+
+    @media(max-width:768px) {
+    width: 90%;
+    /* box-shadow: 2px 2px 10px rgb(255, 255, 255); */
+    box-shadow: 0px 0px 10px rgb(255, 255, 255);
+    }
+}
+/* 【画像拡大】 */
+img.zoomed {
+    position: relative; /* 絶対位置指定 */
+    transform: scale(1.5); /* ズーム時の拡大率と画面の中央配置 */
+    z-index: 1;
+    border-radius: 0;
+    box-shadow: 0px 0px 50px rgb(255, 255, 255);
+}
+
+
+
+
+/*===========================================================*/
+/*【ライトボックス】*/
+/*===========================================================*/
+.gallery{
+    columns: 4;/*段組みの数*/
+    padding:0 15px;/*ギャラリー左右に余白をつける*/
+    margin:0;
+    }
+    
+    .gallery li {
+        margin-bottom: 20px;/*各画像下に余白をつける*/
+    list-style:none;
+    }
+    
+    /*ギャラリー内のイメージは横幅100%にする*/
+    .gallery img{
+        width:100%;
+        height:auto;
+        vertical-align: bottom;/*画像の下にできる余白を削除*/
+        border-radius: 50%;
+        box-shadow: 0px 0px 8px rgb(255, 255, 255);
+    }
+    
+    /*横幅900px以下の段組み設定*/
+    @media only screen and (max-width: 900px) {
+        .gallery{
+        columns:3;
+        }	
+    }
+    
+    @media only screen and (max-width: 768px) {
+        .gallery{
+        columns: 3;
+        }	
+    }
+
+
+
+
+/* ホームに戻る */
+/* .return > a {
+    width: 10%;
+    height: auto;
+    top: 1.5rem;
+    right: 3%;
+    font-size: 1.5rem;
+    position: fixed;
+    text-align: center;
+    z-index: 1;
+    opacity: 0.6;
+
+    @media (max-width: 768px) {
+        top: 1.5rem;
+        right: 5%;
+        font-size: 0.8rem;
+    }
+}
+.btn {
+    height: auto;
+    display: inline-block;
+    padding: 0.8em 3em;
+    background-color: #3e4885;
+    box-shadow: 0 5px 0 #323966;
+    border-radius: 10px;
+    color: #fff;
+    cursor: pointer;
+    text-decoration: none;
+    transform: scale(0.9);
+    box-shadow: 4px 4px 5px rgb(0, 0, 0);
+}
+.btn:hover {
+    color: #fff;
+    background-color: #252fa2;
+    transform: scale(1.0);
+}
+.btn:active {
+    box-shadow: none;
+    transform: translateY(4px);
+} */

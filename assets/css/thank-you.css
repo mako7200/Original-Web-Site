@@ -1,0 +1,29 @@
+
+
+html, body {
+    text-align: center;
+    line-height: 3.0;
+}
+
+
+h1 {
+    font-size: 50px;
+}
+
+.btn {
+    font-size: 50px;
+    text-decoration: none;
+    color: white;
+    background-color: green;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px black;
+}
+
+.btn:hover {
+    color: aqua;
+}
+
+.button:hover {
+    transform: scale(1.1);
+}
