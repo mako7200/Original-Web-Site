@@ -1,6 +1,5 @@
 
 
-
 /*===========================================================*/
 /*【】*/
 /*===========================================================*/
@@ -89,15 +88,15 @@ $(".modal-open").modaal({
 //   $(this).toggleClass('active');
 // });
 $(document).ready(function(){
-  $(".open-btn").click(function () {
-    $(this).toggleClass('active');
-    $(".navbar").toggle();
-  });
-  // メニューが表示された時にハンバーガーメニューを非表示にする
-  $(".navbar a").click(function() {
-    $(".open-btn").removeClass('active');
-    $(".navbar").hide();
-  });
+	$(".open-btn").click(function () {
+		$(this).toggleClass('active');
+		$(".navbar").toggle();
+	});
+	// メニューが表示された時にハンバーガーメニューを非表示にする
+	$(".navbar a").click(function() {
+		$(".open-btn").removeClass('active');
+		$(".navbar").hide();
+	});
 });
 
 
@@ -126,17 +125,18 @@ jQuery('#wrapper').raindrops(//指定したエリアに描画
 /*===========================================================*/
 
 document.addEventListener("DOMContentLoaded", function() {
-  var imageSwitch = document.querySelector('.image-switch');
-  var images = ['./assets/img/26.jpg', './assets/img/M.jpg', './assets/img/M3.jpg', './assets/img/Sedaバー.jpg', './assets/img/21.jpg', './assets/img/16.jpg','./assets/img/17.jpg','./assets/img/15.jpg', './assets/img/25.jpg', './assets/img/27.jpg', './assets/img/11.jpg'];
-  var currentIndex = 0;
-
-  function changeImage() {
-      imageSwitch.src = images[currentIndex];
-      currentIndex = (currentIndex + 1) % images.length;
-  }
-
-  setInterval(changeImage, 6000); // 秒数で画像を切り替える（1000＝1秒）
+	var imageSwitch = document.querySelector('.image-switch');
+	var images = ['./assets/img/26.jpg', './assets/img/M.jpg', './assets/img/M3.jpg', './assets/img/Sedaバー.jpg', './assets/img/21.jpg', './assets/img/16.jpg','./assets/img/17.jpg','./assets/img/15.jpg', './assets/img/25.jpg', './assets/img/27.jpg', './assets/img/11.jpg'];
+	var currentIndex = 0;
+	
+	function changeImage() {
+		imageSwitch.src = images[currentIndex];
+		currentIndex = (currentIndex + 1) % images.length;
+	}
+	
+	setInterval(changeImage, 6000); // 秒数で画像を切り替える（1000＝1秒）
 });
+
 
 
 
@@ -174,4 +174,3 @@ $('.choice-btn').slick({
 	nextArrow: '<div class="slick-next"></div>',//矢印部分NextのHTMLを変更
 	asNavFor: '.gallery', //連動させるスライドショーのクラス名
 });
-
