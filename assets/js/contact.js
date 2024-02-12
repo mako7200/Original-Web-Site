@@ -6,9 +6,9 @@ var bar = new ProgressBar.Line(splash_text, {//id名を指定
 	easing: 'easeInOut',//アニメーション効果linear、easeIn、easeOut、easeInOutが指定可能
 	duration: 2000,//時間指定(1000＝1秒)
 	strokeWidth: 0.2,//進捗ゲージの太さ
-	color: 'white',//進捗ゲージのカラー
-	trailWidth: 0.1,//ゲージベースの線の太さ
-	trailColor: '#bbb',//ゲージベースの線のカラー
+	color: 'red',//進捗ゲージのカラー
+	trailWidth: 0.2,//ゲージベースの線の太さ
+	trailColor: 'white',//ゲージベースの線のカラー
 	text: {//テキストの形状を直接指定				
 		style: {//天地中央に配置
 			position: 'absolute',

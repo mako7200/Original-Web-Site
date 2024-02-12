@@ -28,7 +28,7 @@ var bar = new ProgressBar.Line(splash_text, {//id名を指定
 			transform:'translate(-50%,-50%)',
 			'font-size':'1rem',
 			color: '#fff',
-      'text-shadow':'1px 1px 10px rgb(255, 255, 255)'
+			'text-shadow':'1px 1px 10px rgb(255, 255, 255)'
 		},
 		autoStyleContainer: false //自動付与のスタイルを切る
 	},
