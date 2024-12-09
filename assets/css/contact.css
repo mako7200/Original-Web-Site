@@ -303,6 +303,9 @@ html, body {
 
 /*【ヘッダー】*/
 header {
+  position: fixed;
+  top: 0;
+  z-index: 100;
   width: 100%;
   height: auto;
   display: flex;
@@ -314,7 +317,7 @@ header {
 
 
 
-.contact > h1 {
+.header-title > h1 {
   color: gray;
   font-size: 5rem;
   padding: 1rem 2rem;
@@ -326,18 +329,6 @@ header {
 }
 
 
-.main-title > h3 {
-  text-shadow: 1px 1px 2px rgb(255, 255, 255, 0.5);
-  color: gray;
-  font-size: 3rem;
-  margin: 10% 20% 5% 20%;
-  
-  @media(max-width:768px) {
-      font-size: 1.8rem;
-      margin: 15% 10% 5% 10%;
-  }
-}
-
 
 
 .contact-address {
@@ -348,6 +339,11 @@ header {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin: 160px;
+  
+  @media(max-width: 780px) {
+  margin: 120px auto;
+  }
 }
 
 .contact-address > a {
@@ -437,6 +433,8 @@ canvas {
 
 /* コピーライト */
 footer > p {
+  position: fixed;
+  bottom: 0;
   width: 100%;
   height: auto;
   font-size: 2rem;
